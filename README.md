@@ -1,4 +1,4 @@
-# Sterile-Processing-Quiz
+<h1> Sterile-Processing-Quiz</h1> 
 
 # Quiz Questions Repository
 
@@ -31,9 +31,9 @@ Each question is formatted in the following HTML structure:
 </div>
 
 
-#How to Use
+<h1>How to Use</h1>
 
-Clone the Repository:
+<h2>Clone the Repository:</h2>
 
 git clone https://github.com/yourusername/quiz-questions.git
 Navigate to the Questions: Navigate to the relevant HTML file or section containing the questions you need.
@@ -42,32 +42,32 @@ Integrate into Your Application: Copy the relevant HTML blocks and integrate the
 
 Customize as Needed: Modify the questions, answers, and formatting as needed to fit your specific requirements.
 
-#Contributing
+<h1>Contributing</h1>
 If you would like to contribute to this repository, please follow these steps:
 
 Fork the Repository: Click the "Fork" button at the top right of this repository's GitHub page.
 
-###Clone Your Fork:
+<h1>Clone Your Fork:</h1>
 git clone https://github.com/yourusername/quiz-questions.git
 
-##Create a New Branch:
+<h1>Create a New Branch:</h1>
 git checkout -b feature/new-questions
 
 Make Your Changes: Add your new questions or make modifications as needed.
 
-##Commit Your Changes:
+<h2>Commit Your Changes:</h2>
 git add .
 git commit -m "Added new questions"
 
-Push to Your Fork:
+<h2>Push to Your Fork:</h2>
 git push origin feature/new-questions
 
 Create a Pull Request: Go to the "Pull Requests" tab of the original repository and create a new pull request.
 
-##License
+<h2>License</h2>
 This repository is licensed under the MIT License.
 
-##Contact
+<h2>Contact</h2>
 For any questions or issues, please contact mannyom98@gmail.com.
 
 Feel free to modify any section according to your repository’s specific details or requirements.
