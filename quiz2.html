@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2</title>
+    <style>
+       body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #quiz {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .question p {
+            margin: 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .answer {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .answer input[type="radio"] {
+            margin-right: 10px;
+        }
+        .answer:hover {
+            background-color: #e2e6ea;
+        }
+        .correct {
+            background-color: #d4edda; /* Light green for correct answers */
+            border: 1px solid #c3e6cb; /* Green border */ 
+        }
+        .incorrect {
+            background-color: #f8d7da; /* Light red for wrong answers */
+            border: 1px solid #f5c6cb; /* Red border */ 
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz 2</h1>
+
+<div class="question" data-question="">
+    <p>101. A chemical process applied during instrument manufacture that provides a corrosion-resistant finish by forming a thin transparent oxide film is known as:</p>
+    <div class="answer"><input type="radio" name="q101" value="A"> A. Pasteurization</div>
+    <div class="answer"><input type="radio" name="q101" value="B"> B. Polymorphisate</div>
+    <div class="answer"><input type="radio" name="q101" value="C" data-correct="true"> C. Passivation</div>
+    <div class="answer"><input type="radio" name="q101" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>102. Which of the following is not an ergonomic stressor?</p>
+    <div class="answer"><input type="radio" name="q102" value="A"> A. Repetition</div>
+    <div class="answer"><input type="radio" name="q102" value="B"> B. Awkward positions</div>
+    <div class="answer"><input type="radio" name="q102" value="C"> C. Vibration</div>
+    <div class="answer"><input type="radio" name="q102" value="D" data-correct="true"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>103. If the Flash sterilization load consists of a single instrument comprised of metal and without lumens, a ___________ cycle at 270°F (132°C) should be used.</p>
+    <div class="answer"><input type="radio" name="q103" value="A"> A. 5 min</div>
+    <div class="answer"><input type="radio" name="q103" value="B"> B. 4 min</div>
+    <div class="answer"><input type="radio" name="q103" value="C"> C. 10 min</div>
+    <div class="answer"><input type="radio" name="q103" value="D" data-correct="true"> D. 3 min</div>
+</div>
+
+<div class="question" data-question="">
+    <p>104. The Department of Veteran's Affairs has its own certification programs and does not follow AAMI guidelines.</p>
+    <div class="answer"><input type="radio" name="q104" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q104" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>105. USP-NF states packaging requirements for purified water.</p>
+    <div class="answer"><input type="radio" name="q105" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q105" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>106. A molecular reaction that creates an uncontrolled release of energy is known as:</p>
+    <div class="answer"><input type="radio" name="q106" value="A"> A. Molecular Fission</div>
+    <div class="answer"><input type="radio" name="q106" value="B" data-correct="true"> B. Polymerization</div>
+    <div class="answer"><input type="radio" name="q106" value="C"> C. Molecular Fusion</div>
+    <div class="answer"><input type="radio" name="q106" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>107. The Express cycle is a just-in-time process and has a shelf life.</p>
+    <div class="answer"><input type="radio" name="q107" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q107" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>108. Specialized words or phrases known only by persons working in a position is known as Jargon.</p>
+    <div class="answer"><input type="radio" name="q108" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q108" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>109. The amount of time required to kill 90% of the microorganisms present is known as:</p>
+    <div class="answer"><input type="radio" name="q109" value="A"> A. Terminalization</div>
+    <div class="answer"><input type="radio" name="q109" value="B" data-correct="true"> B. D-Values</div>
+    <div class="answer"><input type="radio" name="q109" value="C"> C. Sterility</div>
+    <div class="answer"><input type="radio" name="q109" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>110. To test the sharpness of chisels and osteotomes, a CS tech would use:</p>
+    <div class="answer"><input type="radio" name="q110" value="A"> A. Steel rod</div>
+    <div class="answer"><input type="radio" name="q110" value="B" data-correct="true"> B. Plastic dowel rod</div>
+    <div class="answer"><input type="radio" name="q110" value="C"> C. Sharpening Stone</div>
+    <div class="answer"><input type="radio" name="q110" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>111. One can clean without sterilizing, but one cannot sterilize without cleaning.</p>
+    <div class="answer"><input type="radio" name="q111" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q111" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>112. Chemicals that remove or inactivate hard water minerals are known as:</p>
+    <div class="answer"><input type="radio" name="q112" value="A" data-correct="true"> A. Sequesting agents</div>
+    <div class="answer"><input type="radio" name="q112" value="B"> B. Chelating agents</div>
+    <div class="answer"><input type="radio" name="q112" value="C"> C. Wetting agents</div>
+    <div class="answer"><input type="radio" name="q112" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>113. Non-porous and porous items within wraps, pouches, or containers can be sterilized in pre-vacuum cycles if the appropriate times and temperatures are used for each.</p>
+    <div class="answer"><input type="radio" name="q113" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q113" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>114. Accreditation is a mandatory process by which an organization measures the quality of its services and performance against nationally recognized standards.</p>
+    <div class="answer"><input type="radio" name="q114" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q114" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>115. A disease, one that occurs more or less continuously throughout a community is known as:</p>
+    <div class="answer"><input type="radio" name="q115" value="A" data-correct="true"> A. Endemic</div>
+    <div class="answer"><input type="radio" name="q115" value="B"> B. Transdemic</div>
+    <div class="answer"><input type="radio" name="q115" value="C"> C. Epidemic</div>
+    <div class="answer"><input type="radio" name="q115" value="D"> D. None of the Above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>116. __________ involves methods used to assess the risks of a specific activity, and to develop a program to reduce losses from exposure to them.</p>
+    <div class="answer"><input type="radio" name="q116" value="A"> A. Ergonomics</div>
+    <div class="answer"><input type="radio" name="q116" value="B"> B. Central Supply</div>
+    <div class="answer"><input type="radio" name="q116" value="C" data-correct="true"> C. Risk Management</div>
+    <div class="answer"><input type="radio" name="q116" value="D"> D. All the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>117. The process of sterilizing an item that is not packaged is known as Terminal Sterilization.</p>
+    <div class="answer"><input type="radio" name="q117" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q117" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>118. Glucagon is a hormone that decreases the blood sugar level.</p>
+    <div class="answer"><input type="radio" name="q118" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q118" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>119. Chemicals that hold hard water minerals in solution, and prevent soaps or detergents from reacting with the minerals is known as:</p>
+    <div class="answer"><input type="radio" name="q119" value="A"> A. Chelating agents</div>
+    <div class="answer"><input type="radio" name="q119" value="B"> B. Wetting agents</div>
+    <div class="answer"><input type="radio" name="q119" value="C" data-correct="true"> C. Sequesting agents</div>
+    <div class="answer"><input type="radio" name="q119" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>120. The most widely used temperature for dry heat sterilization is a minimum of 320°F for preferably, two hours.</p>
+    <div class="answer"><input type="radio" name="q120" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q120" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>121. Mixed EtO systems operates under a vacuum, while 100% EtO systems operate under pressure.</p>
+    <div class="answer"><input type="radio" name="q121" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q121" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>122. Unlike gravity flash cycles, pre-vacuum flash cycles are standard sterilization cycles with a limited drying time.</p>
+    <div class="answer"><input type="radio" name="q122" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q122" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>123. To unload a sterilizer, crack the door, and wait __________ minutes (if a vacuum unit) or _____________ minutes (if a gravity sterilizer) to assure proper evaporation and drying.</p>
+    <div class="answer"><input type="radio" name="q123" value="A" data-correct="true"> A. 10 and 25 to 30</div>
+    <div class="answer"><input type="radio" name="q123" value="B"> B. 10 and 10 to 20</div>
+    <div class="answer"><input type="radio" name="q123" value="C"> C. 8 and 15 to 20</div>
+    <div class="answer"><input type="radio" name="q123" value="D"> D. 15 and 8 to 15</div>
+</div>
+
+<div class="question" data-question="">
+    <p>124. If the load includes complex or lumened instruments, mixed materials, or multiple instruments, a ____________ cycle at 270°F (132°C) should be used.</p>
+    <div class="answer"><input type="radio" name="q124" value="A" data-correct="true"> A. 10 min</div>
+    <div class="answer"><input type="radio" name="q124" value="B"> B. 3 min</div>
+    <div class="answer"><input type="radio" name="q124" value="C"> C. 4 min</div>
+    <div class="answer"><input type="radio" name="q124" value="D"> D. 5 min</div>
+</div>
+
+<div class="question" data-question="">
+    <p>125. Sterilization______________ indicators help to confirm that package have been properly exposed to the sterilization process, and can be the first sign of a process error.</p>
+    <div class="answer"><input type="radio" name="q125" value="A"> A. Guaze strips</div>
+    <div class="answer"><input type="radio" name="q125" value="B"> B. Chemical</div>
+    <div class="answer"><input type="radio" name="q125" value="C" data-correct="true"> C. Process</div>
+    <div class="answer"><input type="radio" name="q125" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>126. One can clean without disinfecting, but one cannot disinfect without cleaning.</p>
+    <div class="answer"><input type="radio" name="q126" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q126" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>127. There is no national recommendation for how long Central Sterile Dept needs to maintain cycle records.</p>
+    <div class="answer"><input type="radio" name="q127" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q127" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>128. The amount of EtO that remains inside materials after sterilization is called the residual.</p>
+    <div class="answer"><input type="radio" name="q128" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q128" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>129. There are two types of sterile solutions:____________ and external solutions.</p>
+    <div class="answer"><input type="radio" name="q129" value="A"> A. Internal</div>
+    <div class="answer"><input type="radio" name="q129" value="B" data-correct="true"> B. Parenteral</div>
+    <div class="answer"><input type="radio" name="q129" value="C"> C. Compound</div>
+    <div class="answer"><input type="radio" name="q129" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>130. Some chemical indicators are often the first performance test the user sees upon opening a sterile package.</p>
+    <div class="answer"><input type="radio" name="q130" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q130" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>131. EtO Personnel Monitoring records must be kept for 30 years after an employee has completed the last EtO-related task.</p>
+    <div class="answer"><input type="radio" name="q131" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q131" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>132. Ozone is generated within the equipment so there is no need to handle sterilant containers for Ozone Sterilizers.</p>
+    <div class="answer"><input type="radio" name="q132" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q132" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>133. Up to _______ percent of the micro-organisms on an instrument can be removed with thorough cleaning.</p>
+    <div class="answer"><input type="radio" name="q133" value="A"> A. 100</div>
+    <div class="answer"><input type="radio" name="q133" value="B"> B. 95</div>
+    <div class="answer"><input type="radio" name="q133" value="C" data-correct="true"> C. 99</div>
+    <div class="answer"><input type="radio" name="q133" value="D"> D. 97</div>
+</div>
+
+<div class="question" data-question="">
+    <p>134. Hydrogen peroxide does not have the same inherent penetration capabilities as EtO, nor is it nearly as soluble in most materials.</p>
+    <div class="answer"><input type="radio" name="q134" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q134" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>135. Insulin is a hormone that increases the level of sugar in the blood.</p>
+    <div class="answer"><input type="radio" name="q135" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q135" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>136. Two basic types of dry heat sterilizers are used in dental offices, which are oven type and ____________.</p>
+    <div class="answer"><input type="radio" name="q136" value="A"> A. Thermal Nucleur</div>
+    <div class="answer"><input type="radio" name="q136" value="B" data-correct="true"> B. Rapid Heat transfer</div>
+    <div class="answer"><input type="radio" name="q136" value="C"> C. Superheated Heat</div>
+    <div class="answer"><input type="radio" name="q136" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>137. EtO inactivates microbes by a process called__________, which seek out specific proteins in microbes to which to react.</p>
+    <div class="answer"><input type="radio" name="q137" value="A"> A. Treboridation</div>
+    <div class="answer"><input type="radio" name="q137" value="B"> B. Oxidation</div>
+    <div class="answer"><input type="radio" name="q137" value="C" data-correct="true"> C. Alkylation</div>
+    <div class="answer"><input type="radio" name="q137" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>138. Fire extinguishers appropriate to the hazards that are present. If the fire involved flammable liquid which type of extinguisher would you use?</p>
+    <div class="answer"><input type="radio" name="q138" value="A" data-correct="true"> A. B</div>
+    <div class="answer"><input type="radio" name="q138" value="B"> B. D</div>
+    <div class="answer"><input type="radio" name="q138" value="C"> C. A</div>
+    <div class="answer"><input type="radio" name="q138" value="D"> D. C</div>
+</div>
+
+<div class="question" data-question="">
+    <p>139. The process of sterilizing an item that is packaged is known as Flash Sterilization.</p>
+    <div class="answer"><input type="radio" name="q139" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q139" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>140. Quality Assurance for EtO has process monitors that consists of the "4 R's": Run, Read, Record and ___________.</p>
+    <div class="answer"><input type="radio" name="q140" value="A"> A. Revert</div>
+    <div class="answer"><input type="radio" name="q140" value="B" data-correct="true"> B. Retain</div>
+    <div class="answer"><input type="radio" name="q140" value="C"> C. Resolve</div>
+    <div class="answer"><input type="radio" name="q140" value="D"> D. Re-act</div>
+</div>
+
+<div class="question" data-question="">
+    <p>141. The Express cycle is preset by the manufacturer for __________ minutes at 270°F with _________ minutes of drying time and a total cycle of __________ minutes.</p>
+    <div class="answer"><input type="radio" name="q141" value="A"> A. 8, 5 and 10</div>
+    <div class="answer"><input type="radio" name="q141" value="B"> B. 3, 4 and 10</div>
+    <div class="answer"><input type="radio" name="q141" value="C" data-correct="true"> C. 4, 3 and 12</div>
+    <div class="answer"><input type="radio" name="q141" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>142. They style of sterilizer use a repeated sequence of steam flush and pressure pulse to remove air from the sterilizer chamber to process materials.</p>
+    <div class="answer"><input type="radio" name="q142" value="A" data-correct="true"> A. SFPP</div>
+    <div class="answer"><input type="radio" name="q142" value="B"> B. Flash</div>
+    <div class="answer"><input type="radio" name="q142" value="C"> C. Gravity Air</div>
+    <div class="answer"><input type="radio" name="q142" value="D"> D. Dynamic Air</div>
+</div>
+
+<div class="question" data-question="">
+    <p>143. Bacteria that grows best in the cold is known as:</p>
+    <div class="answer"><input type="radio" name="q143" value="A"> A. Thermophiles</div>
+    <div class="answer"><input type="radio" name="q143" value="B"> B. Mesophiles</div>
+    <div class="answer"><input type="radio" name="q143" value="C" data-correct="true"> C. Psychrophiles</div>
+    <div class="answer"><input type="radio" name="q143" value="D"> D. None of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>144. MSDS contains important information about hazardous materials that employees must know to work safely with any given material.</p>
+    <div class="answer"><input type="radio" name="q144" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q144" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>145. Pre-set pre-vacuum flash cycle drying time helps decrease steam in the chamber and does dry the instruments.</p>
+    <div class="answer"><input type="radio" name="q145" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q145" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>146. The suffix, "ectomy," refers to:</p>
+    <div class="answer"><input type="radio" name="q146" value="A" data-correct="true"> A. Surgical removal</div>
+    <div class="answer"><input type="radio" name="q146" value="B"> B. Inflammation</div>
+    <div class="answer"><input type="radio" name="q146" value="C"> C. Surgical revision</div>
+    <div class="answer"><input type="radio" name="q146" value="D"> D. Visual examination of organs</div>
+</div>
+
+<div class="question" data-question="">
+    <p>147. Instrument sets and other required instrumentation needed for all surgical procedures for an entire day are usually pulled (collected):</p>
+    <div class="answer"><input type="radio" name="q147" value="A"> A. Two days before they will be used</div>
+    <div class="answer"><input type="radio" name="q147" value="B" data-correct="true"> B. The day or evening before they will be used</div>
+    <div class="answer"><input type="radio" name="q147" value="C"> C. The morning of the planned surgery</div>
+    <div class="answer"><input type="radio" name="q147" value="D"> D. Early morning (for morning procedures) and early afternoon (for afternoon procedures) on the day of surgery</div>
+</div>
+
+<div class="question" data-question="">
+    <p>148. The term "excise" means:</p>
+    <div class="answer"><input type="radio" name="q148" value="A"> A. To repair</div>
+    <div class="answer"><input type="radio" name="q148" value="B"> B. To open</div>
+    <div class="answer"><input type="radio" name="q148" value="C" data-correct="true"> C. To cut out</div>
+    <div class="answer"><input type="radio" name="q148" value="D"> D. Examine</div>
+</div>
+
+<div class="question" data-question="">
+    <p>149. The process by which cartilage is replaced by bone.</p>
+    <div class="answer"><input type="radio" name="q149" value="A"> A. Joint</div>
+    <div class="answer"><input type="radio" name="q149" value="B" data-correct="true"> B. Ossification</div>
+    <div class="answer"><input type="radio" name="q149" value="C"> C. Calcification</div>
+    <div class="answer"><input type="radio" name="q149" value="D"> D. Ureters</div>
+</div>
+
+<div class="question" data-question="">
+    <p>150. A cord of fibrous tissue that connects muscle to a bone.</p>
+    <div class="answer"><input type="radio" name="q150" value="A" data-correct="true"> A. Tendon</div>
+    <div class="answer"><input type="radio" name="q150" value="B"> B. Joint</div>
+    <div class="answer"><input type="radio" name="q150" value="C"> C. Metacarpals</div>
+    <div class="answer"><input type="radio" name="q150" value="D"> D. Chromosomes</div>
+</div>
+
+		<div class="question" data-question="151">
+            <p>151. Central Service Technicians must be able to adapt to change:</p>
+            <div class="answer"><input type="radio" name="q151" value="A" data-correct="true"> A. True</div>
+            <div class="answer"><input type="radio" name="q151" value="B"> B. False</div>
+        </div>
+
+        <!-- Question 152 -->
+        <div class="question" data-question="152">
+            <p>152. Soiled instruments and other items are received in the blank area of the Central Service Department:</p>
+            <div class="answer"><input type="radio" name="q152" value="A"> A. Preparation</div>
+            <div class="answer"><input type="radio" name="q152" value="B"> B. Packaging</div>
+            <div class="answer"><input type="radio" name="q152" value="C" data-correct="true"> C. Decontamination</div>
+            <div class="answer"><input type="radio" name="q152" value="D"> D. Sterilization</div>
+        </div>
+		
+		
+
+        <!-- Question 153 -->
+        <div class="question" data-question="153">
+            <p>153. The term, "CR", relates to a surgical procedure for:</p>
+            <div class="answer"><input type="radio" name="q153" value="A" data-correct="true"> A. Treating a fractured bone without a surgical incision</div>
+            <div class="answer"><input type="radio" name="q153" value="B"> B. Creating a new blood supply to an area of the heart</div>
+            <div class="answer"><input type="radio" name="q153" value="C"> C. Surgical removal of the uterus</div>
+            <div class="answer"><input type="radio" name="q153" value="D"> D. Surgical removal of part of the prostate gland</div>
+        </div>
+
+        <!-- Question 154 -->
+        <div class="question" data-question="154">
+            <p>154. Surgical instruments should be inspected:</p>
+            <div class="answer"><input type="radio" name="q154" value="A"> A. Before they are cleaned</div>
+            <div class="answer"><input type="radio" name="q154" value="B" data-correct="true"> B. After they are cleaned</div>
+            <div class="answer"><input type="radio" name="q154" value="C"> C. After they are sterilized</div>
+            <div class="answer"><input type="radio" name="q154" value="D"> D. During storage</div>
+        </div>
+
+        <!-- Question 155 -->
+        <div class="question" data-question="155">
+            <p>155. All microorganisms are harmful to humans:</p>
+            <div class="answer"><input type="radio" name="q155" value="A"> A. True</div>
+            <div class="answer"><input type="radio" name="q155" value="B" data-correct="true"> B. False</div>
+        </div>
+
+        <!-- Question 156 -->
+        <div class="question" data-question="156">
+            <p>156. A somewhat flexible muscular tube that helps move food into the stomach:</p>
+            <div class="answer"><input type="radio" name="q156" value="A"> A. Alimentary Canal</div>
+            <div class="answer"><input type="radio" name="q156" value="B"> B. Ureters</div>
+            <div class="answer"><input type="radio" name="q156" value="C" data-correct="true"> C. Esophagus</div>
+            <div class="answer"><input type="radio" name="q156" value="D"> D. Mouth</div>
+        </div>
+
+        <!-- Question 157 -->
+        <div class="question" data-question="157">
+            <p>157. This procedure is the removal of the gall bladder:</p>
+            <div class="answer"><input type="radio" name="q157" value="A" data-correct="true"> A. Cholecystectomy</div>
+            <div class="answer"><input type="radio" name="q157" value="B"> B. Colectomy</div>
+            <div class="answer"><input type="radio" name="q157" value="C"> C. Parotidectomy</div>
+            <div class="answer"><input type="radio" name="q157" value="D"> D. Gastrectomy</div>
+        </div>
+
+        <!-- Question 158 -->
+        <div class="question" data-question="158">
+            <p>158. The largest part of the brain, it controls mental activities and movement:</p>
+            <div class="answer"><input type="radio" name="q158" value="A" data-correct="true"> A. Cerebrum</div>
+            <div class="answer"><input type="radio" name="q158" value="B"> B. Cell</div>
+            <div class="answer" name="q158" value="C"> C. Cerebellum</div>
+            <div class="answer"><input type="radio" name="q158" value="D"> D. Brain Stem</div>
+        </div>
+
+        <!-- Question 159 -->
+        <div class="question" data-question="159">
+            <p>159. The use of analytical skills to solve problems and make decisions is a component of which of the following knowledge and skills dimensions?</p>
+            <div class="answer"><input type="radio" name="q159" value="A"> A. Communication abilities</div>
+            <div class="answer"><input type="radio" name="q159" value="B"> B. Facility system responsibilities</div>
+            <div class="answer"><input type="radio" name="q159" value="C" data-correct="true"> C. Employability skills</div>
+            <div class="answer"><input type="radio" name="q159" value="D"> D. Safety practices</div>
+        </div>
+
+        <!-- Question 160 -->
+        <div class="question" data-question="160">
+            <p>160. This gland stimulates body growth:</p>
+            <div class="answer"><input type="radio" name="q160" value="A"> A. Adrenal Gland</div>
+            <div class="answer"><input type="radio" name="q160" value="B"> B. Thyroid Gland</div>
+            <div class="answer"><input type="radio" name="q160" value="C"> C. Pancreas</div>
+            <div class="answer"><input type="radio" name="q160" value="D" data-correct="true"> D. Pituitary Gland</div>
+        </div>
+
+        <!-- Question 161 -->
+        <div class="question" data-question="161">
+            <p>161. All bacteria require the same conditions to live and grow:</p>
+            <div class="answer"><input type="radio" name="q161" value="A"> A. True</div>
+            <div class="answer"><input type="radio" name="q161" value="B" data-correct="true"> B. False</div>
+        </div>
+
+        <!-- Question 162 -->
+        <div class="question" data-question="162">
+            <p>162. The "throat":</p>
+            <div class="answer"><input type="radio" name="q162" value="A"> A. Esophagus</div>
+            <div class="answer"><input type="radio" name="q162" value="B"> B. Larynx</div>
+            <div class="answer"><input type="radio" name="q162" value="C"> C. Trachea</div>
+            <div class="answer"><input type="radio" name="q162" value="D" data-correct="true"> D. Pharnyx</div>
+        </div>
+
+        <!-- Question 163 -->
+        <div class="question" data-question="163">
+            <p>163. Thread-like "tails" that help bacteria move through liquids are called:</p>
+            <div class="answer"><input type="radio" name="q163" value="A"> A. Nucleus</div>
+            <div class="answer"><input type="radio" name="q163" value="B"> B. Causative agent</div>
+            <div class="answer"><input type="radio" name="q163" value="C" data-correct="true"> C. Flagella</div>
+            <div class="answer"><input type="radio" name="q163" value="D"> D. Spores</div>
+        </div>
+
+        <!-- Question 164 -->
+        <div class="question" data-question="164">
+            <p>164. Career growth and progression is virtually non-existent for Central Service Technicians:</p>
+            <div class="answer"><input type="radio" name="q164" value="A"> A. True</div>
+            <div class="answer"><input type="radio" name="q164" value="B" data-correct="true"> B. False</div>
+        </div>
+
+        <!-- Question 165 -->
+        <div class="question" data-question="165">
+            <p>165. What type of air pressure is required for decontamination areas?</p>
+            <div class="answer"><input type="radio" name="q165" value="A" data-correct="true"> A. Negative</div>
+            <div class="answer"><input type="radio" name="q165" value="B"> B. Neutral</div>
+            <div class="answer"><input type="radio" name="q165" value="C"> C. Forced air</div>
+            <div class="answer"><input type="radio" name="q165" value="D"> D. Positive</div>
+        </div>
+
+        <!-- Question 166 -->
+        <div class="question" data-question="166">
+            <p>166. Central Service Technicians must be able to identify approximately 100 surgical instruments in order to be proficient in their job:</p>
+            <div class="answer"><input type="radio" name="q166" value="A"> A. True</div>
+            <div class="answer"><input type="radio" name="q166" value="B" data-correct="true"> B. False</div>
+        </div>
+
+        <div class="question" data-question="">
+    <p>167. Bacteria that require free oxygen to grow are called BLANK bacteria.</p>
+    <div class="answer"><input type="radio" name="q167" value="A"> A. Anaerobic</div>
+    <div class="answer"><input type="radio" name="q167" value="B" data-correct="true"> B. Aerobic</div>
+    <div class="answer"><input type="radio" name="q167" value="C"> C. Viral</div>
+    <div class="answer"><input type="radio" name="q167" value="D"> D. Vegetative</div>
+</div>
+
+<div class="question" data-question="">
+    <p>168. In Central Service, the concept of "one-way flow of materials" refers to the movement of products:</p>
+    <div class="answer"><input type="radio" name="q168" value="A"> A. From Central Service to surgical areas</div>
+    <div class="answer"><input type="radio" name="q168" value="B"> B. From surgical areas to Central Service</div>
+    <div class="answer"><input type="radio" name="q168" value="C" data-correct="true"> C. From soiled areas to clean processing areas within Central Service</div>
+    <div class="answer"><input type="radio" name="q168" value="D"> D. From clean processing areas to soiled areas in the Central Service</div>
+</div>
+
+<div class="question" data-question="">
+    <p>169. Which of the following tells a primary meaning of a word?</p>
+    <div class="answer"><input type="radio" name="q169" value="A"> A. Prefix word element</div>
+    <div class="answer"><input type="radio" name="q169" value="B" data-correct="true"> B. Root word element</div>
+    <div class="answer"><input type="radio" name="q169" value="C"> C. Suffix word element</div>
+    <div class="answer"><input type="radio" name="q169" value="D"> D. Combining vowel</div>
+</div>
+
+<div class="question" data-question="">
+    <p>170. The majority of medical terms are of either BLANK or BLANK origin.</p>
+    <div class="answer"><input type="radio" name="q170" value="A"> A. Greek or French</div>
+    <div class="answer"><input type="radio" name="q170" value="B" data-correct="true"> B. Greek or Latin</div>
+    <div class="answer"><input type="radio" name="q170" value="C"> C. Latin or French</div>
+    <div class="answer"><input type="radio" name="q170" value="D"> D. Latin or English</div>
+</div>
+
+<div class="question" data-question="">
+    <p>171. The largest customer of Central Service is:</p>
+    <div class="answer"><input type="radio" name="q171" value="A"> A. The Emergency Department</div>
+    <div class="answer"><input type="radio" name="q171" value="B"> B. Labor and Delivery</div>
+    <div class="answer"><input type="radio" name="q171" value="C"> C. Material Management</div>
+    <div class="answer"><input type="radio" name="q171" value="D" data-correct="true"> D. The Operating Room</div>
+</div>
+
+<div class="question" data-question="">
+    <p>172. BLANK are often pathogenic to humans because they grow best at body temperatures.</p>
+    <div class="answer"><input type="radio" name="q172" value="A"> A. Gram-Stain</div>
+    <div class="answer"><input type="radio" name="q172" value="B"> B. Spores</div>
+    <div class="answer"><input type="radio" name="q172" value="C"> C. Bacillus</div>
+    <div class="answer"><input type="radio" name="q172" value="D" data-correct="true"> D. Mesophiles</div>
+</div>
+
+<div class="question" data-question="">
+    <p>173. The term, "BKA", refers to a surgical procedure involving:</p>
+    <div class="answer"><input type="radio" name="q173" value="A"> A. Treatment of a fractured bone without a surgical incision</div>
+    <div class="answer"><input type="radio" name="q173" value="B"> B. Surgical removal of both the fallopian tubes and ovaries</div>
+    <div class="answer"><input type="radio" name="q173" value="C" data-correct="true"> C. Surgical removal of the leg below the knee</div>
+    <div class="answer"><input type="radio" name="q173" value="D"> D. A type of hip joint reconstruction</div>
+</div>
+
+<div class="question" data-question="">
+    <p>174. Healthy people do not harbor or transmit bacteria.</p>
+    <div class="answer"><input type="radio" name="q174" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q174" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>175. Since modern Central Service Departments are virtually risk-free, Central Service Technicians need not to be concerned with safety.</p>
+    <div class="answer"><input type="radio" name="q175" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q175" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>176. The term "rhinoplasty," refers to:</p>
+    <div class="answer"><input type="radio" name="q176" value="A"> A. Surgery of a muscle wound</div>
+    <div class="answer"><input type="radio" name="q176" value="B" data-correct="true"> B. Surgical repair of the nose</div>
+    <div class="answer"><input type="radio" name="q176" value="C"> C. Removal of cyst</div>
+    <div class="answer"><input type="radio" name="q176" value="D"> D. Incision of the stomach</div>
+</div>
+
+<div class="question" data-question="">
+    <p>177. In the future, which of the following will more frequently become a requirement for working in a Central Service department?</p>
+    <div class="answer"><input type="radio" name="q177" value="A"> A. On-the-job training</div>
+    <div class="answer"><input type="radio" name="q177" value="B"> B. Experience</div>
+    <div class="answer"><input type="radio" name="q177" value="C" data-correct="true"> C. Formal education</div>
+    <div class="answer"><input type="radio" name="q177" value="D"> D. Reference from facility administrator</div>
+</div>
+
+<div class="question" data-question="">
+    <p>178. Produces a fluid element in semen that stimulates the motility of sperm.</p>
+    <div class="answer"><input type="radio" name="q178" value="A"> A. Ovaries</div>
+    <div class="answer"><input type="radio" name="q178" value="B" data-correct="true"> B. Prostate Gland</div>
+    <div class="answer"><input type="radio" name="q178" value="C"> C. Ureters</div>
+    <div class="answer"><input type="radio" name="q178" value="D"> D. Chromosomes</div>
+</div>
+
+<div class="question" data-question="">
+    <p>179. Spores help some microorganisms survive in adverse conditions.</p>
+    <div class="answer"><input type="radio" name="q179" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q179" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>180. This tissue connects one bone to another.</p>
+    <div class="answer"><input type="radio" name="q180" value="A"> A. Tendon</div>
+    <div class="answer"><input type="radio" name="q180" value="B"> B. Muscle</div>
+    <div class="answer"><input type="radio" name="q180" value="C"> C. Cartilage</div>
+    <div class="answer"><input type="radio" name="q180" value="D" data-correct="true"> D. Ligament</div>
+</div>
+
+
+<div class="question" data-question="">
+    <p>181. Blank is the first step in the sterilization process.</p>
+    <div class="answer"><input type="radio" name="q181" value="A" data-correct="true"> A. Receiving</div>
+    <div class="answer"><input type="radio" name="q181" value="B"> B. Sorting</div>
+    <div class="answer"><input type="radio" name="q181" value="C"> C. Soaking</div>
+    <div class="answer"><input type="radio" name="q181" value="D"> D. Cleaning</div>
+</div>
+
+<div class="question" data-question="">
+    <p>182. The term "hypo" means</p>
+    <div class="answer"><input type="radio" name="q182" value="A"> A. Quickly</div>
+    <div class="answer"><input type="radio" name="q182" value="B"> B. Above</div>
+    <div class="answer"><input type="radio" name="q182" value="C" data-correct="true"> C. Below</div>
+    <div class="answer"><input type="radio" name="q182" value="D"> D. Measured</div>
+</div>
+
+<div class="question" data-question="">
+    <p>183. The brain center of a cell.</p>
+    <div class="answer"><input type="radio" name="q183" value="A"> A. Cell Membranes</div>
+    <div class="answer"><input type="radio" name="q183" value="B"> B. Cytoplasm</div>
+    <div class="answer"><input type="radio" name="q183" value="C" data-correct="true"> C. Nucleus</div>
+    <div class="answer"><input type="radio" name="q183" value="D"> D. DNA</div>
+</div>
+
+<div class="question" data-question="">
+    <p>184. Central Service Technicians practice resource management when they control costs and reduce waste.</p>
+    <div class="answer"><input type="radio" name="q184" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q184" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>185. Using Gram-Stain classifications, Staphylococcus, Enterococcus, and Streptococcus are examples of Gram-BLANK bacteria.</p>
+    <div class="answer"><input type="radio" name="q185" value="A"> A. Negative</div>
+    <div class="answer"><input type="radio" name="q185" value="B" data-correct="true"> B. Positive</div>
+</div>
+
+<div class="question" data-question="">
+    <p>186. Tetanus and botulism do not require free oxygen to grow, so they are classified as BLANK bacteria</p>
+    <div class="answer"><input type="radio" name="q186" value="A"> A. Aerobic</div>
+    <div class="answer"><input type="radio" name="q186" value="B"> B. Vegetative</div>
+    <div class="answer"><input type="radio" name="q186" value="C" data-correct="true"> C. Anaerobic</div>
+    <div class="answer"><input type="radio" name="q186" value="D"> D. Cytoplasm</div>
+</div>
+
+<div class="question" data-question="">
+    <p>187. Which of the following surgical abbreviations might be used relating to a fractured bone?</p>
+    <div class="answer"><input type="radio" name="q187" value="A"> A. CABG</div>
+    <div class="answer"><input type="radio" name="q187" value="B"> B. BSO</div>
+    <div class="answer"><input type="radio" name="q187" value="C" data-correct="true"> C. ORIF</div>
+    <div class="answer"><input type="radio" name="q187" value="D"> D. TAH</div>
+</div>
+
+<div class="question" data-question="">
+    <p>188. This system gives the body shape and support.</p>
+    <div class="answer"><input type="radio" name="q188" value="A"> A. Muscular System</div>
+    <div class="answer"><input type="radio" name="q188" value="B"> B. Nervous System</div>
+    <div class="answer"><input type="radio" name="q188" value="C" data-correct="true"> C. Skeletal System</div>
+    <div class="answer"><input type="radio" name="q188" value="D"> D. Circulatory System</div>
+</div>
+
+<div class="question" data-question="">
+    <p>189. Which of the following is not a growing trend in Central Service?</p>
+    <div class="answer"><input type="radio" name="q189" value="A" data-correct="true"> A. Decentralization of Central Service responsibilities</div>
+    <div class="answer"><input type="radio" name="q189" value="B"> B. The use of more reusable and more complex devices</div>
+    <div class="answer"><input type="radio" name="q189" value="C"> C. Satellite-processing units with centralized management</div>
+    <div class="answer"><input type="radio" name="q189" value="D"> D. Consolidation into entire integrated delivery networks</div>
+</div>
+
+<div class="question" data-question="">
+    <p>190. This surgical procedure removes tissue or displaced bone from the wrist area to release pressure on the median nerve.</p>
+    <div class="answer"><input type="radio" name="q190" value="A" data-correct="true"> A. Carpal Tunnel Repair</div>
+    <div class="answer"><input type="radio" name="q190" value="B"> B. Ulner Nerve Transposition</div>
+    <div class="answer"><input type="radio" name="q190" value="C"> C. Arthrotomy</div>
+    <div class="answer"><input type="radio" name="q190" value="D"> D. Fasciotomy</div>
+</div>
+
+<div class="question" data-question="">
+    <p>191. This tissue covers the body's external surface.</p>
+    <div class="answer"><input type="radio" name="q191" value="A" data-correct="true"> A. Epithelial Tissue</div>
+    <div class="answer"><input type="radio" name="q191" value="B"> B. Connective Tissue</div>
+    <div class="answer"><input type="radio" name="q191" value="C"> C. Muscular Tissue</div>
+    <div class="answer"><input type="radio" name="q191" value="D"> D. Nervous Tissue</div>
+</div>
+
+<div class="question" data-question="">
+    <p>192. This organ pumps blood throughout the body</p>
+    <div class="answer"><input type="radio" name="q192" value="A"> A. Ovaries</div>
+    <div class="answer"><input type="radio" name="q192" value="B"> B. Liver</div>
+    <div class="answer"><input type="radio" name="q192" value="C" data-correct="true"> C. Heart</div>
+    <div class="answer"><input type="radio" name="q192" value="D"> D. Calcification</div>
+</div>
+
+<div class="question" data-question="">
+    <p>193. Because all Central Services Departments have the same structure, healthcare facilities use one standardized job description for all Central Service Technicians.</p>
+    <div class="answer"><input type="radio" name="q193" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q193" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>194. These carry blood away from the heart.</p>
+    <div class="answer"><input type="radio" name="q194" value="A" data-correct="true"> A. Arteries</div>
+    <div class="answer"><input type="radio" name="q194" value="B"> B. Veins</div>
+    <div class="answer"><input type="radio" name="q194" value="C"> C. Alimentary Canal</div>
+    <div class="answer"><input type="radio" name="q194" value="D"> D. Liver</div>
+</div>
+
+<div class="question" data-question="">
+    <p>195. The use of positive and negative air pressure in the Central Service Department is designed to take the place of heating and air conditioning.</p>
+    <div class="answer"><input type="radio" name="q195" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q195" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>196. This surgical procedure consists of removing an ear bone that has thickened and no longer transmits sound waves and replacing it with an artificial implant to improve hearing.</p>
+    <div class="answer"><input type="radio" name="q196" value="A"> A. Tympanoplasty</div>
+    <div class="answer"><input type="radio" name="q196" value="B" data-correct="true"> B. Stapedectomy</div>
+    <div class="answer"><input type="radio" name="q196" value="C"> C. Auditory Implantation</div>
+    <div class="answer"><input type="radio" name="q196" value="D"> D. Myringotomy</div>
+</div>
+
+<div class="question" data-question="">
+    <p>197. Which of the following means "beside or near"?</p>
+    <div class="answer"><input type="radio" name="q197" value="A" data-correct="true"> A. Para</div>
+    <div class="answer"><input type="radio" name="q197" value="B"> B. Peri</div>
+    <div class="answer"><input type="radio" name="q197" value="C"> C. Parta</div>
+    <div class="answer"><input type="radio" name="q197" value="D"> D. Pana</div>
+</div>
+
+<div class="question" data-question="">
+    <p>198. These muscles control involuntary movements like breathing, digestion, etc.</p>
+    <div class="answer"><input type="radio" name="q198" value="A" data-correct="true"> A. Smooth Muscle</div>
+    <div class="answer"><input type="radio" name="q198" value="B"> B. Cardiac Muscle</div>
+    <div class="answer"><input type="radio" name="q198" value="C"> C. Skeletal Muscle</div>
+    <div class="answer"><input type="radio" name="q198" value="D"> D. Fascia Muscle</div>
+</div>
+
+<div class="question" data-question="">
+    <p>199. The pathway that food takes through the digestive system.</p>
+    <div class="answer"><input type="radio" name="q199" value="A" data-correct="true"> A. Alimentary Canal</div>
+    <div class="answer"><input type="radio" name="q199" value="B"> B. Esophagus</div>
+    <div class="answer"><input type="radio" name="q199" value="C"> C. Stomach</div>
+    <div class="answer"><input type="radio" name="q199" value="D"> D. Veins</div>
+</div>
+
+<div class="question" data-question="">
+    <p>200. Central Service Technicians can protect patients by breaking the chain of infection.</p>
+    <div class="answer"><input type="radio" name="q200" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q200" value="B"> B. False</div>
+</div>
+
+
+
+
+    <!-- Submit Button -->
+<button type="button" onclick="checkAnswers()">Submit Answers</button>
+
+
+    <script>
+        function checkAnswers() {
+        // Get all questions
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach(question => {
+            // Get all answers for this question
+            const answers = question.querySelectorAll('.answer input[type="radio"]');
+            let selectedAnswer = null;
+
+            answers.forEach(answer => {
+                if (answer.checked) {
+                    selectedAnswer = answer;
+                }
+            });
+
+            // Clear previous highlights
+            answers.forEach(answer => {
+                answer.parentElement.classList.remove('correct', 'incorrect');
+            });
+
+            // Highlight the correct and wrong answers
+            answers.forEach(answer => {
+                if (answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('correct');
+                }
+
+                if (answer === selectedAnswer && !answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('incorrect');
+                }
+            });
+        });
+    }
+    </script>
+</body>
+</html>

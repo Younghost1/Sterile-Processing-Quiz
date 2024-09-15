@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1</title>
+    <style>
+       body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #quiz {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .question p {
+            margin: 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .answer {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .answer input[type="radio"] {
+            margin-right: 10px;
+        }
+        .answer:hover {
+            background-color: #e2e6ea;
+        }
+        .correct {
+            background-color: #d4edda; /* Light green for correct answers */
+            border: 1px solid #c3e6cb; /* Green border */ 
+        }
+        .incorrect {
+            background-color: #f8d7da; /* Light red for wrong answers */
+            border: 1px solid #f5c6cb; /* Red border */ 
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz 1</h1>
+
+
+    <div id="quiz">
+        
+		<div class="question" data-question="">
+    <p>1. Instruments with lumens should be soaked in a horizontal position:</p>
+    <div class="answer"><input type="radio" name="q1" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q1" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>2. The mechanical process by which an ultrasonic cleaner works is called cavitation:</p>
+    <div class="answer"><input type="radio" name="q2" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q2" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>3. To prevent aerosols, items should be brushed below the surface of the water:</p>
+    <div class="answer"><input type="radio" name="q3" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q3" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>4. Automatic washers clean using a spray-force action called impingement:</p>
+    <div class="answer"><input type="radio" name="q4" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q4" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>5. Instruments received from Surgery and tagged for repair do not need to be cleaned until they come back from repair:</p>
+    <div class="answer"><input type="radio" name="q5" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q5" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>6. Powered surgical instruments should be cleaned using a mechanical cleaning process:</p>
+    <div class="answer"><input type="radio" name="q6" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q6" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>7. There are currently no methods available to verify cleaning process outcomes:</p>
+    <div class="answer"><input type="radio" name="q7" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q7" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>8. Infectious medical waste is regulated by the EPA:</p>
+    <div class="answer"><input type="radio" name="q8" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q8" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>9. Horizontal work surfaces in the decontamination area should be cleaned and disinfected once per day:</p>
+    <div class="answer"><input type="radio" name="q9" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q9" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>10. PPE should be changed immediately if it becomes soaked with blood or other infectious material:</p>
+    <div class="answer"><input type="radio" name="q10" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q10" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>11. What is the preferred pH for detergents used for most cleaning processes?</p>
+    <div class="answer"><input type="radio" name="q11" value="A"> A. Low pH</div>
+    <div class="answer"><input type="radio" name="q11" value="B"> B. High pH</div>
+    <div class="answer"><input type="radio" name="q11" value="C" data-correct="true"> C. Neutral pH</div>
+    <div class="answer"><input type="radio" name="q11" value="D"> D. It depends on the water temperature and exposure time.</div>
+</div>
+
+<div class="question" data-question="">
+    <p>12. Which of the following is an example of regulated medical waste?</p>
+    <div class="answer"><input type="radio" name="q12" value="A"> A. Discarded sterilization wraps</div>
+    <div class="answer"><input type="radio" name="q12" value="B" data-correct="true"> B. Blood-soaked sponges</div>
+    <div class="answer"><input type="radio" name="q12" value="C"> C. Used copier toner cartridges</div>
+    <div class="answer"><input type="radio" name="q12" value="D"> D. General trash from the surgery department</div>
+</div>
+
+<div class="question" data-question="">
+    <p>13. Which of the following statements about the use of mechanical washers is NOT true?</p>
+    <div class="answer"><input type="radio" name="q13" value="A"> A. Multi-level trays should be separated</div>
+    <div class="answer"><input type="radio" name="q13" value="B"> B. Trays with lids should be opened</div>
+    <div class="answer"><input type="radio" name="q13" value="C"> C. Instruments should be disassembled and opened</div>
+    <div class="answer"><input type="radio" name="q13" value="D" data-correct="true"> D. All items should be washed on the same cycle</div>
+</div>
+
+<div class="question" data-question="">
+    <p>14. Water must be degassed each time the ultrasonic cleaner's tank is changed, because:</p>
+    <div class="answer"><input type="radio" name="q14" value="A" data-correct="true"> A. Excess bubbles from filling reduce the energy of the cavitation process</div>
+    <div class="answer"><input type="radio" name="q14" value="B"> B. Excess bubbles reduce the effectiveness of the detergent</div>
+    <div class="answer"><input type="radio" name="q14" value="C"> C. Excess bubbles decrease the temperature of the tank</div>
+    <div class="answer"><input type="radio" name="q14" value="D"> D. Excess bubbles make it difficult to see items being cleaned</div>
+</div>
+
+<div class="question" data-question="">
+    <p>15. Specialized clothing or equipment worn by an employee for protection against a hazard is called:</p>
+    <div class="answer"><input type="radio" name="q15" value="A"> A. Restricted Apparel</div>
+    <div class="answer"><input type="radio" name="q15" value="B"> B. Safety Apparel</div>
+    <div class="answer"><input type="radio" name="q15" value="C"> C. Hazard Equipment</div>
+    <div class="answer"><input type="radio" name="q15" value="D" data-correct="true"> D. Personal Protective Equipment</div>
+</div>
+
+<div class="question" data-question="">
+    <p>16. Written cleaning instructions for surgical instruments should be provided by:</p>
+    <div class="answer"><input type="radio" name="q16" value="A"> A. The mechanical washer manufacturer</div>
+    <div class="answer"><input type="radio" name="q16" value="B" data-correct="true"> B. The instrument manufacturer</div>
+    <div class="answer"><input type="radio" name="q16" value="C"> C. The detergent manufacturer</div>
+    <div class="answer"><input type="radio" name="q16" value="D"> D. The healthcare facility</div>
+</div>
+
+<div class="question" data-question="">
+    <p>17. Pyrogens:</p>
+    <div class="answer"><input type="radio" name="q17" value="A" data-correct="true"> A. Are fever-producing substances</div>
+    <div class="answer"><input type="radio" name="q17" value="B"> B. Are microorganisms that have survived sterilization</div>
+    <div class="answer"><input type="radio" name="q17" value="C"> C. Cause CJD</div>
+    <div class="answer"><input type="radio" name="q17" value="D"> D. Are soiled particles</div>
+</div>
+
+<div class="question" data-question="">
+    <p>18. Softened water:</p>
+    <div class="answer"><input type="radio" name="q18" value="A"> A. Increases the likelihood of mineral scale deposits</div>
+    <div class="answer"><input type="radio" name="q18" value="B" data-correct="true"> B. Decreases the likelihood of mineral scale deposits</div>
+    <div class="answer"><input type="radio" name="q18" value="C"> C. Is not compatible with detergents</div>
+    <div class="answer"><input type="radio" name="q18" value="D"> D. Can cause rusting of metal substances</div>
+</div>
+
+<div class="question" data-question="">
+    <p>19. The desired solution for cleaning instruments is:</p>
+    <div class="answer"><input type="radio" name="q19" value="A"> A. Soap</div>
+    <div class="answer"><input type="radio" name="q19" value="B"> B. Steam</div>
+    <div class="answer"><input type="radio" name="q19" value="C"> C. A disinfectant</div>
+    <div class="answer"><input type="radio" name="q19" value="D" data-correct="true"> D. A detergent</div>
+</div>
+
+<div class="question" data-question="">
+    <p>20. These are used to breakdown fatty tissue on instruments:</p>
+    <div class="answer"><input type="radio" name="q20" value="A"> A. Protease enzymes</div>
+    <div class="answer"><input type="radio" name="q20" value="B" data-correct="true"> B. Lipase enzymes</div>
+    <div class="answer"><input type="radio" name="q20" value="C"> C. Amylase enzymes</div>
+    <div class="answer"><input type="radio" name="q20" value="D"> D. Neutral pH cleaners</div>
+</div>
+
+
+<div class="question" data-question="">
+    <p>21. To prevent coagulation of proteins, water temperature should be:</p>
+    <div class="answer"><input type="radio" name="q21" value="A" data-correct="true"> A. Below 43°C (110°F)</div>
+    <div class="answer"><input type="radio" name="q21" value="B"> B. Above 43°C (110°F)</div>
+    <div class="answer"><input type="radio" name="q21" value="C"> C. Below 100°C (212°F)</div>
+    <div class="answer"><input type="radio" name="q21" value="D"> D. Below 24°C (75°F)</div>
+</div>
+
+<div class="question" data-question="">
+    <p>22. Instrument lubrication is performed:</p>
+    <div class="answer"><input type="radio" name="q22" value="A"> A. Immediately before use</div>
+    <div class="answer"><input type="radio" name="q22" value="B"> B. After sterilization</div>
+    <div class="answer"><input type="radio" name="q22" value="C" data-correct="true"> C. After cleaning</div>
+    <div class="answer"><input type="radio" name="q22" value="D"> D. Before cleaning</div>
+</div>
+
+<div class="question" data-question="">
+    <p>23. Aluminum items should be cleaned:</p>
+    <div class="answer"><input type="radio" name="q23" value="A"> A. Using a circular motion</div>
+    <div class="answer"><input type="radio" name="q23" value="B" data-correct="true"> B. Using a to and fro motion with the grain</div>
+    <div class="answer"><input type="radio" name="q23" value="C"> C. Using a stiff metal brush</div>
+    <div class="answer"><input type="radio" name="q23" value="D"> D. Using a water spray</div>
+</div>
+
+<div class="question" data-question="">
+    <p>24. Powered surgical instruments:</p>
+    <div class="answer"><input type="radio" name="q24" value="A" data-correct="true"> A. Cannot be immersed</div>
+    <div class="answer"><input type="radio" name="q24" value="B"> B. Can be immersed</div>
+    <div class="answer"><input type="radio" name="q24" value="C"> C. Should be cleaned at the point of use</div>
+    <div class="answer"><input type="radio" name="q24" value="D"> D. Should be cleaned using a mechanical washer</div>
+</div>
+
+<div class="question" data-question="">
+    <p>25. The use of heat to kill microorganisms, except spores:</p>
+    <div class="answer"><input type="radio" name="q25" value="A"> A. Sterilization</div>
+    <div class="answer"><input type="radio" name="q25" value="B" data-correct="true"> B. Thermal Disinfection</div>
+</div>
+
+<div class="question" data-question="">
+    <p>26. Detergents used in mechanical cleaners should be:</p>
+    <div class="answer"><input type="radio" name="q26" value="A"> A. Low alkaline</div>
+    <div class="answer"><input type="radio" name="q26" value="B"> B. Low acid</div>
+    <div class="answer"><input type="radio" name="q26" value="C"> C. Low temperature</div>
+    <div class="answer"><input type="radio" name="q26" value="D" data-correct="true"> D. Low foaming</div>
+</div>
+
+<div class="question" data-question="">
+    <p>27. Compounds that contain a positive electrical charge and exhibit germicidal properties:</p>
+    <div class="answer"><input type="radio" name="q27" value="A" data-correct="true"> A. Cationic</div>
+    <div class="answer"><input type="radio" name="q27" value="B"> B. Anionic</div>
+</div>
+
+<div class="question" data-question="">
+    <p>28. A chemical which kills most pathogenic organisms, but does not kill spores:</p>
+    <div class="answer"><input type="radio" name="q28" value="A"> A. Antiseptic</div>
+    <div class="answer"><input type="radio" name="q28" value="B" data-correct="true"> B. Disinfectant</div>
+</div>
+
+<div class="question" data-question="">
+    <p>29. A solution which inhibits the growth of bacteria. It is usually used topically and only on animate objects:</p>
+    <div class="answer"><input type="radio" name="q29" value="A" data-correct="true"> A. Antiseptic</div>
+    <div class="answer"><input type="radio" name="q29" value="B"> B. Disinfectant</div>
+</div>
+
+<div class="question" data-question="">
+    <p>30. The length of time a disinfectant can be properly stored after which it must be discarded:</p>
+    <div class="answer"><input type="radio" name="q30" value="A"> A. Use life</div>
+    <div class="answer"><input type="radio" name="q30" value="B" data-correct="true"> B. Shelf life</div>
+</div>
+
+<div class="question" data-question="">
+    <p>31. Compounds that have a negative electrical charge and form a large group of synthetic detergents:</p>
+    <div class="answer"><input type="radio" name="q31" value="A"> A. Cationic</div>
+    <div class="answer"><input type="radio" name="q31" value="B" data-correct="true"> B. Anionic</div>
+</div>
+
+<div class="question" data-question="">
+    <p>32. The destruction of nearly all pathogenic microorganisms on an inanimate surface:</p>
+    <div class="answer"><input type="radio" name="q32" value="A"> A. Sterilization</div>
+    <div class="answer"><input type="radio" name="q32" value="B" data-correct="true"> B. Disinfection</div>
+</div>
+
+<div class="question" data-question="">
+    <p>33. Relating to the destruction of bacteria:</p>
+    <div class="answer"><input type="radio" name="q33" value="A" data-correct="true"> A. Bactericidal</div>
+    <div class="answer"><input type="radio" name="q33" value="B"> B. Sterilization</div>
+</div>
+
+<div class="question" data-question="">
+    <p>34. The length of time (or number of uses) after which the efficiency of a disinfectant is diminished:</p>
+    <div class="answer"><input type="radio" name="q34" value="A"> A. Shelf life</div>
+    <div class="answer"><input type="radio" name="q34" value="B" data-correct="true"> B. Use life</div>
+</div>
+
+<div class="question" data-question="">
+    <p>35. A process by which all forms of microbial life are destroyed:</p>
+    <div class="answer"><input type="radio" name="q35" value="A" data-correct="true"> A. Sterilization</div>
+    <div class="answer"><input type="radio" name="q35" value="B"> B. Disinfection</div>
+</div>
+
+<div class="question" data-question="">
+    <p>36. The use of heat to kill all microorganisms, except spores, is called:</p>
+    <div class="answer"><input type="radio" name="q36" value="A"> A. Sterilization</div>
+    <div class="answer"><input type="radio" name="q36" value="B" data-correct="true"> B. Thermal Disinfection</div>
+    <div class="answer"><input type="radio" name="q36" value="C"> C. High-Level Disinfection</div>
+    <div class="answer"><input type="radio" name="q36" value="D"> D. Mechanical Disinfection</div>
+</div>
+
+<div class="question" data-question="">
+    <p>37. These chemicals are used on animate (living tissue) to slow the growth of microorganisms:</p>
+    <div class="answer"><input type="radio" name="q37" value="A"> A. Glutaraldehydes</div>
+    <div class="answer"><input type="radio" name="q37" value="B"> B. Disinfectants</div>
+    <div class="answer"><input type="radio" name="q37" value="C"> C. Halogens</div>
+    <div class="answer"><input type="radio" name="q37" value="D" data-correct="true"> D. Antiseptics</div>
+</div>
+
+<div class="question" data-question="">
+    <p>38. Items that are introduced directly into the bloodstream or other normally sterile areas of the body are classified as:</p>
+    <div class="answer"><input type="radio" name="q38" value="A" data-correct="true"> A. Critical Items</div>
+    <div class="answer"><input type="radio" name="q38" value="B"> B. Semi-Critical Items</div>
+    <div class="answer"><input type="radio" name="q38" value="C"> C. Non-Critical Items</div>
+    <div class="answer"><input type="radio" name="q38" value="D"> D. Equipment</div>
+</div>
+
+<div class="question" data-question="">
+    <p>39. The process by which all forms of microorganisms are completely destroyed is called:</p>
+    <div class="answer"><input type="radio" name="q39" value="A"> A. High-level disinfection</div>
+    <div class="answer"><input type="radio" name="q39" value="B"> B. Thermal disinfection</div>
+    <div class="answer"><input type="radio" name="q39" value="C" data-correct="true"> C. Sterilization</div>
+    <div class="answer"><input type="radio" name="q39" value="D"> D. Chemical disinfection</div>
+</div>
+
+<div class="question" data-question="">
+    <p>40. Iodophors are a member of this disinfectant family:</p>
+    <div class="answer"><input type="radio" name="q40" value="A" data-correct="true"> A. Halogens</div>
+    <div class="answer"><input type="radio" name="q40" value="B"> B. Quaternary Ammonium Compounds</div>
+    <div class="answer"><input type="radio" name="q40" value="C"> C. Alcohol</div>
+    <div class="answer"><input type="radio" name="q40" value="D"> D. Phenolics</div>
+</div>
+
+<div class="question" data-question="">
+    <p>41. Phenolics are classified as:</p>
+    <div class="answer"><input type="radio" name="q41" value="A" data-correct="true"> A. Intermediate to low-level disinfectants</div>
+    <div class="answer"><input type="radio" name="q41" value="B"> B. Intermediate to high-level disinfectants</div>
+    <div class="answer"><input type="radio" name="q41" value="C"> C. High-level disinfectants</div>
+    <div class="answer"><input type="radio" name="q41" value="D"> D. Sterilants</div>
+</div>
+
+<div class="question" data-question="">
+    <p>42. Which of the following are classified as high-level disinfectants?</p>
+    <div class="answer"><input type="radio" name="q42" value="A" data-correct="true"> A. Glutaraldehyde and OPA</div>
+    <div class="answer"><input type="radio" name="q42" value="B"> B. Glutaraldehyde and Phenolics</div>
+    <div class="answer"><input type="radio" name="q42" value="C"> C. Quaternary Ammonium Compounds and Phenolics</div>
+    <div class="answer"><input type="radio" name="q42" value="D"> D. Halogens and OPA</div>
+</div>
+
+<div class="question" data-question="">
+    <p>43. Thermal disinfection is accomplished using:</p>
+    <div class="answer"><input type="radio" name="q43" value="A"> A. Heated chemicals</div>
+    <div class="answer"><input type="radio" name="q43" value="B"> B. Heated glutaraldehyde</div>
+    <div class="answer"><input type="radio" name="q43" value="C"> C. Prolonged high pressure steam</div>
+    <div class="answer"><input type="radio" name="q43" value="D" data-correct="true"> D. Heated water</div>
+</div>
+
+<div class="question" data-question="">
+    <p>44. How long must alcohol remain in wet contact with an item to achieve a reasonable level of disinfection?</p>
+    <div class="answer"><input type="radio" name="q44" value="A"> A. 3 minutes</div>
+    <div class="answer"><input type="radio" name="q44" value="B" data-correct="true"> B. 5 minutes</div>
+    <div class="answer"><input type="radio" name="q44" value="C"> C. 10 minutes</div>
+    <div class="answer"><input type="radio" name="q44" value="D"> D. 20 minutes</div>
+</div>
+
+<div class="question" data-question="">
+    <p>45. Which of the following would be the best choice for high-level disinfection of instruments?</p>
+    <div class="answer"><input type="radio" name="q45" value="A"> A. Phenolics</div>
+    <div class="answer"><input type="radio" name="q45" value="B"> B. Chlorine</div>
+    <div class="answer"><input type="radio" name="q45" value="C"> C. Iodophors</div>
+    <div class="answer"><input type="radio" name="q45" value="D" data-correct="true"> D. OPA</div>
+</div>
+
+<div class="question" data-question="">
+    <p>46. Items need to be cleaned before they are sterilized, but they do need to be cleaned before they are disinfected.</p>
+    <div class="answer"><input type="radio" name="q46" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q46" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>47. When liquid chemicals are labeled as both a high-level disinfectant and a sterilant, the time required to achieve sterilization is no longer than the time required to achieve high-level disinfection.</p>
+    <div class="answer"><input type="radio" name="q47" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q47" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>48. Mechanical washers and washer-decontaminators are regulated by the CDC.</p>
+    <div class="answer"><input type="radio" name="q48" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q48" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>49. All liquid disinfectants are capable of sterilization if their exposure time is increased.</p>
+    <div class="answer"><input type="radio" name="q49" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q49" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>50. Log books should be maintained when using Glutaraldehyde and OPA.</p>
+    <div class="answer"><input type="radio" name="q50" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q50" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>51. Microgrind, or Supercut Scissors are usually identified with a black handle.</p>
+    <div class="answer"><input type="radio" name="q51" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q51" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>52. Stainless Steel jaw needleholders last longer than Tungsten Carbide jaw needleholders.</p>
+    <div class="answer"><input type="radio" name="q52" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q52" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>53. The place where the two parts of a ring handled instrument meet and pivot is called the box lock.</p>
+    <div class="answer"><input type="radio" name="q53" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q53" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>54. Instruments are heat treated to give their surface a mirror (shiny) finish.</p>
+    <div class="answer"><input type="radio" name="q54" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q54" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>55. Tissue forceps have teeth.</p>
+    <div class="answer"><input type="radio" name="q55" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q55" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>56. During instrument manufacture, the process of passivation helps build a protective chromium oxide layer on each instrument's surface.</p>
+    <div class="answer"><input type="radio" name="q56" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q56" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>57. The part of a hemostat that locks and holds it in position is called the box lock.</p>
+    <div class="answer"><input type="radio" name="q57" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q57" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>58. Laser-finished instruments are coated with a durable protective finish that cannot be chipped or scratched.</p>
+    <div class="answer"><input type="radio" name="q58" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q58" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>59. When assembling an instrument set, heavier instruments should be placed on top of the lighter ones to hold them in place.</p>
+    <div class="answer"><input type="radio" name="q59" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q59" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>60. After applying instrument identification tape, instruments should be autoclaved to help the tape bond to the instrument.</p>
+    <div class="answer"><input type="radio" name="q60" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q60" value="B"> B. False</div>
+</div>
+
+
+<div class="question" data-question="">
+    <p>61. Instrument marking tape should be wrapped approximately BLANK around the instrument.</p>
+    <div class="answer"><input type="radio" name="q61" value="A" data-correct="true"> A. 1 to 1½</div>
+    <div class="answer"><input type="radio" name="q61" value="B"> B. 1½ to 2</div>
+    <div class="answer"><input type="radio" name="q61" value="C"> C. 2 to 2½</div>
+    <div class="answer"><input type="radio" name="q61" value="D"> D. 2½ to 3</div>
+</div>
+
+<div class="question" data-question="">
+    <p>62. Which of the following is NOT an acceptable form of instrument marking?</p>
+    <div class="answer"><input type="radio" name="q62" value="A"> A. Laser-etching</div>
+    <div class="answer"><input type="radio" name="q62" value="B"> B. Acid-base etching</div>
+    <div class="answer"><input type="radio" name="q62" value="C" data-correct="true"> C. Electric etching (engraving)</div>
+    <div class="answer"><input type="radio" name="q62" value="D"> D. Heat-fused nylon</div>
+</div>
+
+<div class="question" data-question="">
+    <p>63. The purpose of a suction stylet is to:</p>
+    <div class="answer"><input type="radio" name="q63" value="A" data-correct="true"> A. Unclog the suction during surgery</div>
+    <div class="answer"><input type="radio" name="q63" value="B"> B. Clean the suction in the decontamination area</div>
+    <div class="answer"><input type="radio" name="q63" value="C"> C. Facilitate the sterilization process</div>
+    <div class="answer"><input type="radio" name="q63" value="D"> D. Provide a measuring guide for the surgeon</div>
+</div>
+
+<div class="question" data-question="">
+    <p>64. Kerrison Laminectomy Ronguers should be tested using:</p>
+    <div class="answer"><input type="radio" name="q64" value="A"> A. Tissue paper</div>
+    <div class="answer"><input type="radio" name="q64" value="B"> B. A plastic dowel rod</div>
+    <div class="answer"><input type="radio" name="q64" value="C"> C. Rubber testing material</div>
+    <div class="answer"><input type="radio" name="q64" value="D" data-correct="true"> D. An index card</div>
+</div>
+
+<div class="question" data-question="">
+    <p>65. Scissors with Tungsten Carbide cutting edges are usually identified by:</p>
+    <div class="answer"><input type="radio" name="q65" value="A"> A. Black handles</div>
+    <div class="answer"><input type="radio" name="q65" value="B"> B. Silver handles</div>
+    <div class="answer"><input type="radio" name="q65" value="C" data-correct="true"> C. Gold handles</div>
+    <div class="answer"><input type="radio" name="q65" value="D"> D. The letters "TC"</div>
+</div>
+
+<div class="question" data-question="">
+    <p>66. Used to repair and reconstruct teeth and jawbones.</p>
+    <div class="answer"><input type="radio" name="q66" value="A"> A. Dermabraider</div>
+    <div class="answer"><input type="radio" name="q66" value="B" data-correct="true"> B. Dental drill</div>
+</div>
+
+<div class="question" data-question="">
+    <p>67. Used in ear surgery and for driving very small wires through the bone.</p>
+    <div class="answer"><input type="radio" name="q67" value="A"> A. Cebatome</div>
+    <div class="answer"><input type="radio" name="q67" value="B" data-correct="true"> B. Micro Drill</div>
+</div>
+
+<div class="question" data-question="">
+    <p>68. Used in open heart surgery.</p>
+    <div class="answer"><input type="radio" name="q68" value="A" data-correct="true"> A. Sternal Saw</div>
+    <div class="answer"><input type="radio" name="q68" value="B"> B. Micro Drill</div>
+</div>
+
+<div class="question" data-question="">
+    <p>69. Used to remove cement.</p>
+    <div class="answer"><input type="radio" name="q69" value="A"> A. Dermatome</div>
+    <div class="answer"><input type="radio" name="q69" value="B" data-correct="true"> B. Cebatome</div>
+</div>
+
+<div class="question" data-question="">
+    <p>70. Used to harvest skin grafts and reshape skin surfaces.</p>
+    <div class="answer"><input type="radio" name="q70" value="A" data-correct="true"> A. Dermatome/Dermabraider</div>
+    <div class="answer"><input type="radio" name="q70" value="B"> B. Micro Drill</div>
+</div>
+
+<div class="question" data-question="">
+    <p>71. Used to perform specific cutting actions such as reciprocating or oscillating.</p>
+    <div class="answer"><input type="radio" name="q71" value="A"> A. Drill</div>
+    <div class="answer"><input type="radio" name="q71" value="B" data-correct="true"> B. Saw</div>
+</div>
+
+<div class="question" data-question="">
+    <p>72. Allows for visual inspection of the lower part of the large intestine.</p>
+    <div class="answer"><input type="radio" name="q72" value="A" data-correct="true"> A. Sigmoidoscope</div>
+    <div class="answer"><input type="radio" name="q72" value="B"> B. Colonoscope</div>
+</div>
+
+<div class="question" data-question="">
+    <p>73. Allows for visual inspection of the upper digestive tract.</p>
+    <div class="answer"><input type="radio" name="q73" value="A" data-correct="true"> A. Gastroscope</div>
+    <div class="answer"><input type="radio" name="q73" value="B"> B. Bronchoscope</div>
+</div>
+
+<div class="question" data-question="">
+    <p>74. Used to visualize the urethra and bladder.</p>
+    <div class="answer"><input type="radio" name="q74" value="A" data-correct="true"> A. Cystoscope</div>
+    <div class="answer"><input type="radio" name="q74" value="B"> B. Hysteroscope</div>
+</div>
+
+<div class="question" data-question="">
+    <p>75. Used to visualize the tracheobronchial tree.</p>
+    <div class="answer"><input type="radio" name="q75" value="A"> A. Tracheoscope</div>
+    <div class="answer"><input type="radio" name="q75" value="B" data-correct="true"> B. Bronchoscope</div>
+</div>
+
+<div class="question" data-question="">
+    <p>76. Used to visualize the entire large intestine.</p>
+    <div class="answer"><input type="radio" name="q76" value="A"> A. Sigmoidoscope</div>
+    <div class="answer"><input type="radio" name="q76" value="B" data-correct="true"> B. Colonoscope</div>
+</div>
+
+<div class="question" data-question="">
+    <p>77. Leak testing should be performed on each flexible endoscope annually.</p>
+    <div class="answer"><input type="radio" name="q77" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q77" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>78. Loaner instruments trays that are received sterile from other facilities do not need to be decontaminated and resterilized before use.</p>
+    <div class="answer"><input type="radio" name="q78" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q78" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>79. Endoscope channels should be cleaned and then left moist for storage.</p>
+    <div class="answer"><input type="radio" name="q79" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q79" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>80. Powered surgical instruments have one of three power sources; electricity, air, or battery.</p>
+    <div class="answer"><input type="radio" name="q80" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q80" value="B"> B. False</div>
+</div>
+
+
+<div class="question" data-question="">
+    <p>81. Modern powered surgical instruments are immersible.</p>
+    <div class="answer"><input type="radio" name="q81" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q81" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>82. Laparoscopic instrument insulation failure can cause burns.</p>
+    <div class="answer"><input type="radio" name="q82" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q82" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>83. The purpose of a decontamination battery is to protect PSIs from fluid invasion.</p>
+    <div class="answer"><input type="radio" name="q83" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q83" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>84. Dental Drills are used to remove cement.</p>
+    <div class="answer"><input type="radio" name="q84" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q84" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>85. Automatic endoscope reprocessors are not recommended for flexible endoscopes.</p>
+    <div class="answer"><input type="radio" name="q85" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q85" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>86. The first step to inspect the insulation of a laparoscopic instrument is to:</p>
+    <div class="answer"><input type="radio" name="q86" value="A" data-correct="true"> A. Check the collar at the distal tip</div>
+    <div class="answer"><input type="radio" name="q86" value="B"> B. Try to slide the insulation back</div>
+    <div class="answer"><input type="radio" name="q86" value="C"> C. Check the handle for chipping or cracking</div>
+    <div class="answer"><input type="radio" name="q86" value="D"> D. Visually check the instrument's shaft</div>
+</div>
+
+<div class="question" data-question="">
+    <p>87. Which of the following steps happens first when processing flexible endoscopes?</p>
+    <div class="answer"><input type="radio" name="q87" value="A" data-correct="true"> A. Leak-testing</div>
+    <div class="answer"><input type="radio" name="q87" value="B"> B. High-level disinfecting/sterilizing</div>
+    <div class="answer"><input type="radio" name="q87" value="C"> C. Manual cleaning</div>
+    <div class="answer"><input type="radio" name="q87" value="D"> D. Drying</div>
+</div>
+
+<div class="question" data-question="">
+    <p>88. Which of the following should be used to thoroughly rinse (remove) all traces of disinfectant from an endoscope's channels?</p>
+    <div class="answer"><input type="radio" name="q88" value="A"> A. Forced air</div>
+    <div class="answer"><input type="radio" name="q88" value="B"> B. Water containing approved sterilant</div>
+    <div class="answer"><input type="radio" name="q88" value="C" data-correct="true"> C. Filtered water</div>
+    <div class="answer"><input type="radio" name="q88" value="D"> D. A heated glutaraldehyde</div>
+</div>
+
+<div class="question" data-question="">
+    <p>89. The purpose of using a decontamination battery or cord when cleaning powered surgical instruments is:</p>
+    <div class="answer"><input type="radio" name="q89" value="A" data-correct="true"> A. To keep fluid from entering the unit</div>
+    <div class="answer"><input type="radio" name="q89" value="B"> B. To keep functioning batteries and cords clean</div>
+    <div class="answer"><input type="radio" name="q89" value="C"> C. To prevent electrical shock</div>
+    <div class="answer"><input type="radio" name="q89" value="D"> D. To test the unit while cleaning</div>
+</div>
+
+<div class="question" data-question="">
+    <p>90. Endoscopes are often processed in a mechanical unit called:</p>
+    <div class="answer"><input type="radio" name="q90" value="A"> A. An ultrasonic cleaner</div>
+    <div class="answer"><input type="radio" name="q90" value="B"> B. A washer-decontaminator</div>
+    <div class="answer"><input type="radio" name="q90" value="C"> C. A flush-pulse endoscope reprocessor</div>
+    <div class="answer"><input type="radio" name="q90" value="D" data-correct="true"> D. An automatic endoscope reprocessor</div>
+</div>
+
+<div class="question" data-question="">
+    <p>91. The endoscope that would be dispensed for a procedure that required visualization of the lower part of the large intestine would be a:</p>
+    <div class="answer"><input type="radio" name="q91" value="A"> A. Colonoscope</div>
+    <div class="answer"><input type="radio" name="q91" value="B" data-correct="true"> B. Sigmoidoscope</div>
+    <div class="answer"><input type="radio" name="q91" value="C"> C. Gastroscope</div>
+    <div class="answer"><input type="radio" name="q91" value="D"> D. Ureteroscope</div>
+</div>
+
+<div class="question" data-question="">
+    <p>92. Loaner instruments should:</p>
+    <div class="answer"><input type="radio" name="q92" value="A"> A. Be decontaminated if they appear soiled upon arrival</div>
+    <div class="answer"><input type="radio" name="q92" value="B"> B. Be sterilized using a low temperature process</div>
+    <div class="answer"><input type="radio" name="q92" value="C" data-correct="true"> C. Be decontaminated before use</div>
+    <div class="answer"><input type="radio" name="q92" value="D"> D. Not be used</div>
+</div>
+
+<div class="question" data-question="">
+    <p>93. Information regarding cleaning processes for endoscopes should be provided by:</p>
+    <div class="answer"><input type="radio" name="q93" value="A"> A. The SGNA</div>
+    <div class="answer"><input type="radio" name="q93" value="B"> B. APIC</div>
+    <div class="answer"><input type="radio" name="q93" value="C" data-correct="true"> C. The instrument manufacturer</div>
+    <div class="answer"><input type="radio" name="q93" value="D"> D. The operating room staff</div>
+</div>
+
+<div class="question" data-question="">
+    <p>94. Which of the following statements about endoscopes is true?</p>
+    <div class="answer"><input type="radio" name="q94" value="A" data-correct="true"> A. Not all endoscopes can be processed in an AER</div>
+    <div class="answer"><input type="radio" name="q94" value="B"> B. Ultrasonic cleaning is the process of choice for endoscopes</div>
+    <div class="answer"><input type="radio" name="q94" value="C"> C. Flexible endoscopes are not easily damaged</div>
+    <div class="answer"><input type="radio" name="q94" value="D"> D. All endoscopes should be steam sterilized</div>
+</div>
+
+<div class="question" data-question="">
+    <p>95. Electronic testing of laparoscopic insulation should be done:</p>
+    <div class="answer"><input type="radio" name="q95" value="A"> A. In the decontamination area prior to cleaning</div>
+    <div class="answer"><input type="radio" name="q95" value="B" data-correct="true"> B. In the clean assembly area prior to set assembly</div>
+    <div class="answer"><input type="radio" name="q95" value="C"> C. At the factory or onsite repair unit</div>
+    <div class="answer"><input type="radio" name="q95" value="D"> D. In the operating room at the end of the procedure</div>
+</div>
+
+<div class="question" data-question="">
+    <p>96. Loaner instrumentation poses storage and workload challenges.</p>
+    <div class="answer"><input type="radio" name="q96" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q96" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>97. Flexible endoscopes that fail a leak test may continue to be used until the break/hole impacts the scope's function.</p>
+    <div class="answer"><input type="radio" name="q97" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q97" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>98. All flexible endoscopes have internal channels.</p>
+    <div class="answer"><input type="radio" name="q98" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q98" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>99. After use, loaner instrumentation must be decontaminated before it is shipped out.</p>
+    <div class="answer"><input type="radio" name="q99" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q99" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>100. The biggest advantage to battery-powered surgical instruments is that they can be immersed for cleaning.</p>
+    <div class="answer"><input type="radio" name="q100" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q100" value="B" data-correct="true"> B. False</div>
+</div>
+
+
+
+
+		
+    <!-- Submit Button -->
+<button type="button" onclick="checkAnswers()">Submit Answers</button>
+
+
+    <script>
+        function checkAnswers() {
+        // Get all questions
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach(question => {
+            // Get all answers for this question
+            const answers = question.querySelectorAll('.answer input[type="radio"]');
+            let selectedAnswer = null;
+
+            answers.forEach(answer => {
+                if (answer.checked) {
+                    selectedAnswer = answer;
+                }
+            });
+
+            // Clear previous highlights
+            answers.forEach(answer => {
+                answer.parentElement.classList.remove('correct', 'incorrect');
+            });
+
+            // Highlight the correct and wrong answers
+            answers.forEach(answer => {
+                if (answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('correct');
+                }
+
+                if (answer === selectedAnswer && !answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('incorrect');
+                }
+            });
+        });
+    }
+    </script>
+</body>
+</html>

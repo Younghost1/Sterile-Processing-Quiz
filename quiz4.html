@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 4</title>
+    <style>
+       body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #quiz {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .question p {
+            margin: 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .answer {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .answer input[type="radio"] {
+            margin-right: 10px;
+        }
+        .answer:hover {
+            background-color: #e2e6ea;
+        }
+        .correct {
+            background-color: #d4edda; /* Light green for correct answers */
+            border: 1px solid #c3e6cb; /* Green border */ 
+        }
+        .incorrect {
+            background-color: #f8d7da; /* Light red for wrong answers */
+            border: 1px solid #f5c6cb; /* Red border */ 
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz 4</h1>
+
+<div class="question" data-question="301">
+    <p>301. The higher the bioburden on an object:</p>
+    <div class="answer"><input type="radio" name="q301" value="A" data-correct="true"> A. The more difficult it will be to sterilize</div>
+    <div class="answer"><input type="radio" name="q301" value="B"> B. The less time it will take to sterilize</div>
+    <div class="answer"><input type="radio" name="q301" value="C"> C. The more biological tests you will need in the load</div>
+    <div class="answer"><input type="radio" name="q301" value="D"> D. The longer it will take to cool after sterilization</div>
+</div>
+
+<div class="question" data-question="302">
+    <p>302. The transport of flash sterilized items is difficult because:</p>
+    <div class="answer"><input type="radio" name="q302" value="A" data-correct="true"> A. They have no protective wrapping</div>
+    <div class="answer"><input type="radio" name="q302" value="B"> B. They are wet</div>
+    <div class="answer"><input type="radio" name="q302" value="C"> C. They are hot</div>
+    <div class="answer"><input type="radio" name="q302" value="D"> D. Contained in heavy trays</div>
+</div>
+
+<div class="question" data-question="303">
+    <p>303. When processing flexible endoscopes in a liquid chemical sterile processing system you should:</p>
+    <div class="answer"><input type="radio" name="q303" value="A"> A. Pressurize the scope before starting the machine</div>
+    <div class="answer"><input type="radio" name="q303" value="B"> B. Use tap water as pre-rinse</div>
+    <div class="answer"><input type="radio" name="q303" value="C" data-correct="true"> C. Connect channels to special connectors that allow liquid to flow through them</div>
+    <div class="answer"><input type="radio" name="q303" value="D"> D. Run the cycle twice to ensure that proper microbial kill has taken place</div>
+</div>
+
+<div class="question" data-question="304">
+    <p>304. Which of the following systems provides supplies and instruments for individual surgical procedures?</p>
+    <div class="answer"><input type="radio" name="q304" value="A"> A. Exchange carts</div>
+    <div class="answer"><input type="radio" name="q304" value="B"> B. Par-level</div>
+    <div class="answer"><input type="radio" name="q304" value="C" data-correct="true"> C. Case cart</div>
+    <div class="answer"><input type="radio" name="q304" value="D"> D. Requisition</div>
+</div>
+
+<div class="question" data-question="305">
+    <p>305. Official inventory:</p>
+    <div class="answer"><input type="radio" name="q305" value="A"> A. Does not exist in today's modern healthcare facilities</div>
+    <div class="answer"><input type="radio" name="q305" value="B" data-correct="true"> B. Can be counted as an asset on the facility's balance sheet</div>
+    <div class="answer"><input type="radio" name="q305" value="C"> C. Is owned by the vendor but stored at the healthcare facility</div>
+    <div class="answer"><input type="radio" name="q305" value="D"> D. Is owned by the healthcare facility but stored by the vendor</div>
+</div>
+
+<div class="question" data-question="306">
+    <p>306. The inventory system that stocks supplies by established stock levels is called:</p>
+    <div class="answer"><input type="radio" name="q306" value="A" data-correct="true"> A. Par-level</div>
+    <div class="answer"><input type="radio" name="q306" value="B"> B. Case cart</div>
+    <div class="answer"><input type="radio" name="q306" value="C"> C. ADT system</div>
+    <div class="answer"><input type="radio" name="q306" value="D"> D. Exchange system</div>
+</div>
+
+<div class="question" data-question="307">
+    <p>307. The movement of supplies throughout the healthcare facility is called:</p>
+    <div class="answer"><input type="radio" name="q307" value="A" data-correct="true"> A. Distribution</div>
+    <div class="answer"><input type="radio" name="q307" value="B"> B. Inventory management</div>
+    <div class="answer"><input type="radio" name="q307" value="C"> C. Case cart system</div>
+    <div class="answer"><input type="radio" name="q307" value="D"> D. Procurement</div>
+</div>
+
+<div class="question" data-question="308">
+    <p>308. Implantable devices:</p>
+    <div class="answer"><input type="radio" name="q308" value="A" data-correct="true"> A. Should not be flash sterilized</div>
+    <div class="answer"><input type="radio" name="q308" value="B"> B. Should be discarded if not used</div>
+    <div class="answer"><input type="radio" name="q308" value="C"> C. Should only be sterilized using ethylene oxide</div>
+    <div class="answer"><input type="radio" name="q308" value="D"> D. Should be flash sterilized in extended cycles</div>
+</div>
+
+<div class="question" data-question="309">
+    <p>309. If an equipment malfunction causes harm to patients, it should be:</p>
+    <div class="answer"><input type="radio" name="q309" value="A"> A. Sent to the manufacturer for repairs</div>
+    <div class="answer"><input type="radio" name="q309" value="B"> B. Sequestered for inspection by OSHA personnel</div>
+    <div class="answer"><input type="radio" name="q309" value="C" data-correct="true"> C. Returned immediately to the biomedical department</div>
+    <div class="answer"><input type="radio" name="q309" value="D"> D. Discarded immediately</div>
+</div>
+
+<div class="question" data-question="310">
+    <p>310. Instrument making tape should be wrapped approximately ____________ around the instrument.</p>
+    <div class="answer"><input type="radio" name="q310" value="A"> A. 1 1/2 to 2</div>
+    <div class="answer"><input type="radio" name="q310" value="B"> B. 2 1/2 to 3</div>
+    <div class="answer"><input type="radio" name="q310" value="C" data-correct="true"> C. 1 to 1 1/2</div>
+    <div class="answer"><input type="radio" name="q310" value="D"> D. 2 to 2 1/2</div>
+</div>
+
+<div class="question" data-question="311">
+    <p>311. Disadvantages to a Case Cart Distribution System:</p>
+    <div class="answer"><input type="radio" name="q311" value="A"> A. Not require orders</div>
+    <div class="answer"><input type="radio" name="q311" value="B" data-correct="true"> B. A lag time between usage and replenishment</div>
+    <div class="answer"><input type="radio" name="q311" value="C"> C. A waste of time</div>
+    <div class="answer"><input type="radio" name="q311" value="D"> D. Less efficiency organization</div>
+</div>
+
+<div class="question" data-question="312">
+    <p>312. Material safety data are provided by:</p>
+    <div class="answer"><input type="radio" name="q312" value="A"> A. OSHA</div>
+    <div class="answer"><input type="radio" name="q312" value="B" data-correct="true"> B. The product manufacturer</div>
+    <div class="answer"><input type="radio" name="q312" value="C"> C. The risk management department</div>
+    <div class="answer"><input type="radio" name="q312" value="D"> D. The FDA</div>
+</div>
+
+<div class="question" data-question="313">
+    <p>313. The inventory system that uses two identical carts to facilitate the distribution of supplies is known as:</p>
+    <div class="answer"><input type="radio" name="q313" value="A" data-correct="true"> A. Exchange cart</div>
+    <div class="answer"><input type="radio" name="q313" value="B"> B. Par-level</div>
+    <div class="answer"><input type="radio" name="q313" value="C"> C. Case cart</div>
+    <div class="answer"><input type="radio" name="q313" value="D"> D. Stock cart</div>
+</div>
+
+<div class="question" data-question="">
+    <p>314. Wicking materials are used to:</p>
+    <div class="answer"><input type="radio" name="q314" value="A" data-correct="true"> A. Allow air removal, steam penetration and facilitate drying</div>
+    <div class="answer"><input type="radio" name="q314" value="B"> B. Cushion instruments from the extreme force in steam sterilizer chambers</div>
+    <div class="answer"><input type="radio" name="q314" value="C"> C. Hold water away from the bottom of instrument trays</div>
+    <div class="answer"><input type="radio" name="q314" value="D"> D. Dry instruments before sterilization</div>
+</div>
+
+<div class="question" data-question="">
+    <p>315. Which of the following steps happens first when proceeding with flexible endoscopies?</p>
+    <div class="answer"><input type="radio" name="q315" value="A"> A. High-level disinfecting/sterilizing</div>
+    <div class="answer"><input type="radio" name="q315" value="B"> B. Drying</div>
+    <div class="answer"><input type="radio" name="q315" value="C" data-correct="true"> C. Leak testing</div>
+    <div class="answer"><input type="radio" name="q315" value="D"> D. Manual cleaning</div>
+</div>
+
+<div class="question" data-question="">
+    <p>316. Some plastics including formulations of spun-bonded polyolefin are intended for use solely in these sterilization processes:</p>
+    <div class="answer"><input type="radio" name="q316" value="A"> A. Flash</div>
+    <div class="answer"><input type="radio" name="q316" value="B" data-correct="true"> B. Low temperature</div>
+    <div class="answer"><input type="radio" name="q316" value="C"> C. High temperature</div>
+    <div class="answer"><input type="radio" name="q316" value="D"> D. Liquid</div>
+</div>
+
+<div class="question" data-question="">
+    <p>317. Why is it important to evenly distribute large instruments in a set?</p>
+    <div class="answer"><input type="radio" name="q317" value="A"> A. Follow procedures of the supervisor</div>
+    <div class="answer"><input type="radio" name="q317" value="B"> B. Because the sterilizer has a big space</div>
+    <div class="answer"><input type="radio" name="q317" value="C"> C. Contact manufacturer for further instructions</div>
+    <div class="answer"><input type="radio" name="q317" value="D" data-correct="true"> D. Extra condensation will make the set more difficult to dry</div>
+</div>
+
+<div class="question" data-question="">
+    <p>318. The movement of supplies throughout the healthcare facility is called:</p>
+    <div class="answer"><input type="radio" name="q318" value="A" data-correct="true"> A. Distribution</div>
+    <div class="answer"><input type="radio" name="q318" value="B"> B. Procurement</div>
+    <div class="answer"><input type="radio" name="q318" value="C"> C. Inventory management</div>
+    <div class="answer"><input type="radio" name="q318" value="D"> D. Case cart system</div>
+</div>
+
+<div class="question" data-question="">
+    <p>319. In order to elevate the temperature in a steam sterilizer, you must:</p>
+    <div class="answer"><input type="radio" name="q319" value="A"> A. Achieve ambient pressure</div>
+    <div class="answer"><input type="radio" name="q319" value="B"> B. Inject boiler amines</div>
+    <div class="answer"><input type="radio" name="q319" value="C"> C. Decrease the steam pressure</div>
+    <div class="answer"><input type="radio" name="q319" value="D" data-correct="true"> D. Increase the steam pressure</div>
+</div>
+
+<div class="question" data-question="">
+    <p>320. Which of the following is NOT a feature of an instrument tracking system?</p>
+    <div class="answer"><input type="radio" name="q320" value="A"> A. Productivity information</div>
+    <div class="answer"><input type="radio" name="q320" value="B" data-correct="true"> B. Product updates and recall information</div>
+    <div class="answer"><input type="radio" name="q320" value="C"> C. Financial data</div>
+    <div class="answer"><input type="radio" name="q320" value="D"> D. Quality assurance information</div>
+</div>
+
+
+<div class="question" data-question="">
+    <p>321. Which of the following information is NOT included in the MSDS?</p>
+    <div class="answer"><input type="radio" name="q321" value="A"> A. Product identification</div>
+    <div class="answer"><input type="radio" name="q321" value="B" data-correct="true"> B. Required inventory levels</div>
+    <div class="answer"><input type="radio" name="q321" value="C"> C. Special precautions</div>
+    <div class="answer"><input type="radio" name="q321" value="D"> D. Physical data</div>
+</div>
+
+<div class="question" data-question="">
+    <p>322. Which of the following systems provides supplies and instruments for individual surgical procedures?</p>
+    <div class="answer"><input type="radio" name="q322" value="A" data-correct="true"> A. Case cart</div>
+    <div class="answer"><input type="radio" name="q322" value="B"> B. Par level</div>
+    <div class="answer"><input type="radio" name="q322" value="C"> C. Exchange cart</div>
+    <div class="answer"><input type="radio" name="q322" value="D"> D. Requisition</div>
+</div>
+
+<div class="question" data-question="">
+    <p>323. In the event of a load recall, information about specific load contents can be obtained from:</p>
+    <div class="answer"><input type="radio" name="q323" value="A" data-correct="true"> A. The sterilization log</div>
+    <div class="answer"><input type="radio" name="q323" value="B"> B. The hospital safety director</div>
+    <div class="answer"><input type="radio" name="q323" value="C"> C. The procedure manual</div>
+    <div class="answer"><input type="radio" name="q323" value="D"> D. The central service supervisor</div>
+</div>
+
+<div class="question" data-question="">
+    <p>324. Which of the following common items of patient care equipment limits the development of DVT (deep vein thrombosis) and peripheral edema in immobile patients?</p>
+    <div class="answer"><input type="radio" name="q324" value="A"> A. Defibrillator</div>
+    <div class="answer"><input type="radio" name="q324" value="B"> B. Intermittent suction device</div>
+    <div class="answer"><input type="radio" name="q324" value="C"> C. Respirator</div>
+    <div class="answer"><input type="radio" name="q324" value="D" data-correct="true"> D. Sequential compression unit</div>
+</div>
+
+<div class="question" data-question="">
+    <p>325. Bowie Dick tests should be run in:</p>
+    <div class="answer"><input type="radio" name="q325" value="A"> A. Washers/sterilizers</div>
+    <div class="answer"><input type="radio" name="q325" value="B"> B. Downward displacement sterilizers</div>
+    <div class="answer"><input type="radio" name="q325" value="C" data-correct="true"> C. Dynamic air removal steam sterilizers</div>
+    <div class="answer"><input type="radio" name="q325" value="D"> D. Ethylene oxide sterilizers</div>
+</div>
+
+<div class="question" data-question="">
+    <p>326. Which type of fire extinguisher should be used on flammable liquids?</p>
+    <div class="answer"><input type="radio" name="q326" value="A"> A. Type C</div>
+    <div class="answer"><input type="radio" name="q326" value="B"> B. Type A</div>
+    <div class="answer"><input type="radio" name="q326" value="C" data-correct="true"> C. Type B</div>
+    <div class="answer"><input type="radio" name="q326" value="D"> D. Type D</div>
+</div>
+
+<div class="question" data-question="">
+    <p>327. Equipment leasing and rental differ in that:</p>
+    <div class="answer"><input type="radio" name="q327" value="A" data-correct="true"> A. Equipment rental is usually done on a shorter-term basis than equipment leasing</div>
+    <div class="answer"><input type="radio" name="q327" value="B"> B. Leasing involves purchase; rental does not require ownership</div>
+    <div class="answer"><input type="radio" name="q327" value="C"> C. Equipment leasing involves the most expensive equipment; equipment rental involves less expensive equipment</div>
+    <div class="answer"><input type="radio" name="q327" value="D"> D. Equipment leasing is an operating expense; equipment rental does not have cost implications</div>
+</div>
+
+<div class="question" data-question="">
+    <p>328. The inventory system that stocks supplies by established levels is called:</p>
+    <div class="answer"><input type="radio" name="q328" value="A" data-correct="true"> A. Par-level</div>
+    <div class="answer"><input type="radio" name="q328" value="B"> B. Case cart</div>
+    <div class="answer"><input type="radio" name="q328" value="C"> C. Exchange system</div>
+    <div class="answer"><input type="radio" name="q328" value="D"> D. ADT system</div>
+</div>
+
+<div class="question" data-question="">
+    <p>329. The first step to inspect the insulation of laparoscopic instruments is to:</p>
+    <div class="answer"><input type="radio" name="q329" value="A"> A. Visually check the instrument shaft</div>
+    <div class="answer"><input type="radio" name="q329" value="B"> B. Check the handle for chipping or cracking</div>
+    <div class="answer"><input type="radio" name="q329" value="C" data-correct="true"> C. Check the collar at the distal tip</div>
+    <div class="answer"><input type="radio" name="q329" value="D"> D. Try to slide the insulation back</div>
+</div>
+
+<div class="question" data-question="">
+    <p>330. All patient care equipment dispensed for use must be considered __________ and handled as such, regardless of its appearance:</p>
+    <div class="answer"><input type="radio" name="q330" value="A"> A. Clean</div>
+    <div class="answer"><input type="radio" name="q330" value="B" data-correct="true"> B. Contaminated</div>
+    <div class="answer"><input type="radio" name="q330" value="C"> C. Defibrillator</div>
+    <div class="answer"><input type="radio" name="q330" value="D"> D. Sterile</div>
+</div>
+
+<div class="question" data-question="">
+    <p>331. 1005 ethylene oxide gas canisters should be stored:</p>
+    <div class="answer"><input type="radio" name="q331" value="A"> A. Outside</div>
+    <div class="answer"><input type="radio" name="q331" value="B" data-correct="true"> B. In a chemical storage cabinet</div>
+    <div class="answer"><input type="radio" name="q331" value="C"> C. In a refrigerator</div>
+    <div class="answer"><input type="radio" name="q331" value="D"> D. In a chamber heated to 75°F</div>
+</div>
+
+<div class="question" data-question="">
+    <p>332. Parts of this surgical instrument?</p>
+    <div class="answer"><input type="radio" name="q332" value="A"> A. Jaw, tips, box lock, shanks, handle, neck</div>
+    <div class="answer"><input type="radio" name="q332" value="B"> B. Proximal end, handle, tip serrations</div>
+    <div class="answer"><input type="radio" name="q332" value="C" data-correct="true"> C. Rings, ratchet, shanks, box lock, jaw, tips</div>
+    <div class="answer"><input type="radio" name="q332" value="D"> D. Loop handle, shank, blade</div>
+</div>
+
+<div class="question" data-question="">
+    <p>333. Heat sensitive items:</p>
+    <div class="answer"><input type="radio" name="q333" value="A"> A. Should not be used</div>
+    <div class="answer"><input type="radio" name="q333" value="B" data-correct="true"> B. Cannot be flash sterilized</div>
+    <div class="answer"><input type="radio" name="q333" value="C"> C. Must not be immersed</div>
+    <div class="answer"><input type="radio" name="q333" value="D"> D. Should be disposable</div>
+</div>
+
+<div class="question" data-question="">
+    <p>334. Point of use computing:</p>
+    <div class="answer"><input type="radio" name="q334" value="A"> A. Eliminates data entry jobs</div>
+    <div class="answer"><input type="radio" name="q334" value="B" data-correct="true"> B. Moves computers into central service department work areas</div>
+    <div class="answer"><input type="radio" name="q334" value="C"> C. Provides no benefit to the central service department</div>
+    <div class="answer"><input type="radio" name="q334" value="D"> D. Is impossible in central service department because of infection control requirements</div>
+</div>
+
+<div class="question" data-question="">
+    <p>335. The process by which unwrapped instruments are steam sterilized for immediate use when an emergency situation arises is called:</p>
+    <div class="answer"><input type="radio" name="q335" value="A"> A. Emergency sterilization</div>
+    <div class="answer"><input type="radio" name="q335" value="B" data-correct="true"> B. Flash sterilization</div>
+    <div class="answer"><input type="radio" name="q335" value="C"> C. Rapid reprocessing</div>
+    <div class="answer"><input type="radio" name="q335" value="D"> D. Core sterilization</div>
+</div>
+
+<div class="question" data-question="">
+    <p>336. Technicians on the __________ department perform safety inspections and functional tests on equipment:</p>
+    <div class="answer"><input type="radio" name="q336" value="A" data-correct="true"> A. Biomedical engineering</div>
+    <div class="answer"><input type="radio" name="q336" value="B"> B. Facilities and maintenance</div>
+    <div class="answer"><input type="radio" name="q336" value="C"> C. Infection control</div>
+    <div class="answer"><input type="radio" name="q336" value="D"> D. Material management</div>
+</div>
+
+<div class="question" data-question="">
+    <p>337. What is burning in a class C fire?</p>
+    <div class="answer"><input type="radio" name="q337" value="A" data-correct="true"> A. Energized electrical equipment</div>
+    <div class="answer"><input type="radio" name="q337" value="B"> B. Wood or paper</div>
+    <div class="answer"><input type="radio" name="q337" value="C"> C. Flammable liquid</div>
+    <div class="answer"><input type="radio" name="q337" value="D"> D. Cloth or plastic</div>
+</div>
+
+<div class="question" data-question="">
+    <p>338. When loading a steam sterilizer, items with solid bottoms should be:</p>
+    <div class="answer"><input type="radio" name="q338" value="A" data-correct="true"> A. Placed on edge</div>
+    <div class="answer"><input type="radio" name="q338" value="B"> B. Placed in a wire basket</div>
+    <div class="answer"><input type="radio" name="q338" value="C"> C. Placed in an upright position</div>
+    <div class="answer"><input type="radio" name="q338" value="D"> D. Loaded first</div>
+</div>
+
+<div class="question" data-question="">
+    <p>339. Information regarding cleaning processes for endoscopes should be provided by:</p>
+    <div class="answer"><input type="radio" name="q339" value="A"> A. APIC</div>
+    <div class="answer"><input type="radio" name="q339" value="B" data-correct="true"> B. The instrument manufacturer</div>
+    <div class="answer"><input type="radio" name="q339" value="C"> C. The SGNA</div>
+    <div class="answer"><input type="radio" name="q339" value="D"> D. The operating room staff</div>
+</div>
+
+<div class="question" data-question="">
+    <p>340. Which of the following basic listening tactics is most useful?</p>
+    <div class="answer"><input type="radio" name="q340" value="A"> A. Try to listen to the specific facts</div>
+    <div class="answer"><input type="radio" name="q340" value="B"> B. Ignore all non-verbal communication “sent” by the speaker</div>
+    <div class="answer"><input type="radio" name="q340" value="C"> C. Focus on the delivery of the message rather than its content</div>
+    <div class="answer"><input type="radio" name="q340" value="D" data-correct="true"> D. None of the above tactics is useful listening tactics</div>
+</div>
+
+<div class="question" data-question="">
+    <p>341. Which of the following is NOT an acceptable sterilization packaging material?</p>
+    <div class="answer"><input type="radio" name="q341" value="A"> A. Twills</div>
+    <div class="answer"><input type="radio" name="q341" value="B" data-correct="true"> B. Canvas</div>
+    <div class="answer"><input type="radio" name="q341" value="C"> C. Barrier cloth</div>
+    <div class="answer"><input type="radio" name="q341" value="D"> D. Muslin</div>
+</div>
+
+<div class="question" data-question="">
+    <p>342. A step in communication that occurs when a listener asks a question is called:</p>
+    <div class="answer"><input type="radio" name="q342" value="A"> A. Communication looping</div>
+    <div class="answer"><input type="radio" name="q342" value="B"> B. STEREOTYPING</div>
+    <div class="answer"><input type="radio" name="q342" value="C" data-correct="true"> C. Feedback</div>
+    <div class="answer"><input type="radio" name="q342" value="D"> D. Halo interpretation</div>
+</div>
+
+<div class="question" data-question="">
+    <p>343. How frequently should a sterilizer strainer be removed and cleaned?</p>
+    <div class="answer"><input type="radio" name="q343" value="A"> A. Once weekly</div>
+    <div class="answer"><input type="radio" name="q343" value="B"> B. Only when the machine's operating control gauge indicates cleaning is necessary</div>
+    <div class="answer"><input type="radio" name="q343" value="C" data-correct="true"> C. Daily</div>
+    <div class="answer"><input type="radio" name="q343" value="D"> D. After each use</div>
+</div>
+
+<div class="question" data-question="">
+    <p>344. Disposable components such as pads and tubing on patient care equipment should be:</p>
+    <div class="answer"><input type="radio" name="q344" value="A"> A. Removed in the biomedical engineering department</div>
+    <div class="answer"><input type="radio" name="q344" value="B" data-correct="true"> B. Discarded at point of use</div>
+    <div class="answer"><input type="radio" name="q344" value="C"> C. Be reprocessed for re-use</div>
+    <div class="answer"><input type="radio" name="q344" value="D"> D. Discarded during preventive maintenance</div>
+</div>
+
+<div class="question" data-question="">
+    <p>345. When arranging plastic-paper pouches in the sterilizer, the pouches should be arranged:</p>
+    <div class="answer"><input type="radio" name="q345" value="A"> A. Plastic to plastic</div>
+    <div class="answer"><input type="radio" name="q345" value="B" data-correct="true"> B. Paper to plastic</div>
+    <div class="answer"><input type="radio" name="q345" value="C"> C. Paper to paper</div>
+    <div class="answer"><input type="radio" name="q345" value="D"> D. The way in which the most packages can be placed in the sterilizer</div>
+</div>
+
+<div class="question" data-question="">
+    <p>346. What is the concentration of an antiseptic liquid used in healthcare facilities?</p>
+    <div class="answer"><input type="radio" name="q346" value="A" data-correct="true"> A. 60% to 95%</div>
+    <div class="answer"><input type="radio" name="q346" value="B"> B. 80% to 20%</div>
+    <div class="answer"><input type="radio" name="q346" value="C"> C. 100% to 70%</div>
+    <div class="answer"><input type="radio" name="q346" value="D"> D. 50% to 50%</div>
+</div>
+
+<div class="question" data-question="">
+    <p>347. Kerrison laminectomy rongeurs should be tested using:</p>
+    <div class="answer"><input type="radio" name="q347" value="A"> A. A plastic dowel rod</div>
+    <div class="answer"><input type="radio" name="q347" value="B" data-correct="true"> B. An index card</div>
+    <div class="answer"><input type="radio" name="q347" value="C"> C. Tissue paper</div>
+    <div class="answer"><input type="radio" name="q347" value="D"> D. Rubber testing material</div>
+</div>
+
+<div class="question" data-question="">
+    <p>348. Which of the following statements is true?</p>
+    <div class="answer"><input type="radio" name="q348" value="A" data-correct="true"> A. None of the above statements is true</div>
+    <div class="answer"><input type="radio" name="q348" value="B"> B. Words mean the same to everyone</div>
+    <div class="answer"><input type="radio" name="q348" value="C"> C. We only communicate when we want to</div>
+    <div class="answer"><input type="radio" name="q348" value="D"> D. Message should contain all possible information</div>
+</div>
+
+<div class="question" data-question="">
+    <p>349. Maintenance insurance:</p>
+    <div class="answer"><input type="radio" name="q349" value="A"> A. Is the same as outsourcing</div>
+    <div class="answer"><input type="radio" name="q349" value="B"> B. Can reduce equipment downtime</div>
+    <div class="answer"><input type="radio" name="q349" value="C"> C. Is required by the FDA</div>
+    <div class="answer"><input type="radio" name="q349" value="D" data-correct="true"> D. Can help manage costs</div>
+</div>
+
+<div class="question" data-question="">
+    <p>350. Which of the following tracking methods provides real-time information?</p>
+    <div class="answer"><input type="radio" name="q350" value="A"> A. Do matrix applications</div>
+    <div class="answer"><input type="radio" name="q350" value="B"> B. Standard bar code</div>
+    <div class="answer"><input type="radio" name="q350" value="C" data-correct="true"> C. RFID</div>
+    <div class="answer"><input type="radio" name="q350" value="D"> D. Laser etched bar codes</div>
+</div>
+
+<div class="question" data-question="">
+    <p>351. Behavior relating to what is "right and wrong" relative to the standards of conduct for your profession are called:</p>
+    <div class="answer"><input type="radio" name="q351" value="A"> A. Personal behavior</div>
+    <div class="answer"><input type="radio" name="q351" value="B"> B. Legal behavior</div>
+    <div class="answer"><input type="radio" name="q351" value="C" data-correct="true"> C. Ethical behavior</div>
+    <div class="answer"><input type="radio" name="q351" value="D"> D. Moral behavior</div>
+</div>
+
+<div class="question" data-question="">
+    <p>352. The endoscope that would be dispensed for a procedure that requires visualization of the lower part of the large intestine would be a:</p>
+    <div class="answer"><input type="radio" name="q352" value="A"> A. Gastroscope</div>
+    <div class="answer"><input type="radio" name="q352" value="B" data-correct="true"> B. Sigmoidoscope</div>
+    <div class="answer"><input type="radio" name="q352" value="C"> C. Ureteroscope</div>
+    <div class="answer"><input type="radio" name="q352" value="D"> D. Colonoscope</div>
+</div>
+
+<div class="question" data-question="">
+    <p>353. A material that removes electrons from another substance is called:</p>
+    <div class="answer"><input type="radio" name="q353" value="A"> A. A demagnetizer</div>
+    <div class="answer"><input type="radio" name="q353" value="B" data-correct="true"> B. An oxidizing agent</div>
+    <div class="answer"><input type="radio" name="q353" value="C"> C. A molecule</div>
+    <div class="answer"><input type="radio" name="q353" value="D"> D. An atom</div>
+</div>
+
+<div class="question" data-question="">
+    <p>354. If a sterilizer has successfully killed all the bacterial spores in a biological test:</p>
+    <div class="answer"><input type="radio" name="q354" value="A"> A. It is called a positive test</div>
+    <div class="answer"><input type="radio" name="q354" value="B"> B. An alarm will sound at the completion of the cycle</div>
+    <div class="answer"><input type="radio" name="q354" value="C"> C. It is taken out of service until it is repaired</div>
+    <div class="answer"><input type="radio" name="q354" value="D" data-correct="true"> D. It is called a negative test</div>
+</div>
+
+<div class="question" data-question="">
+    <p>355. The term "superheated steam" means:</p>
+    <div class="answer"><input type="radio" name="q355" value="A"> A. Moist steam at sea level</div>
+    <div class="answer"><input type="radio" name="q355" value="B"> B. The type of steam necessary for high temperature sterilization</div>
+    <div class="answer"><input type="radio" name="q355" value="C" data-correct="true"> C. Dry steam</div>
+    <div class="answer"><input type="radio" name="q355" value="D"> D. Steam that has had chemicals added to it to increase its temperature</div>
+</div>
+
+<div class="question" data-question="">
+    <p>356. The most efficient type of dry heat sterilizer is:</p>
+    <div class="answer"><input type="radio" name="q356" value="A"> A. The special purpose dry heat oven</div>
+    <div class="answer"><input type="radio" name="q356" value="B" data-correct="true"> B. The mechanical convection sterilizer</div>
+    <div class="answer"><input type="radio" name="q356" value="C"> C. The gravity convection sterilizer</div>
+    <div class="answer"><input type="radio" name="q356" value="D"> D. The dynamic air removal sterilizer</div>
+</div>
+
+<div class="question" data-question="">
+    <p>357. The transport of flash sterilized items is difficult because:</p>
+    <div class="answer"><input type="radio" name="q357" value="A"> A. They are hot</div>
+    <div class="answer"><input type="radio" name="q357" value="B"> B. They are wet</div>
+    <div class="answer"><input type="radio" name="q357" value="C"> C. Contained in heavy trays</div>
+    <div class="answer"><input type="radio" name="q357" value="D" data-correct="true"> D. They have no protective wrapping</div>
+</div>
+
+<div class="question" data-question="">
+    <p>358. Chemical indicators:</p>
+    <div class="answer"><input type="radio" name="q358" value="A"> A. Prove that an item is sterile</div>
+    <div class="answer"><input type="radio" name="q358" value="B"> B. Provide information about bacterial spore kill within the sterilizer</div>
+    <div class="answer"><input type="radio" name="q358" value="C"> C. Prove that the sterilizer did not damage heat sensitive items</div>
+    <div class="answer"><input type="radio" name="q358" value="D" data-correct="true"> D. Provide a visual indication that an item was exposed to a sterilization process</div>
+</div>
+
+<div class="question" data-question="">
+    <p>359. The higher the bioburden on an object:</p>
+    <div class="answer"><input type="radio" name="q359" value="A"> A. The longer it will take to cool after sterilization</div>
+    <div class="answer"><input type="radio" name="q359" value="B"> B. The more biological tests you will need in the load</div>
+    <div class="answer"><input type="radio" name="q359" value="C" data-correct="true"> C. The more difficult it will be to sterilize</div>
+    <div class="answer"><input type="radio" name="q359" value="D"> D. The less time it will take to sterilize it</div>
+</div>
+
+<div class="question" data-question="">
+    <p>360. Ergonomic injuries:</p>
+    <div class="answer"><input type="radio" name="q360" value="A"> A. Happen only in the office setting</div>
+    <div class="answer"><input type="radio" name="q360" value="B" data-correct="true"> B. Are a risk factor for persons who perform repetitive or physical work</div>
+    <div class="answer"><input type="radio" name="q360" value="C"> C. Are rare in today's work environment</div>
+    <div class="answer"><input type="radio" name="q360" value="D"> D. Are not a concern for central service employees</div>
+</div>
+
+<div class="question" data-question="">
+    <p>361. Paper/plastic sterilization pouches:</p>
+    <div class="answer"><input type="radio" name="q361" value="A"> A. Should be used only for dry heat sterilization processes</div>
+    <div class="answer"><input type="radio" name="q361" value="B"> B. Are not suitable for steam sterilization processes</div>
+    <div class="answer"><input type="radio" name="q361" value="C" data-correct="true"> C. Should not be placed inside of wrapped sets or containers</div>
+    <div class="answer"><input type="radio" name="q361" value="D"> D. Are used to package wood and cork products for sterilization</div>
+</div>
+
+<div class="question" data-question="">
+    <p>362. Tests which use live bacterial spores to challenge the efficacy of the sterilization process and provide a direct measure of lethality are called:</p>
+    <div class="answer"><input type="radio" name="q362" value="A" data-correct="true"> A. Biological tests</div>
+    <div class="answer"><input type="radio" name="q362" value="B"> B. Chemical integrator tests</div>
+    <div class="answer"><input type="radio" name="q362" value="C"> C. Ampulization tests</div>
+    <div class="answer"><input type="radio" name="q362" value="D"> D. Chemical indicator tests</div>
+</div>
+
+<div class="question" data-question="">
+    <p>363. Secondary containers of chemicals:</p>
+    <div class="answer"><input type="radio" name="q363" value="A"> A. Must be labeled with a permanent marker and must state the chemical's name and designated storage location</div>
+    <div class="answer"><input type="radio" name="q363" value="B"> B. There are no restrictions for secondary container labels at this time</div>
+    <div class="answer"><input type="radio" name="q363" value="C"> C. Secondary containers of chemicals are not allowed in healthcare facilities</div>
+    <div class="answer"><input type="radio" name="q363" value="D" data-correct="true"> D. Must be labeled with a copy of the original manufacturer's label or a generic label that identifies hazard warnings and directions</div>
+</div>
+
+<div class="question" data-question="">
+    <p>364. When placing ring-handled instruments in an instrument tray, you should:</p>
+    <div class="answer"><input type="radio" name="q364" value="A"> A. Arrange the instruments in alphabetical order</div>
+    <div class="answer"><input type="radio" name="q364" value="B" data-correct="true"> B. Unlock the handles and open the instruments</div>
+    <div class="answer"><input type="radio" name="q364" value="C"> C. Lock the handles to prevent damage during sterilization</div>
+    <div class="answer"><input type="radio" name="q364" value="D"> D. Arrange the instruments in the order of their use</div>
+</div>
+
+<div class="question" data-question="">
+    <p>365. Loaner instruments should:</p>
+    <div class="answer"><input type="radio" name="q365" value="A"> A. Not be used</div>
+    <div class="answer"><input type="radio" name="q365" value="B"> B. Be sterilized using a low-temperature process</div>
+    <div class="answer"><input type="radio" name="q365" value="C"> C. Be decontaminated if they appear soiled upon arrival</div>
+    <div class="answer"><input type="radio" name="q365" value="D" data-correct="true"> D. Be decontaminated before use</div>
+</div>
+
+<div class="question" data-question="">
+    <p>366. Both AORN and the Joint Commission recommend that:</p>
+    <div class="answer"><input type="radio" name="q366" value="A"> A. Only central service technicians operate flash sterilizers</div>
+    <div class="answer"><input type="radio" name="q366" value="B"> B. Healthcare facilities get FDA approval for flash sterilization</div>
+    <div class="answer"><input type="radio" name="q366" value="C" data-correct="true"> C. The use of flash sterilization be minimized or decreased</div>
+    <div class="answer"><input type="radio" name="q366" value="D"> D. Flash sterilization be performed in only one sterilizer per facility</div>
+</div>
+
+<div class="question" data-question="">
+    <p>367. The purpose of using a decontamination battery or cord when cleaning powered surgical instruments is:</p>
+    <div class="answer"><input type="radio" name="q367" value="A"> A. To prevent electrical shock</div>
+    <div class="answer"><input type="radio" name="q367" value="B"> B. To keep functioning batteries and cords clean</div>
+    <div class="answer"><input type="radio" name="q367" value="C" data-correct="true"> C. To keep fluid from entering the unit</div>
+    <div class="answer"><input type="radio" name="q367" value="D"> D. To test the unit while cleaning</div>
+</div>
+
+<div class="question" data-question="">
+    <p>368. A solution having a pH of 7 means:</p>
+    <div class="answer"><input type="radio" name="q368" value="A"> A. Too dense</div>
+    <div class="answer"><input type="radio" name="q368" value="B"> B. Too alkaline</div>
+    <div class="answer"><input type="radio" name="q368" value="C"> C. Too acidic</div>
+    <div class="answer"><input type="radio" name="q368" value="D" data-correct="true"> D. Neutral</div>
+</div>
+
+<div class="question" data-question="">
+    <p>369. Which of the following is the most important factor necessary for teamwork?</p>
+    <div class="answer"><input type="radio" name="q369" value="A"> A. Cooperation</div>
+    <div class="answer"><input type="radio" name="q369" value="B"> B. Promptness</div>
+    <div class="answer"><input type="radio" name="q369" value="C" data-correct="true"> C. Attitude</div>
+    <div class="answer"><input type="radio" name="q369" value="D"> D. Loyalty</div>
+</div>
+
+<div class="question" data-question="">
+    <p>370. Which of the following requires preventive maintenance standards be established for medical equipment?</p>
+    <div class="answer"><input type="radio" name="q370" value="A"> A. AORN</div>
+    <div class="answer"><input type="radio" name="q370" value="B"> B. AAMI</div>
+    <div class="answer"><input type="radio" name="q370" value="C" data-correct="true"> C. Joint Commission</div>
+    <div class="answer"><input type="radio" name="q370" value="D"> D. OSHA</div>
+</div>
+
+<div class="question" data-question="">
+    <p>371. The amount of time that it takes to kill 90% of the microorganisms present on an object is called:</p>
+    <div class="answer"><input type="radio" name="q371" value="A"> A. Exposure time</div>
+    <div class="answer"><input type="radio" name="q371" value="B"> B. Time weighted average</div>
+    <div class="answer"><input type="radio" name="q371" value="C"> C. A sterilization cycle</div>
+    <div class="answer"><input type="radio" name="q371" value="D" data-correct="true"> D. A D value</div>
+</div>
+
+<div class="question" data-question="">
+    <p>372. What instruments clean the sonic irrigator?</p>
+    <div class="answer"><input type="radio" name="q372" value="A"> A. Power instruments</div>
+    <div class="answer"><input type="radio" name="q372" value="B" data-correct="true"> B. Luminex instruments</div>
+    <div class="answer"><input type="radio" name="q372" value="C"> C. Case carts</div>
+    <div class="answer"><input type="radio" name="q372" value="D"> D. Forceps</div>
+</div>
+
+<div class="question" data-question="">
+    <p>373. The relative humidity of the central service department should be:</p>
+    <div class="answer"><input type="radio" name="q373" value="A" data-correct="true"> A. Less than 75%</div>
+    <div class="answer"><input type="radio" name="q373" value="B"> B. Less than 50%</div>
+    <div class="answer"><input type="radio" name="q373" value="C"> C. Less than 35%</div>
+    <div class="answer"><input type="radio" name="q373" value="D"> D. Less than 60%</div>
+</div>
+
+<div class="question" data-question="">
+    <p>374. In this system items are owned by the vendor but stored at the healthcare facility:</p>
+    <div class="answer"><input type="radio" name="q374" value="A"> A. Min/max</div>
+    <div class="answer"><input type="radio" name="q374" value="B" data-correct="true"> B. Consignment</div>
+    <div class="answer"><input type="radio" name="q374" value="C"> C. Stockless</div>
+    <div class="answer"><input type="radio" name="q374" value="D"> D. Just-in-time</div>
+</div>
+
+<div class="question" data-question="">
+    <p>375. Before an item can be placed in a liquid chemical sterile processing system they must be:</p>
+    <div class="answer"><input type="radio" name="q375" value="A"> A. Sterilized</div>
+    <div class="answer"><input type="radio" name="q375" value="B"> B. Heated</div>
+    <div class="answer"><input type="radio" name="q375" value="C" data-correct="true"> C. Cleaned</div>
+    <div class="answer"><input type="radio" name="q375" value="D"> D. Filled with air</div>
+</div>
+
+<div class="question" data-question="">
+    <p>376. Official inventory:</p>
+    <div class="answer"><input type="radio" name="q376" value="A"> A. Is owned by the vendor but stored at the healthcare facility</div>
+    <div class="answer"><input type="radio" name="q376" value="B"> B. Is owned by the healthcare facility but stored by the vendor</div>
+    <div class="answer"><input type="radio" name="q376" value="C" data-correct="true"> C. Can be counted as an asset on the facility's balance sheet</div>
+    <div class="answer"><input type="radio" name="q376" value="D"> D. Does not exist in today's modern healthcare facilities</div>
+</div>
+
+<div class="question" data-question="">
+    <p>377. All soiled instruments and materials are received from the user units into the Central Service ______ area:</p>
+    <div class="answer"><input type="radio" name="q377" value="A"> A. Preparation</div>
+    <div class="answer"><input type="radio" name="q377" value="B" data-correct="true"> B. Decontamination</div>
+    <div class="answer"><input type="radio" name="q377" value="C"> C. Sterilization</div>
+</div>
+
+<div class="question" data-question="">
+    <p>378. All medical terms consist of each of the following word elements: prefix, root and suffix:</p>
+    <div class="answer"><input type="radio" name="q378" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q378" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>379. The purpose of a prefix is to alter or modify the meaning of the root element:</p>
+    <div class="answer"><input type="radio" name="q379" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q379" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>380. There are two parts to the ear: the outer ear and the inner ear:</p>
+    <div class="answer"><input type="radio" name="q380" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q380" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>381. A function of the digestive system is to convert food into energy for the body:</p>
+    <div class="answer"><input type="radio" name="q381" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q381" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>382. The gastrointestinal tract is one portal of entry used by an infectious agent to enter a susceptible host:</p>
+    <div class="answer"><input type="radio" name="q382" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q382" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>383. Which of the following is not an example of surgical asepsis?</p>
+    <div class="answer"><input type="radio" name="q383" value="A"> A. Sterilization of instruments</div>
+    <div class="answer"><input type="radio" name="q383" value="B" data-correct="true"> B. Asset management</div>
+    <div class="answer"><input type="radio" name="q383" value="C"> C. Operating room techniques to prevent contamination of sterile instruments</div>
+</div>
+
+<div class="question" data-question="">
+    <p>384. Given the word, "hemigastrectomy", which element of that word is the root?</p>
+    <div class="answer"><input type="radio" name="q384" value="A"> A. Hemi</div>
+    <div class="answer"><input type="radio" name="q384" value="B" data-correct="true"> B. Gastro</div>
+    <div class="answer"><input type="radio" name="q384" value="C"> C. Ectomy</div>
+</div>
+
+<div class="question" data-question="">
+    <p>385. Which of the following glands is located at the base of the brain and is considered the "master gland"?</p>
+    <div class="answer"><input type="radio" name="q385" value="A" data-correct="true"> A. Pituitary</div>
+    <div class="answer"><input type="radio" name="q385" value="B"> B. Thyroid</div>
+    <div class="answer"><input type="radio" name="q385" value="C"> C. Adrenal</div>
+</div>
+
+<div class="question" data-question="">
+    <p>386. Which of the following is the circular opening of the eye which controls the amount of light which enters the eye?</p>
+    <div class="answer"><input type="radio" name="q386" value="A"> A. Iris</div>
+    <div class="answer"><input type="radio" name="q386" value="B" data-correct="true"> B. Pupil</div>
+    <div class="answer"><input type="radio" name="q386" value="C"> C. Cornea</div>
+</div>
+
+<div class="question" data-question="">
+    <p>387. Cells are the basic units of all living organisms and are the smallest element that can live, grow, and reproduce:</p>
+    <div class="answer"><input type="radio" name="q387" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q387" value="B"> B. False</div>
+</div>
+
+
+<div class="question" data-question="">
+    <p>388. A virus can move by means of its flagella:</p>
+    <div class="answer"><input type="radio" name="q388" value="A"> A. True</div>
+    <div class="answer"><input type="radio" name="q388" value="B" data-correct="true"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>389. What type of bacteria develops spores?</p>
+    <div class="answer"><input type="radio" name="q389" value="A"> A. Gram-positive</div>
+    <div class="answer"><input type="radio" name="q389" value="B"> B. Gram-negative</div>
+    <div class="answer"><input type="radio" name="q389" value="C" data-correct="true"> C. Both of the above</div>
+</div>
+
+<div class="question" data-question="">
+    <p>390. Bacteria that cause diseases are called:</p>
+    <div class="answer"><input type="radio" name="q390" value="A"> A. Aerobic</div>
+    <div class="answer"><input type="radio" name="q390" value="B"> B. Thermophillic</div>
+    <div class="answer"><input type="radio" name="q390" value="C" data-correct="true"> C. Pathogenic</div>
+</div>
+
+<div class="question" data-question="">
+    <p>391. What percentage of microorganisms are harmful to humans because they can grow at approximately human body temperature?</p>
+    <div class="answer"><input type="radio" name="q391" value="A" data-correct="true"> A. 1%</div>
+    <div class="answer"><input type="radio" name="q391" value="B"> B. 2%</div>
+    <div class="answer"><input type="radio" name="q391" value="C"> C. 3%</div>
+</div>
+
+<div class="question" data-question="">
+    <p>392. What type of hepatitis vaccine is strongly recommended for most healthcare workers?</p>
+    <div class="answer"><input type="radio" name="q392" value="A"> A. Hepatitis A</div>
+    <div class="answer"><input type="radio" name="q392" value="B" data-correct="true"> B. Hepatitis B</div>
+    <div class="answer"><input type="radio" name="q392" value="C"> C. Hepatitis D</div>
+</div>
+
+<div class="question" data-question="">
+    <p>393. Eliminating the infectious agent will interrupt the transmission of an infectious disease:</p>
+    <div class="answer"><input type="radio" name="q393" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q393" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>394. In Central Service, the term, "customers" includes anyone who utilizes the department's services:</p>
+    <div class="answer"><input type="radio" name="q394" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q394" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>395. The part of the cell that controls cell function is the:</p>
+    <div class="answer"><input type="radio" name="q395" value="A" data-correct="true"> A. Nucleus</div>
+    <div class="answer"><input type="radio" name="q395" value="B"> B. Cytoplasm</div>
+    <div class="answer"><input type="radio" name="q395" value="C"> C. Capsule</div>
+</div>
+
+<div class="question" data-question="">
+    <p>396. Healthy people carry bacteria:</p>
+    <div class="answer"><input type="radio" name="q396" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q396" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>397. Involuntary muscles:</p>
+    <div class="answer"><input type="radio" name="q397" value="A" data-correct="true"> A. Work without consciousness</div>
+    <div class="answer"><input type="radio" name="q397" value="B"> B. Work only when commanded</div>
+    <div class="answer"><input type="radio" name="q397" value="C"> C. Are not necessary</div>
+</div>
+
+<div class="question" data-question="">
+    <p>398. Rod-Shaped bacteria are classified as:</p>
+    <div class="answer"><input type="radio" name="q398" value="A"> A. Coccus</div>
+    <div class="answer"><input type="radio" name="q398" value="B" data-correct="true"> B. Bacillus</div>
+    <div class="answer"><input type="radio" name="q398" value="C"> C. Anhydrous</div>
+</div>
+
+<div class="question" data-question="">
+    <p>399. Air pressure in the decontamination area should be negative in relation to surrounding areas:</p>
+    <div class="answer"><input type="radio" name="q399" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q399" value="B"> B. False</div>
+</div>
+
+<div class="question" data-question="">
+    <p>400. In medical terminology, the purpose of a combining vowel is to:</p>
+    <div class="answer"><input type="radio" name="q400" value="A"> A. Tell the primary meaning of a word</div>
+    <div class="answer"><input type="radio" name="q400" value="B" data-correct="true"> B. Enhance pronunciation</div>
+    <div class="answer"><input type="radio" name="q400" value="C"> C. Make easier to spell</div>
+</div>
+
+
+
+
+
+    <!-- Submit Button -->
+<button type="button" onclick="checkAnswers()">Submit Answers</button>
+
+
+    <script>
+        function checkAnswers() {
+        // Get all questions
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach(question => {
+            // Get all answers for this question
+            const answers = question.querySelectorAll('.answer input[type="radio"]');
+            let selectedAnswer = null;
+
+            answers.forEach(answer => {
+                if (answer.checked) {
+                    selectedAnswer = answer;
+                }
+            });
+
+            // Clear previous highlights
+            answers.forEach(answer => {
+                answer.parentElement.classList.remove('correct', 'incorrect');
+            });
+
+            // Highlight the correct and wrong answers
+            answers.forEach(answer => {
+                if (answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('correct');
+                }
+
+                if (answer === selectedAnswer && !answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('incorrect');
+                }
+            });
+        });
+    }
+    </script>
+</body>
+</html>
