@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1</title>
+    <style>
+       body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #quiz {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .question p {
+            margin: 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .answer {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .answer input[type="radio"] {
+            margin-right: 10px;
+        }
+        .answer:hover {
+            background-color: #e2e6ea;
+        }
+        .correct {
+            background-color: #d4edda; /* Light green for correct answers */
+            border: 1px solid #c3e6cb; /* Green border */ 
+        }
+        .incorrect {
+            background-color: #f8d7da; /* Light red for wrong answers */
+            border: 1px solid #f5c6cb; /* Red border */ 
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz 1</h1>
+
+
+    <div id="quiz">
+        <!-- Question 1 -->
+        <div class="question" data-question="1">
+            <p>1. A chemical process applied during instrument manufacture that provides a corrosion-resistant finish by forming a thin transparent oxide film is known as:</p>
+            <div class="answer"><input type="radio" name="q1" value="A"> A. Pastuerization</div>
+            <div class="answer"><input type="radio" name="q1" value="B"> B. Polymorphisate</div>
+            <div class="answer"><input type="radio" name="q1" value="C" data-correct="true"> C. Passivation</div>
+            <div class="answer"><input type="radio" name="q1" value="D"> D. None of the above</div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question" data-question="2">
+            <p>2. Which of the following is not an ergonomic stressor?</p>
+            <div class="answer"><input type="radio" name="q2" value="A"> A. Repetition</div>
+            <div class="answer"><input type="radio" name="q2" value="B"> B. Awkward positions</div>
+            <div class="answer"><input type="radio" name="q2" value="C"> C. Vibration</div>
+            <div class="answer"><input type="radio" name="q2" value="D" data-correct="true"> D. None of the above</div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question" data-question="3">
+            <p>3. If the Flash sterilization load consists of a single instrument comprised of metal and without lumens, a ___________ cycle at 270°C (132°C) should be used.</p>
+            <div class="answer"><input type="radio" name="q3" value="A" data-correct="true"> A. 5 min</div>
+            <div class="answer"><input type="radio" name="q3" value="B"> B. 4 min</div>
+            <div class="answer"><input type="radio" name="q3" value="C"> C. 10 min</div>
+            <div class="answer"><input type="radio" name="q3" value="D"> D. 3 min</div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question" data-question="4">
+            <p>4. The Department of Veteran's Affairs has its own certification programs and does not follow AAMI guidelines.</p>
+            <div class="answer"><input type="radio" name="q4" value="A" data-correct="true"> A. True</div>
+            <div class="answer"><input type="radio" name="q4" value="B"> B. False</div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question" data-question="5">
+            <p>5. USP-NF states packaging requirements for purified water.</p>
+            <div class="answer"><input type="radio" name="q5" value="A" data-correct="true"> A. True</div>
+            <div class="answer"><input type="radio" name="q5" value="B"> B. False</div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question" data-question="6">
+            <p>6. A molecular reaction that creates an uncontrolled release of energy is known as:</p>
+            <div class="answer"><input type="radio" name="q6" value="A"> A. Molecular Fission</div>
+            <div class="answer"><input type="radio" name="q6" value="B" data-correct="true"> B. Polymerization</div>
+            <div class="answer"><input type="radio" name="q6" value="C"> C. Molecular Fusion</div>
+            <div class="answer"><input type="radio" name="q6" value="D"> D. None of the above</div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question" data-question="7">
+            <p>7. The Express cycle is a just-in-time process and has a shelf life.</p>
+            <div class="answer"><input type="radio" name="q7" value="A"> A. True</div>
+            <div class="answer"><input type="radio" name="q7" value="B" data-correct="true"> B. False</div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question" data-question="8">
+            <p>8. Specialized words or phrases known only by persons working in a position is known as Jargon.</p>
+            <div class="answer"><input type="radio" name="q8" value="A" data-correct="true"> A. True</div>
+            <div class="answer"><input type="radio" name="q8" value="B"> B. False</div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question" data-question="9">
+            <p>9. The amount of time required to kill 90% of the microorganisms present is known as:</p>
+            <div class="answer"><input type="radio" name="q9" value="A"> A. Terminalization</div>
+            <div class="answer"><input type="radio" name="q9" value="B" data-correct="true"> B. D-Values</div>
+            <div class="answer"><input type="radio" name="q9" value="C"> C. Sterility</div>
+            <div class="answer"><input type="radio" name="q9" value="D"> D. None of the above</div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question" data-question="10">
+            <p>10. To test the sharpness of chisels and osteotomes, a CS tech would use_______________.</p>
+            <div class="answer"><input type="radio" name="q10" value="A"> A. Steel rod</div>
+            <div class="answer"><input type="radio" name="q10" value="B" data-correct="true"> B. Plastic dowel rod</div>
+            <div class="answer"><input type="radio" name="q10" value="C"> C. Sharpening Stone</div>
+            <div class="answer"><input type="radio" name="q10" value="D"> D. None of the above</div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question" data-question="11">
+            <p>11. One can clean without sterilizing, but one cannot sterilize without cleaning.</p>
+            <div class="answer"><input type="radio" name="q11" value="A" data-correct="true"> A. True</div>
+            <div class="answer"><input type="radio" name="q11" value="B"> B. False</div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question" data-question="12">
+            <p>12. Chemicals that remove or inactivate hard water minerals are known as:</p>
+            <div class="answer"><input type="radio" name="q12" value="A" data-correct="true"> A. Sequesting agents</div>
+            <div class="answer"><input type="radio" name="q12" value="B"> B. Chelating agents</div>
+            <div class="answer"><input type="radio" name="q12" value="C"> C. Wetting agents</div>
+            <div class="answer"><input type="radio" name="q12" value="D"> D. None of the above</div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question" data-question="13">
+            <p>13. Non-porous and porous items within wraps, pouches, or containers can be sterilized in pre-vacuum cycles if the appropriate times and temperatures are used for each.</p>
+            <div class="answer"><input type="radio" name="q13" value="A" data-correct="true"> A. True</div>
+            <div class="answer"><input type="radio" name="q13" value="B"> B. False</div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question" data-question="14">
+            <p>14. Accreditation is a mandatory process by which an organization measures the quality of its services and performance against predefined standards.</p>
+            <div class="answer"><input type="radio" name="q14" value="A" data-correct="true"> A. True</div>
+            <div class="answer"><input type="radio" name="q14" value="B"> B. False</div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question" data-question="15">
+            <p>15. The proper use of biological indicators ensures that the sterilization process was effective and that all microorganisms have been killed.</p>
+            <div class="answer"><input type="radio" name="q15" value="A" data-correct="true"> A. True</div>
+            <div class="answer"><input type="radio" name="q15" value="B"> B. False</div>
+        </div>
+
+               <!-- Question 16 -->
+        <div class="question" data-question="16">
+            <p>16. The process of removing contaminants and microorganisms from a surface is known as:</p>
+            <div class="answer"><input type="radio" name="q16" value="A"> A. Sterilization</div>
+            <div class="answer"><input type="radio" name="q16" value="B"> B. Disinfection</div>
+            <div class="answer"><input type="radio" name="q16" value="C" data-correct="true"> C. Cleaning</div>
+            <div class="answer"><input type="radio" name="q16" value="D"> D. Sanitization</div>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question" data-question="17">
+            <p>17. In the context of sterilization, the term “bioburden” refers to:</p>
+            <div class="answer"><input type="radio" name="q17" value="A"> A. The total weight of the items being sterilized</div>
+            <div class="answer"><input type="radio" name="q17" value="B"> B. The time required to sterilize items</div>
+            <div class="answer"><input type="radio" name="q17" value="C" data-correct="true"> C. The number and type of microorganisms present on an item</div>
+            <div class="answer"><input type="radio" name="q17" value="D"> D. The temperature used during sterilization</div>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question" data-question="18">
+            <p>18. Which type of sterilization uses steam under pressure to kill microorganisms?</p>
+            <div class="answer"><input type="radio" name="q18" value="A" data-correct="true"> A. Autoclaving</div>
+            <div class="answer"><input type="radio" name="q18" value="B"> B. Dry Heat Sterilization</div>
+            <div class="answer"><input type="radio" name="q18" value="C"> C. Ethylene Oxide Sterilization</div>
+            <div class="answer"><input type="radio" name="q18" value="D"> D. Chemical Sterilization</div>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question" data-question="19">
+            <p>19. The device used to measure the efficiency of a sterilization process is called:</p>
+            <div class="answer"><input type="radio" name="q19" value="A"> A. A Biometer</div>
+            <div class="answer"><input type="radio" name="q19" value="B" data-correct="true"> C. A Biological Indicator</div>
+            <div class="answer"><input type="radio" name="q19" value="C"> C. A Thermometer</div>
+            <div class="answer"><input type="radio" name="q19" value="D"> D. A Pressure Gauge</div>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question" data-question="20">
+            <p>20. Which of the following is a common method of chemical sterilization?</p>
+            <div class="answer"><input type="radio" name="q20" value="A"> A. Radiation</div>
+            <div class="answer"><input type="radio" name="q20" value="B" data-correct="true"> B. Ethylene Oxide</div>
+            <div class="answer"><input type="radio" name="q20" value="C"> C. Autoclaving</div>
+            <div class="answer"><input type="radio" name="q20" value="D"> D. Incineration</div>
+        </div>
+
+        <!-- Question 21 -->
+        <div class="question" data-question="21">
+            <p>21. Which part of a sterilizer is responsible for creating the steam necessary for the process?</p>
+            <div class="answer"><input type="radio" name="q21" value="A"> A. The Chamber</div>
+            <div class="answer"><input type="radio" name="q21" value="B"> B. The Generator</div>
+            <div class="answer"><input type="radio" name="q21" value="C" data-correct="true"> C. The Boiler</div>
+            <div class="answer"><input type="radio" name="q21" value="D"> D. The Vacuum Pump</div>
+        </div>
+
+        <!-- Question 22 -->
+        <div class="question" data-question="22">
+            <p>22. Which method of sterilization is most appropriate for heat-sensitive instruments?</p>
+            <div class="answer"><input type="radio" name="q22" value="A"> A. Autoclaving</div>
+            <div class="answer"><input type="radio" name="q22" value="B"> B. Dry Heat Sterilization</div>
+            <div class="answer"><input type="radio" name="q22" value="C"> C. Chemical Sterilization</div>
+            <div class="answer"><input type="radio" name="q22" value="D" data-correct="true"> D. Ethylene Oxide</div>
+        </div>
+
+        <!-- Question 23 -->
+        <div class="question" data-question="23">
+            <p>23. To ensure that a sterilization cycle was effective, what should be checked after the process?</p>
+            <div class="answer"><input type="radio" name="q23" value="A"> A. The expiration date of the items</div>
+            <div class="answer"><input type="radio" name="q23" value="B"> B. The physical appearance of the items</div>
+            <div class="answer"><input type="radio" name="q23" value="C" data-correct="true"> C. The results of biological indicators</div>
+            <div class="answer"><input type="radio" name="q23" value="D"> D. The temperature of the sterilizer</div>
+        </div>
+
+        <!-- Question 24 -->
+        <div class="question" data-question="24">
+            <p>24. What is the purpose of using a chemical indicator in a sterilization process?</p>
+            <div class="answer"><input type="radio" name="q24" value="A" data-correct="true"> A. To confirm that the sterilizing conditions have been met</div>
+            <div class="answer"><input type="radio" name="q24" value="B"> B. To ensure the items are dry</div>
+            <div class="answer"><input type="radio" name="q24" value="C"> C. To measure the weight of the items</div>
+            <div class="answer"><input type="radio" name="q24" value="D"> D. To determine the shelf life of the items</div>
+        </div>
+
+        <!-- Question 25 -->
+        <div class="question" data-question="25">
+            <p>25. What is a “Class 5” chemical indicator used for?</p>
+            <div class="answer"><input type="radio" name="q25" value="A"> A. To measure temperature</div>
+            <div class="answer"><input type="radio" name="q25" value="B"> B. To measure time</div>
+            <div class="answer"><input type="radio" name="q25" value="C" data-correct="true"> C. To measure the combined parameters of time, temperature, and pressure</div>
+            <div class="answer"><input type="radio" name="q25" value="D"> D. To measure humidity</div>
+        </div>
+
+                <!-- Question 26 -->
+        <div class="question" data-question="26">
+            <p>26. Which of the following is NOT a standard method of sterilization?</p>
+            <div class="answer"><input type="radio" name="q26" value="A"> A. Dry Heat</div>
+            <div class="answer"><input type="radio" name="q26" value="B"> B. Radiation</div>
+            <div class="answer"><input type="radio" name="q26" value="C"> C. Chemical Sterilization</div>
+            <div class="answer"><input type="radio" name="q26" value="D" data-correct="true"> D. Freezing</div>
+        </div>
+
+        <!-- Question 27 -->
+        <div class="question" data-question="27">
+            <p>27. Which factor is crucial for the effectiveness of steam sterilization?</p>
+            <div class="answer"><input type="radio" name="q27" value="A"> A. Humidity</div>
+            <div class="answer"><input type="radio" name="q27" value="B"> B. Pressure</div>
+            <div class="answer"><input type="radio" name="q27" value="C"> C. Time</div>
+            <div class="answer"><input type="radio" name="q27" value="D" data-correct="true"> D. All of the above</div>
+        </div>
+
+        <!-- Question 28 -->
+        <div class="question" data-question="28">
+            <p>28. What is the primary purpose of using a chemical indicator in a sterilization process?</p>
+            <div class="answer"><input type="radio" name="q28" value="A"> A. To determine the type of microorganism present</div>
+            <div class="answer"><input type="radio" name="q28" value="B"> B. To measure the amount of steam used</div>
+            <div class="answer"><input type="radio" name="q28" value="C"> C. To confirm that the correct sterilizing conditions were met</div>
+            <div class="answer"><input type="radio" name="q28" value="D" data-correct="true"> D. To check the physical condition of the items</div>
+        </div>
+
+        <!-- Question 29 -->
+        <div class="question" data-question="29">
+            <p>29. Which sterilization method uses ultraviolet light to kill microorganisms?</p>
+            <div class="answer"><input type="radio" name="q29" value="A"> A. Autoclaving</div>
+            <div class="answer"><input type="radio" name="q29" value="B"> B. Chemical Sterilization</div>
+            <div class="answer"><input type="radio" name="q29" value="C"> C. Dry Heat Sterilization</div>
+            <div class="answer"><input type="radio" name="q29" value="D" data-correct="true"> D. UV Sterilization</div>
+        </div>
+
+        <!-- Question 30 -->
+        <div class="question" data-question="30">
+            <p>30. Which of the following is NOT a factor that affects the efficacy of sterilization?</p>
+            <div class="answer"><input type="radio" name="q30" value="A"> A. Type of microorganisms</div>
+            <div class="answer"><input type="radio" name="q30" value="B"> B. Temperature</div>
+            <div class="answer"><input type="radio" name="q30" value="C"> C. Pressure</div>
+            <div class="answer"><input type="radio" name="q30" value="D" data-correct="true"> D. Color of the items</div>
+        </div>
+
+        <!-- Question 31 -->
+        <div class="question" data-question="31">
+            <p>31. What is the correct term for the process of destroying all forms of microbial life?</p>
+            <div class="answer"><input type="radio" name="q31" value="A"> A. Sanitization</div>
+            <div class="answer"><input type="radio" name="q31" value="B"> B. Disinfection</div>
+            <div class="answer"><input type="radio" name="q31" value="C"> C. Cleaning</div>
+            <div class="answer"><input type="radio" name="q31" value="D" data-correct="true"> D. Sterilization</div>
+        </div>
+
+        <!-- Question 32 -->
+        <div class="question" data-question="32">
+            <p>32. Which sterilization method is best suited for materials that cannot withstand high temperatures?</p>
+            <div class="answer"><input type="radio" name="q32" value="A"> A. Dry Heat</div>
+            <div class="answer"><input type="radio" name="q32" value="B"> B. Autoclaving</div>
+            <div class="answer"><input type="radio" name="q32" value="C"> C. Radiation</div>
+            <div class="answer"><input type="radio" name="q32" value="D" data-correct="true"> D. Ethylene Oxide</div>
+        </div>
+
+        <!-- Question 33 -->
+        <div class="question" data-question="33">
+            <p>33. What does the term “microbial load” refer to in sterilization?</p>
+            <div class="answer"><input type="radio" name="q33" value="A"> A. The weight of the microorganisms</div>
+            <div class="answer"><input type="radio" name="q33" value="B"> B. The number of microorganisms present</div>
+            <div class="answer"><input type="radio" name="q33" value="C" data-correct="true"> C. The type and quantity of microorganisms</div>
+            <div class="answer"><input type="radio" name="q33" value="D"> D. The size of the microorganisms</div>
+        </div>
+
+        <!-- Question 34 -->
+        <div class="question" data-question="34">
+            <p>34. What is the purpose of using a biological indicator in a sterilization process?</p>
+            <div class="answer"><input type="radio" name="q34" value="A"> A. To measure the duration of sterilization</div>
+            <div class="answer"><input type="radio" name="q34" value="B"> B. To confirm the presence of microorganisms</div>
+            <div class="answer"><input type="radio" name="q34" value="C"> C. To verify that the sterilizing conditions were met</div>
+            <div class="answer"><input type="radio" name="q34" value="D" data-correct="true"> D. To check the efficiency of the sterilization process</div>
+        </div>
+
+        <!-- Question 35 -->
+        <div class="question" data-question="35">
+            <p>35. What type of sterilization is used for heat-sensitive instruments like plastic or rubber?</p>
+            <div class="answer"><input type="radio" name="q35" value="A"> A. Steam Sterilization</div>
+            <div class="answer"><input type="radio" name="q35" value="B"> B. Dry Heat Sterilization</div>
+            <div class="answer"><input type="radio" name="q35" value="C" data-correct="true"> C. Chemical Sterilization</div>
+            <div class="answer"><input type="radio" name="q35" value="D"> D. Incineration</div>
+        </div>
+
+        <!-- Question 36 -->
+        <div class="question" data-question="36">
+            <p>36. In which sterilization process is the “Bowtie Test” used?</p>
+            <div class="answer"><input type="radio" name="q36" value="A" data-correct="true"> A. Autoclaving</div>
+            <div class="answer"><input type="radio" name="q36" value="B"> B. Dry Heat Sterilization</div>
+            <div class="answer"><input type="radio" name="q36" value="C"> C. Ethylene Oxide Sterilization</div>
+            <div class="answer"><input type="radio" name="q36" value="D"> D. Chemical Sterilization</div>
+        </div>
+
+        <!-- Question 37 -->
+        <div class="question" data-question="37">
+            <p>37. The effectiveness of an autoclave is generally measured by:</p>
+            <div class="answer"><input type="radio" name="q37" value="A"> A. The color change in a chemical indicator</div>
+            <div class="answer"><input type="radio" name="q37" value="B"> B. The temperature of the steam</div>
+            <div class="answer"><input type="radio" name="q37" value="C"> C. The pressure within the chamber</div>
+            <div class="answer"><input type="radio" name="q37" value="D" data-correct="true"> D. The biological indicator results</div>
+        </div>
+
+        <!-- Question 38 -->
+        <div class="question" data-question="38">
+            <p>38. Which of the following materials is NOT typically sterilized using ethylene oxide?</p>
+            <div class="answer"><input type="radio" name="q38" value="A"> A. Plastic items</div>
+            <div class="answer"><input type="radio" name="q38" value="B"> B. Rubber items</div>
+            <div class="answer"><input type="radio" name="q38" value="C"> C. Metal items</div>
+            <div class="answer"><input type="radio" name="q38" value="D" data-correct="true"> D. Wooden items</div>
+        </div>
+
+        <!-- Question 39 -->
+        <div class="question" data-question="39">
+            <p>39. What type of sterilization is best for small, heat-sensitive items like electronics?</p>
+            <div class="answer"><input type="radio" name="q39" value="A"> A. Steam Sterilization</div>
+            <div class="answer"><input type="radio" name="q39" value="B"> B. Dry Heat Sterilization</div>
+            <div class="answer"><input type="radio" name="q39" value="C"> C. Chemical Sterilization</div>
+            <div class="answer"><input type="radio" name="q39" value="D" data-correct="true"> D. Radiation</div>
+        </div>
+
+        <!-- Question 40 -->
+        <div class="question" data-question="40">
+            <p>40. The process of reducing the number of microorganisms to a safe level is known as:</p>
+            <div class="answer"><input type="radio" name="q40" value="A" data-correct="true"> A. Disinfection</div>
+            <div class="answer"><input type="radio" name="q40" value="B"> B. Sterilization</div>
+            <div class="answer"><input type="radio" name="q40" value="C"> C. Cleaning</div>
+            <div class="answer"><input type="radio" name="q40" value="D"> D. Sanitization</div>
+        </div>
+
+        <!-- Question 41 -->
+        <div class="question" data-question="41">
+            <p>41. Which chemical is commonly used in the sterilization process known as "cold sterilization"?</p>
+            <div class="answer"><input type="radio" name="q41" value="A"> A. Hydrogen Peroxide</div>
+            <div class="answer"><input type="radio" name="q41" value="B" data-correct="true"> B. Glutaraldehyde</div>
+            <div class="answer"><input type="radio" name="q41" value="C"> C. Alcohol</div>
+            <div class="answer"><input type="radio" name="q41" value="D"> D. Iodine</div>
+        </div>
+
+        <!-- Question 42 -->
+        <div class="question" data-question="42">
+            <p>42. Which type of sterilization requires a high level of humidity?</p>
+            <div class="answer"><input type="radio" name="q42" value="A"> A. Dry Heat Sterilization</div>
+            <div class="answer"><input type="radio" name="q42" value="B" data-correct="true"> B. Steam Sterilization</div>
+            <div class="answer"><input type="radio" name="q42" value="C"> C. Ethylene Oxide Sterilization</div>
+            <div class="answer"><input type="radio" name="q42" value="D"> D. Radiation Sterilization</div>
+        </div>
+
+        <!-- Question 43 -->
+        <div class="question" data-question="43">
+            <p>43. What is the primary disadvantage of using dry heat for sterilization?</p>
+            <div class="answer"><input type="radio" name="q43" value="A" data-correct="true"> A. It requires longer exposure times</div>
+            <div class="answer"><input type="radio" name="q43" value="B"> B. It cannot be used for metal items</div>
+            <div class="answer"><input type="radio" name="q43" value="C"> C. It is not effective against spores</div>
+            <div class="answer"><input type="radio" name="q43" value="D"> D. It requires high humidity</div>
+        </div>
+
+        <!-- Question 44 -->
+        <div class="question" data-question="44">
+            <p>44. Which of the following is NOT an advantage of using ethylene oxide for sterilization?</p>
+            <div class="answer"><input type="radio" name="q44" value="A" data-correct="true"> A. It is effective for heat-sensitive items</div>
+            <div class="answer"><input type="radio" name="q44" value="B"> B. It requires a short exposure time</div>
+            <div class="answer"><input type="radio" name="q44" value="C"> C. It can penetrate through packaging</div>
+            <div class="answer"><input type="radio" name="q44" value="D"> D. It has a long residual effect</div>
+        </div>
+
+        <!-- Question 45 -->
+        <div class="question" data-question="45">
+            <p>45. What is the recommended method for sterilizing surgical instruments that cannot withstand high temperatures?</p>
+            <div class="answer"><input type="radio" name="q45" value="A"> A. Autoclaving</div>
+            <div class="answer"><input type="radio" name="q45" value="B"> B. Dry Heat Sterilization</div>
+            <div class="answer"><input type="radio" name="q45" value="C" data-correct="true"> C. Ethylene Oxide Sterilization</div>
+            <div class="answer"><input type="radio" name="q45" value="D"> D. Incineration</div>
+        </div>
+
+        <!-- Question 46 -->
+        <div class="question" data-question="46">
+            <p>46. Which type of sterilization uses high-energy radiation to destroy microorganisms?</p>
+            <div class="answer"><input type="radio" name="q46" value="A"> A. Dry Heat Sterilization</div>
+            <div class="answer"><input type="radio" name="q46" value="B"> B. Steam Sterilization</div>
+            <div class="answer"><input type="radio" name="q46" value="C" data-correct="true"> C. Gamma Radiation Sterilization</div>
+            <div class="answer"><input type="radio" name="q46" value="D"> D. Chemical Sterilization</div>
+        </div>
+
+        <!-- Question 47 -->
+        <div class="question" data-question="47">
+            <p>47. Which of the following is a common use of hydrogen peroxide in sterilization?</p>
+            <div class="answer"><input type="radio" name="q47" value="A"> A. For autoclaving</div>
+            <div class="answer"><input type="radio" name="q47" value="B" data-correct="true"> B. For plasma sterilization</div>
+            <div class="answer"><input type="radio" name="q47" value="C"> C. For dry heat sterilization</div>
+            <div class="answer"><input type="radio" name="q47" value="D"> D. For chemical sterilization</div>
+        </div>
+
+        <!-- Question 48 -->
+        <div class="question" data-question="48">
+            <p>48. What is the main advantage of using steam sterilization over other methods?</p>
+            <div class="answer"><input type="radio" name="q48" value="A"> A. It is suitable for heat-sensitive materials</div>
+            <div class="answer"><input type="radio" name="q48" value="B"> B. It is the fastest method</div>
+            <div class="answer"><input type="radio" name="q48" value="C" data-correct="true"> C. It is effective against all microorganisms</div>
+            <div class="answer"><input type="radio" name="q48" value="D"> D. It has no residual effects</div>
+        </div>
+
+        <!-- Question 49 -->
+        <div class="question" data-question="49">
+            <p>49. Which of the following materials is NOT typically sterilized using steam?</p>
+            <div class="answer"><input type="radio" name="q49" value="A"> A. Glassware</div>
+            <div class="answer"><input type="radio" name="q49" value="B"> B. Stainless steel instruments</div>
+            <div class="answer"><input type="radio" name="q49" value="C"> C. Rubber items</div>
+            <div class="answer"><input type="radio" name="q49" value="D" data-correct="true"> D. Plastic items</div>
+        </div>
+
+        <!-- Question 50 -->
+        <div class="question" data-question="50">
+            <p>50. What is a key disadvantage of using chemical sterilization?</p>
+            <div class="answer"><input type="radio" name="q50" value="A"> A. It is not effective against all microorganisms</div>
+            <div class="answer"><input type="radio" name="q50" value="B"> B. It can be used only for heat-resistant items</div>
+            <div class="answer"><input type="radio" name="q50" value="C"> C. It requires high temperatures</div>
+            <div class="answer"><input type="radio" name="q50" value="D" data-correct="true"> D. It can leave toxic residues</div>
+        </div>
+
+        <!-- Question 51 -->
+		<div class="question" data-question="51">
+			<p>51. Which method of sterilization is most suitable for items that cannot withstand high humidity?</p>
+			<div class="answer"><input type="radio" name="q51" value="A"> A. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q51" value="B" data-correct="true"> B. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q51" value="C"> C. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q51" value="D"> D. Radiation Sterilization</div>
+		</div>
+
+		<!-- Question 52 -->
+		<div class="question" data-question="52">
+			<p>52. What is the primary advantage of using ethylene oxide for sterilization?</p>
+			<div class="answer"><input type="radio" name="q52" value="A" data-correct="true"> A. It can sterilize heat-sensitive items</div>
+			<div class="answer"><input type="radio" name="q52" value="B"> B. It has a short cycle time</div>
+			<div class="answer"><input type="radio" name="q52" value="C"> C. It does not require special handling</div>
+			<div class="answer"><input type="radio" name="q52" value="D"> D. It is inexpensive</div>
+		</div>
+
+		<!-- Question 53 -->
+		<div class="question" data-question="53">
+			<p>53. Which of the following is a key disadvantage of using gamma radiation for sterilization?</p>
+			<div class="answer"><input type="radio" name="q53" value="A"> A. It is not effective for small items</div>
+			<div class="answer"><input type="radio" name="q53" value="B"> B. It can be used only for metal items</div>
+			<div class="answer"><input type="radio" name="q53" value="C"> C" data-correct="true"> C. It requires expensive equipment</div>
+			<div class="answer"><input type="radio" name="q53" value="D"> D. It leaves toxic residues</div>
+		</div>
+
+		<!-- Question 54 -->
+		<div class="question" data-question="54">
+			<p>54. What is the typical temperature used for dry heat sterilization?</p>
+			<div class="answer"><input type="radio" name="q54" value="A"> A. 121°C</div>
+			<div class="answer"><input type="radio" name="q54" value="B"> B. 160°C</div>
+			<div class="answer"><input type="radio" name="q54" value="C"> C. 180°C</div>
+			<div class="answer"><input type="radio" name="q54" value="D" data-correct="true"> D. 190°C</div>
+		</div>
+
+		<!-- Question 55 -->
+		<div class="question" data-question="55">
+			<p>55. Which sterilization method is typically used for disposable medical devices?</p>
+			<div class="answer"><input type="radio" name="q55" value="A"> A. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q55" value="B"> B. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q55" value="C"> C. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q55" value="D" data-correct="true"> D. Gamma Radiation Sterilization</div>
+		</div>
+
+		<!-- Question 56 -->
+		<div class="question" data-question="56">
+			<p>56. What is the main disadvantage of using steam sterilization?</p>
+			<div class="answer"><input type="radio" name="q56" value="A"> A. It is not effective against all microorganisms</div>
+			<div class="answer"><input type="radio" name="q56" value="B"> B. It can damage heat-sensitive materials</div>
+			<div class="answer"><input type="radio" name="q56" value="C" data-correct="true"> C. It requires high pressure</div>
+			<div class="answer"><input type="radio" name="q56" value="D"> D. It is expensive</div>
+		</div>
+
+		<!-- Question 57 -->
+		<div class="question" data-question="57">
+			<p>57. What is a common use of peracetic acid in sterilization?</p>
+			<div class="answer"><input type="radio" name="q57" value="A" data-correct="true"> A. For sterilizing medical equipment</div>
+			<div class="answer"><input type="radio" name="q57" value="B"> B. For cleaning surfaces</div>
+			<div class="answer"><input type="radio" name="q57" value="C"> C. For disinfecting water</div>
+			<div class="answer"><input type="radio" name="q57" value="D"> D. For sanitizing food contact surfaces</div>
+		</div>
+
+		<!-- Question 58 -->
+		<div class="question" data-question="58">
+			<p>58. What is the key principle behind the use of chemical indicators in sterilization?</p>
+			<div class="answer"><input type="radio" name="q58" value="A"> A. They change color to indicate the presence of microorganisms</div>
+			<div class="answer"><input type="radio" name="q58" value="B" data-correct="true"> B. They change color to show that the sterilization conditions have been met</div>
+			<div class="answer"><input type="radio" name="q58" value="C"> C. They measure the temperature during the process</div>
+			<div class="answer"><input type="radio" name="q58" value="D"> D. They test the effectiveness of the cleaning process</div>
+		</div>
+
+		<!-- Question 59 -->
+		<div class="question" data-question="59">
+			<p>59. Which type of sterilization is most commonly used for heat-sensitive items that cannot be steam sterilized?</p>
+			<div class="answer"><input type="radio" name="q59" value="A"> A. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q59" value="B"> B. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q59" value="C" data-correct="true"> C. Radiation Sterilization</div>
+			<div class="answer"><input type="radio" name="q59" value="D"> D. Chemical Sterilization</div>
+		</div>
+
+		<!-- Question 60 -->
+		<div class="question" data-question="60">
+			<p>60. Which sterilization method is often used for items that cannot be easily cleaned or sterilized by other means?</p>
+			<div class="answer"><input type="radio" name="q60" value="A"> A. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q60" value="B"> B. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q60" value="C" data-correct="true"> C. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q60" value="D"> D. Gamma Radiation Sterilization</div>
+		</div>
+
+		<!-- Question 61 -->
+		<div class="question" data-question="61">
+			<p>61. What is the main function of a biological indicator in sterilization?</p>
+			<div class="answer"><input type="radio" name="q61" value="A"> A. To measure the temperature during sterilization</div>
+			<div class="answer"><input type="radio" name="q61" value="B"> B. To test the effectiveness of the cleaning process</div>
+			<div class="answer"><input type="radio" name="q61" value="C" data-correct="true"> C. To confirm that the sterilization process has killed microorganisms</div>
+			<div class="answer"><input type="radio" name="q61" value="D"> D. To show the presence of moisture</div>
+		</div>
+
+		<!-- Question 62 -->
+		<div class="question" data-question="62">
+			<p>62. Which sterilization method uses the lowest temperature among the commonly used methods?</p>
+			<div class="answer"><input type="radio" name="q62" value="A" data-correct="true"> A. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q62" value="B"> B. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q62" value="C"> C. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q62" value="D"> D. Gamma Radiation Sterilization</div>
+		</div>
+
+		<!-- Question 63 -->
+		<div class="question" data-question="63">
+			<p>63. Which factor is most critical for effective steam sterilization?</p>
+			<div class="answer"><input type="radio" name="q63" value="A"> A. Humidity</div>
+			<div class="answer"><input type="radio" name="q63" value="B"> B. Temperature</div>
+			<div class="answer"><input type="radio" name="q63" value="C"> C. Time</div>
+			<div class="answer"><input type="radio" name="q63" value="D" data-correct="true"> D. All of the above</div>
+		</div>
+
+		<!-- Question 64 -->
+		<div class="question" data-question="64">
+			<p>64. What is the primary purpose of using a chemical sterilant in high-level disinfection?</p>
+			<div class="answer"><input type="radio" name="q64" value="A"> A. To clean the items</div>
+			<div class="answer"><input type="radio" name="q64" value="B"> B. To sterilize the items</div>
+			<div class="answer"><input type="radio" name="q64" value="C" data-correct="true"> C. To achieve high-level disinfection</div>
+			<div class="answer"><input type="radio" name="q64" value="D"> D. To sanitize the items</div>
+		</div>
+
+		<!-- Question 65 -->
+		<div class="question" data-question="65">
+			<p>65. Which type of microorganism is the most difficult to kill using standard sterilization methods?</p>
+			<div class="answer"><input type="radio" name="q65" value="A"> A. Bacteria</div>
+			<div class="answer"><input type="radio" name="q65" value="B"> B. Viruses</div>
+			<div class="answer"><input type="radio" name="q65" value="C"> C. Fungi</div>
+			<div class="answer"><input type="radio" name="q65" value="D" data-correct="true"> D. Bacterial Spores</div>
+		</div>
+
+		<!-- Question 66 -->
+		<div class="question" data-question="66">
+			<p>66. Which of the following is not a common type of sterilizer used in healthcare settings?</p>
+			<div class="answer"><input type="radio" name="q66" value="A"> A. Steam Sterilizer</div>
+			<div class="answer"><input type="radio" name="q66" value="B"> B. Dry Heat Sterilizer</div>
+			<div class="answer"><input type="radio" name="q66" value="C"> C. Ethylene Oxide Sterilizer</div>
+			<div class="answer"><input type="radio" name="q66" value="D" data-correct="true"> D. Chemical Vapor Sterilizer</div>
+		</div>
+
+		<!-- Question 67 -->
+		<div class="question" data-question="67">
+			<p>67. What is the main advantage of using a pre-vacuum steam sterilizer over a gravity displacement steam sterilizer?</p>
+			<div class="answer"><input type="radio" name="q67" value="A"> A. It is less expensive</div>
+			<div class="answer"><input type="radio" name="q67" value="B"> B. It has a shorter cycle time</div>
+			<div class="answer"><input type="radio" name="q67" value="C" data-correct="true"> C. It provides better steam penetration</div>
+			<div class="answer"><input type="radio" name="q67" value="D"> D. It requires less maintenance</div>
+		</div>
+
+		<!-- Question 68 -->
+		<div class="question" data-question="68">
+			<p>68. What is the role of a chemical indicator in a sterilization process?</p>
+			<div class="answer"><input type="radio" name="q68" value="A"> A. To verify the load temperature</div>
+			<div class="answer"><input type="radio" name="q68" value="B"> B. To measure the cycle time</div>
+			<div class="answer"><input type="radio" name="q68" value="C"> C. To confirm the presence of moisture</div>
+			<div class="answer"><input type="radio" name="q68" value="D" data-correct="true"> D. To ensure the sterilization process was effective</div>
+		</div>
+
+		<!-- Question 69 -->
+		<div class="question" data-question="69">
+			<p>69. Which of the following is a critical factor in the effectiveness of chemical sterilants?</p>
+			<div class="answer"><input type="radio" name="q69" value="A"> A. pH level</div>
+			<div class="answer"><input type="radio" name="q69" value="B"> B. Temperature</div>
+			<div class="answer"><input type="radio" name="q69" value="C"> C. Concentration</div>
+			<div class="answer"><input type="radio" name="q69" value="D" data-correct="true"> D. All of the above</div>
+		</div>
+
+		<!-- Question 70 -->
+		<div class="question" data-question="70">
+			<p>70. Which sterilization method is most suitable for heat-sensitive plastic items?</p>
+			<div class="answer"><input type="radio" name="q70" value="A"> A. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q70" value="B" data-correct="true"> B. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q70" value="C"> C. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q70" value="D"> D. Gamma Radiation Sterilization</div>
+		</div>
+
+		<!-- Question 71 -->
+		<div class="question" data-question="71">
+			<p>71. What is the purpose of using a Bowie-Dick test?</p>
+			<div class="answer"><input type="radio" name="q71" value="A"> A. To test the temperature of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q71" value="B"> B. To test the effectiveness of the cleaning process</div>
+			<div class="answer"><input type="radio" name="q71" value="C" data-correct="true"> C. To test the steam penetration in a pre-vacuum sterilizer</div>
+			<div class="answer"><input type="radio" name="q71" value="D"> D. To measure the humidity in the sterilizer</div>
+		</div>
+
+		<!-- Question 72 -->
+		<div class="question" data-question="72">
+			<p>72. What does a high D-value indicate in sterilization?</p>
+			<div class="answer"><input type="radio" name="q72" value="A" data-correct="true"> A. The microorganism is more resistant to the sterilization process</div>
+			<div class="answer"><input type="radio" name="q72" value="B"> B. The microorganism is more sensitive to the sterilization process</div>
+			<div class="answer"><input type="radio" name="q72" value="C"> C. The sterilization process is more effective</div>
+			<div class="answer"><input type="radio" name="q72" value="D"> D. The sterilization process is less effective</div>
+		</div>
+
+		<!-- Question 73 -->
+		<div class="question" data-question="73">
+			<p>73. Which of the following is a common method for testing the effectiveness of ethylene oxide sterilization?</p>
+			<div class="answer"><input type="radio" name="q73" value="A"> A. Biological indicators</div>
+			<div class="answer"><input type="radio" name="q73" value="B"> B. Chemical indicators</div>
+			<div class="answer"><input type="radio" name="q73" value="C" data-correct="true"> C. Both A and B</div>
+			<div class="answer"><input type="radio" name="q73" value="D"> D. None of the above</div>
+		</div>
+
+		<!-- Question 74 -->
+		<div class="question" data-question="74">
+			<p>74. What type of sterilizer is most commonly used for sterilizing heat-sensitive items?</p>
+			<div class="answer"><input type="radio" name="q74" value="A"> A. Steam Sterilizer</div>
+			<div class="answer"><input type="radio" name="q74" value="B"> B. Dry Heat Sterilizer</div>
+			<div class="answer"><input type="radio" name="q74" value="C" data-correct="true"> C. Ethylene Oxide Sterilizer</div>
+			<div class="answer"><input type="radio" name="q74" value="D"> D. Gamma Radiation Sterilizer</div>
+		</div>
+
+		<!-- Question 75 -->
+		<div class="question" data-question="75">
+			<p>75. What is the primary purpose of using a sterilization log?</p>
+			<div class="answer"><input type="radio" name="q75" value="A"> A. To document the sterilization cycle times</div>
+			<div class="answer"><input type="radio" name="q75" value="B"> B. To track the temperature of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q75" value="C"> C. To ensure compliance with sterilization protocols</div>
+			<div class="answer"><input type="radio" name="q75" value="D" data-correct="true"> D. All of the above</div>
+		</div>
+
+		<!-- Question 76 -->
+		<div class="question" data-question="76">
+			<p>76. Which of the following is a method for sterilizing instruments that cannot be exposed to high temperatures?</p>
+			<div class="answer"><input type="radio" name="q76" value="A"> A. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q76" value="B"> B. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q76" value="C" data-correct="true"> C. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q76" value="D"> D. Radiation Sterilization</div>
+		</div>
+
+		<!-- Question 77 -->
+		<div class="question" data-question="77">
+			<p>77. What is the main advantage of using a chemical vapor sterilizer?</p>
+			<div class="answer"><input type="radio" name="q77" value="A"> A. It is less expensive</div>
+			<div class="answer"><input type="radio" name="q77" value="B"> B. It requires no drying time</div>
+			<div class="answer"><input type="radio" name="q77" value="C" data-correct="true"> C. It has better penetration of porous materials</div>
+			<div class="answer"><input type="radio" name="q77" value="D"> D. It is faster than other methods</div>
+		</div>
+
+		<!-- Question 78 -->
+		<div class="question" data-question="78">
+			<p>78. Which of the following is an advantage of using dry heat sterilization?</p>
+			<div class="answer"><input type="radio" name="q78" value="A"> A. It has a lower temperature requirement</div>
+			<div class="answer"><input type="radio" name="q78" value="B"> B. It is suitable for heat-sensitive items</div>
+			<div class="answer"><input type="radio" name="q78" value="C"> C. It requires less time than other methods</div>
+			<div class="answer"><input type="radio" name="q78" value="D" data-correct="true"> D. It is effective for items that can withstand high temperatures</div>
+		</div>
+
+		<!-- Question 79 -->
+		<div class="question" data-question="79">
+			<p>79. Which sterilization method is typically used for heat-sensitive materials that cannot be steam-sterilized?</p>
+			<div class="answer"><input type="radio" name="q79" value="A"> A. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q79" value="B"> B. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q79" value="C" data-correct="true"> C. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q79" value="D"> D. Gamma Radiation Sterilization</div>
+		</div>
+
+		<!-- Question 80 -->
+		<div class="question" data-question="80">
+			<p>80. What is the main purpose of using a test pack in a sterilization process?</p>
+			<div class="answer"><input type="radio" name="q80" value="A"> A. To measure the pressure in the sterilizer</div>
+			<div class="answer"><input type="radio" name="q80" value="B"> B. To test the temperature of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q80" value="C"> C. To test the effectiveness of the sterilization process</div>
+			<div class="answer"><input type="radio" name="q80" value="D" data-correct="true"> D. To monitor the cycle time of the sterilizer</div>
+		</div>
+
+		<!-- Question 81 -->
+		<div class="question" data-question="81">
+			<p>81. Which method is used to ensure that steam sterilization equipment is working properly?</p>
+			<div class="answer"><input type="radio" name="q81" value="A"> A. Chemical indicators</div>
+			<div class="answer"><input type="radio" name="q81" value="B"> B. Biological indicators</div>
+			<div class="answer"><input type="radio" name="q81" value="C" data-correct="true"> C. Both A and B</div>
+			<div class="answer"><input type="radio" name="q81" value="D"> D. None of the above</div>
+		</div>
+
+		<!-- Question 82 -->
+		<div class="question" data-question="82">
+			<p>82. What is the primary purpose of using a Bowie-Dick test?</p>
+			<div class="answer"><input type="radio" name="q82" value="A"> A. To test the effectiveness of steam penetration in pre-vacuum sterilizers</div>
+			<div class="answer"><input type="radio" name="q82" value="B"> B. To measure the cycle time of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q82" value="C"> C. To test the temperature of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q82" value="D" data-correct="true"> D. To ensure the proper functioning of the sterilizer's vacuum system</div>
+		</div>
+
+		<!-- Question 83 -->
+		<div class="question" data-question="83">
+			<p>83. What type of sterilization method is typically used for heat-sensitive items such as rubber or plastic?</p>
+			<div class="answer"><input type="radio" name="q83" value="A"> A. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q83" value="B" data-correct="true"> B. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q83" value="C"> C. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q83" value="D"> D. Gamma Radiation Sterilization</div>
+		</div>
+
+		<!-- Question 84 -->
+		<div class="question" data-question="84">
+			<p>84. What is the main advantage of using gamma radiation for sterilization?</p>
+			<div class="answer"><input type="radio" name="q84" value="A"> A. It is suitable for heat-sensitive materials</div>
+			<div class="answer"><input type="radio" name="q84" value="B"> B. It is less expensive than other methods</div>
+			<div class="answer"><input type="radio" name="q84" value="C" data-correct="true"> C. It provides effective sterilization for a wide range of materials</div>
+			<div class="answer"><input type="radio" name="q84" value="D"> D. It requires no specialized equipment</div>
+		</div>
+
+		<!-- Question 85 -->
+		<div class="question" data-question="85">
+			<p>85. What is the primary role of a chemical indicator in a sterilization process?</p>
+			<div class="answer"><input type="radio" name="q85" value="A"> A. To ensure the sterilization temperature was achieved</div>
+			<div class="answer"><input type="radio" name="q85" value="B"> B. To confirm the presence of steam</div>
+			<div class="answer"><input type="radio" name="q85" value="C"> C. To indicate the cycle time of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q85" value="D" data-correct="true"> D. To verify that the sterilization process was effective</div>
+		</div>
+
+		<!-- Question 86 -->
+		<div class="question" data-question="86">
+			<p>86. Which sterilization method is best suited for items that are not heat-resistant and must be sterilized quickly?</p>
+			<div class="answer"><input type="radio" name="q86" value="A"> A. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q86" value="B"> B. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q86" value="C" data-correct="true"> C. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q86" value="D"> D. Radiation Sterilization</div>
+		</div>
+
+		<!-- Question 87 -->
+		<div class="question" data-question="87">
+			<p>87. What is the main purpose of using biological indicators in sterilization?</p>
+			<div class="answer"><input type="radio" name="q87" value="A"> A. To measure the cycle time of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q87" value="B"> B. To confirm the presence of moisture</div>
+			<div class="answer"><input type="radio" name="q87" value="C"> C. To test the temperature of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q87" value="D" data-correct="true"> D. To verify the effectiveness of the sterilization process</div>
+		</div>
+
+		<!-- Question 88 -->
+		<div class="question" data-question="88">
+			<p>88. Which sterilization method is commonly used for items that are sensitive to high temperatures and moisture?</p>
+			<div class="answer"><input type="radio" name="q88" value="A"> A. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q88" value="B"> B. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q88" value="C" data-correct="true"> C. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q88" value="D"> D. Gamma Radiation Sterilization</div>
+		</div>
+
+		<!-- Question 89 -->
+		<div class="question" data-question="89">
+			<p>89. What is the main disadvantage of using ethylene oxide sterilization?</p>
+			<div class="answer"><input type="radio" name="q89" value="A"> A. It is not suitable for heat-sensitive items</div>
+			<div class="answer"><input type="radio" name="q89" value="B"> B. It requires high temperatures</div>
+			<div class="answer"><input type="radio" name="q89" value="C"> C. It requires long cycle times</div>
+			<div class="answer"><input type="radio" name="q89" value="D" data-correct="true"> D. It requires specialized safety precautions due to toxic fumes</div>
+		</div>
+
+		<!-- Question 90 -->
+		<div class="question" data-question="90">
+			<p>90. What does the term "sterilization" refer to in the context of infection control?</p>
+			<div class="answer"><input type="radio" name="q90" value="A"> A. The process of cleaning surfaces to remove dirt</div>
+			<div class="answer"><input type="radio" name="q90" value="B"> B. The process of reducing the number of microorganisms on surfaces</div>
+			<div class="answer"><input type="radio" name="q90" value="C"> C. The process of killing all microorganisms, including spores</div>
+			<div class="answer"><input type="radio" name="q90" value="D" data-correct="true"> D. The process of disinfecting surfaces to remove pathogens</div>
+		</div>
+
+		<!-- Question 91 -->
+		<div class="question" data-question="91">
+			<p>91. Which of the following is an advantage of using chemical vapor sterilization?</p>
+			<div class="answer"><input type="radio" name="q91" value="A"> A. It is suitable for heat-sensitive items</div>
+			<div class="answer"><input type="radio" name="q91" value="B"> B. It requires no specialized equipment</div>
+			<div class="answer"><input type="radio" name="q91" value="C" data-correct="true"> C. It is effective for items that can withstand high temperatures</div>
+			<div class="answer"><input type="radio" name="q91" value="D"> D. It has a shorter cycle time than other methods</div>
+		</div>
+
+		<!-- Question 92 -->
+		<div class="question" data-question="92">
+			<p>92. What is the purpose of using a biological indicator in a steam sterilization process?</p>
+			<div class="answer"><input type="radio" name="q92" value="A"> A. To measure the temperature of the steam</div>
+			<div class="answer"><input type="radio" name="q92" value="B"> B. To verify the presence of steam</div>
+			<div class="answer"><input type="radio" name="q92" value="C"> C. To ensure the sterilization cycle was completed</div>
+			<div class="answer"><input type="radio" name="q92" value="D" data-correct="true"> D. To confirm that the sterilization process was effective in killing microorganisms</div>
+		</div>
+
+		<!-- Question 93 -->
+		<div class="question" data-question="93">
+			<p>93. Which of the following is not a common method of sterilization used in healthcare settings?</p>
+			<div class="answer"><input type="radio" name="q93" value="A"> A. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q93" value="B"> B. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q93" value="C"> C. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q93" value="D" data-correct="true"> D. Incineration</div>
+		</div>
+
+		<!-- Question 94 -->
+		<div class="question" data-question="94">
+			<p>94. What is the primary disadvantage of using steam sterilization?</p>
+			<div class="answer"><input type="radio" name="q94" value="A"> A. It is not suitable for heat-sensitive items</div>
+			<div class="answer"><input type="radio" name="q94" value="B"> B. It is not effective in killing spores</div>
+			<div class="answer"><input type="radio" name="q94" value="C" data-correct="true"> C. It requires specialized equipment and a specific cycle time</div>
+			<div class="answer"><input type="radio" name="q94" value="D"> D. It requires no specialized equipment</div>
+		</div>
+
+		<!-- Question 95 -->
+		<div class="question" data-question="95">
+			<p>95. Which of the following methods is effective for sterilizing items that are sensitive to moisture?</p>
+			<div class="answer"><input type="radio" name="q95" value="A"> A. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q95" value="B" data-correct="true"> B. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q95" value="C"> C. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q95" value="D"> D. Gamma Radiation Sterilization</div>
+		</div>
+
+		<!-- Question 96 -->
+		<div class="question" data-question="96">
+			<p>96. What is the main reason for using a sterilization log in a healthcare setting?</p>
+			<div class="answer"><input type="radio" name="q96" value="A"> A. To record the temperature of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q96" value="B"> B. To document the cycle times and effectiveness of the sterilization process</div>
+			<div class="answer"><input type="radio" name="q96" value="C"> C. To track the humidity levels in the sterilizer</div>
+			<div class="answer"><input type="radio" name="q96" value="D" data-correct="true"> D. To ensure compliance with sterilization protocols and standards</div>
+		</div>
+
+		<!-- Question 97 -->
+		<div class="question" data-question="97">
+			<p>97. What type of sterilizer is most suitable for sterilizing items that can withstand high temperatures?</p>
+			<div class="answer"><input type="radio" name="q97" value="A"> A. Ethylene Oxide Sterilizer</div>
+			<div class="answer"><input type="radio" name="q97" value="B"> B. Steam Sterilizer</div>
+			<div class="answer"><input type="radio" name="q97" value="C" data-correct="true"> C. Dry Heat Sterilizer</div>
+			<div class="answer"><input type="radio" name="q97" value="D"> D. Gamma Radiation Sterilizer</div>
+		</div>
+
+		<!-- Question 98 -->
+		<div class="question" data-question="98">
+			<p>98. Which sterilization method is effective for sterilizing heat-sensitive materials that cannot be steam-sterilized?</p>
+			<div class="answer"><input type="radio" name="q98" value="A"> A. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q98" value="B"> B. Gamma Radiation Sterilization</div>
+			<div class="answer"><input type="radio" name="q98" value="C" data-correct="true"> C. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q98" value="D"> D. Steam Sterilization</div>
+		</div>
+
+		<!-- Question 99 -->
+		<div class="question" data-question="99">
+			<p>99. What is the purpose of using chemical indicators in a sterilization process?</p>
+			<div class="answer"><input type="radio" name="q99" value="A"> A. To test the temperature of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q99" value="B"> B. To confirm the presence of steam</div>
+			<div class="answer"><input type="radio" name="q99" value="C"> C. To measure the cycle time of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q99" value="D" data-correct="true"> D. To verify that the sterilization process was effective</div>
+		</div>
+
+		<!-- Question 100 -->
+		<div class="question" data-question="100">
+			<p>100. What does the term "disinfection" refer to in the context of infection control?</p>
+			<div class="answer"><input type="radio" name="q100" value="A"> A. The process of killing all microorganisms, including spores</div>
+			<div class="answer"><input type="radio" name="q100" value="B"> B. The process of cleaning surfaces to remove dirt</div>
+			<div class="answer"><input type="radio" name="q100" value="C" data-correct="true"> C. The process of reducing the number of microorganisms on surfaces</div>
+			<div class="answer"><input type="radio" name="q100" value="D"> D. The process of sterilizing surfaces to remove pathogens</div>
+		</div>
+
+		<!-- Question 101 -->
+		<div class="question" data-question="101">
+			<p>101. What is the primary purpose of using a Bowie-Dick test in steam sterilization?</p>
+			<div class="answer"><input type="radio" name="q101" value="A"> A. To measure the temperature of the sterilizer</div>
+			<div class="answer"><input type="radio" name="q101" value="B"> B. To test the steam penetration in pre-vacuum sterilizers</div>
+			<div class="answer"><input type="radio" name="q101" value="C" data-correct="true"> C. To ensure the proper functioning of the sterilizer's vacuum system</div>
+			<div class="answer"><input type="radio" name="q101" value="D"> D. To test the effectiveness of the sterilization cycle</div>
+		</div>
+
+		<!-- Question 102 -->
+		<div class="question" data-question="102">
+			<p>102. Which of the following is a method used to test the effectiveness of ethylene oxide sterilization?</p>
+			<div class="answer"><input type="radio" name="q102" value="A"> A. Chemical indicators</div>
+			<div class="answer"><input type="radio" name="q102" value="B"> B. Biological indicators</div>
+			<div class="answer"><input type="radio" name="q102" value="C" data-correct="true"> C. Both A and B</div>
+			<div class="answer"><input type="radio" name="q102" value="D"> D. None of the above</div>
+		</div>
+
+		<!-- Question 103 -->
+		<div class="question" data-question="103">
+			<p>103. What type of sterilization is most appropriate for items that are sensitive to high temperatures and moisture?</p>
+			<div class="answer"><input type="radio" name="q103" value="A"> A. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q103" value="B"> B. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q103" value="C"> C. Gamma Radiation Sterilization</div>
+			<div class="answer"><input type="radio" name="q103" value="D" data-correct="true"> D. Ethylene Oxide Sterilization</div>
+		</div>
+
+		<!-- Question 104 -->
+		<div class="question" data-question="104">
+			<p>104. Which of the following is not a common sterilization method used in healthcare settings?</p>
+			<div class="answer"><input type="radio" name="q104" value="A"> A. Steam Sterilization</div>
+			<div class="answer"><input type="radio" name="q104" value="B"> B. Ethylene Oxide Sterilization</div>
+			<div class="answer"><input type="radio" name="q104" value="C"> C. Dry Heat Sterilization</div>
+			<div class="answer"><input type="radio" name="q104" value="D" data-correct="true"> D. Incineration</div>
+		</div>
+
+		<!-- Question 105 -->
+		<div class="question" data-question="105">
+			<p>105. What is the main advantage of using dry heat sterilization over steam sterilization?</p>
+			<div class="answer"><input type="radio" name="q105" value="A"> A. It is faster</div>
+			<div class="answer"><input type="radio" name="q105" value="B" data-correct="true"> B. It is suitable for items that cannot be exposed to moisture</div>
+			<div class="answer"><input type="radio" name="q105" value="C"> C. It is less expensive</div>
+			<div class="answer"><input type="radio" name="q105" value="D"> D. It requires less specialized equipment</div>
+		</div>
+
+
+
+       <!-- Question 106 -->
+<div class="question" data-question="106">
+    <p>106. What type of chemical agent is typically used for high-level disinfection?</p>
+    <div class="answer"><input type="radio" name="q106" value="A"> A. Alcohol</div>
+    <div class="answer"><input type="radio" name="q106" value="B"> B. Hydrogen Peroxide</div>
+    <div class="answer"><input type="radio" name="q106" value="C"> C. Phenolics</div>
+    <div class="answer"><input type="radio" name="q106" value="D" data-correct="true"> D. Glutaraldehyde</div>
+</div>
+
+<!-- Question 107 -->
+<div class="question" data-question="107">
+    <p>107. What is the main purpose of using a sterilization cycle indicator?</p>
+    <div class="answer"><input type="radio" name="q107" value="A"> A. To verify the temperature of the sterilizer</div>
+    <div class="answer"><input type="radio" name="q107" value="B"> B. To confirm the presence of steam</div>
+    <div class="answer"><input type="radio" name="q107" value="C"> C. To measure the humidity level</div>
+    <div class="answer"><input type="radio" name="q107" value="D" data-correct="true"> D. To indicate that the sterilization cycle has been completed</div>
+</div>
+
+<!-- Question 108 -->
+<div class="question" data-question="108">
+    <p>108. Which method of sterilization is commonly used for heat-sensitive instruments that cannot withstand steam?</p>
+    <div class="answer"><input type="radio" name="q108" value="A"> A. Dry Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q108" value="B"> B. Ethylene Oxide Sterilization</div>
+    <div class="answer"><input type="radio" name="q108" value="C"> C. Gamma Radiation Sterilization</div>
+    <div class="answer"><input type="radio" name="q108" value="D" data-correct="true"> D. Chemical Sterilization</div>
+</div>
+
+<!-- Question 109 -->
+<div class="question" data-question="109">
+    <p>109. Which sterilization method uses ultraviolet light to destroy microorganisms?</p>
+    <div class="answer"><input type="radio" name="q109" value="A"> A. Steam Sterilization</div>
+    <div class="answer"><input type="radio" name="q109" value="B"> B. Dry Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q109" value="C" data-correct="true"> C. Ultraviolet Sterilization</div>
+    <div class="answer"><input type="radio" name="q109" value="D"> D. Ethylene Oxide Sterilization</div>
+</div>
+
+<!-- Question 110 -->
+<div class="question" data-question="110">
+    <p>110. What does the term "aseptic technique" refer to?</p>
+    <div class="answer"><input type="radio" name="q110" value="A"> A. The process of cleaning surfaces</div>
+    <div class="answer"><input type="radio" name="q110" value="B"> B. The process of sterilizing instruments</div>
+    <div class="answer"><input type="radio" name="q110" value="C"> C. The process of maintaining an environment free from pathogenic microorganisms</div>
+    <div class="answer"><input type="radio" name="q110" value="D" data-correct="true"> D. The process of disinfecting surfaces and equipment</div>
+</div>
+
+<!-- Question 111 -->
+<div class="question" data-question="111">
+    <p>111. What is the primary purpose of using an autoclave in a medical setting?</p>
+    <div class="answer"><input type="radio" name="q111" value="A"> A. To clean medical instruments</div>
+    <div class="answer"><input type="radio" name="q111" value="B"> B. To disinfect surfaces</div>
+    <div class="answer"><input type="radio" name="q111" value="C" data-correct="true"> C. To sterilize medical instruments</div>
+    <div class="answer"><input type="radio" name="q111" value="D"> D. To maintain sterile conditions</div>
+</div>
+
+<!-- Question 112 -->
+<div class="question" data-question="112">
+    <p>112. Which of the following is a common indicator used to monitor the effectiveness of steam sterilization?</p>
+    <div class="answer"><input type="radio" name="q112" value="A"> A. Biological Indicators</div>
+    <div class="answer"><input type="radio" name="q112" value="B" data-correct="true"> B. Chemical Indicators</div>
+    <div class="answer"><input type="radio" name="q112" value="C"> C. Mechanical Indicators</div>
+    <div class="answer"><input type="radio" name="q112" value="D"> D. Radiological Indicators</div>
+</div>
+
+<!-- Question 113 -->
+<div class="question" data-question="113">
+    <p>113. What is the primary disadvantage of using chemical sterilization?</p>
+    <div class="answer"><input type="radio" name="q113" value="A"> A. It is ineffective against spores</div>
+    <div class="answer"><input type="radio" name="q113" value="B"> B. It is not suitable for heat-sensitive items</div>
+    <div class="answer"><input type="radio" name="q113" value="C" data-correct="true"> C. It requires a long exposure time</div>
+    <div class="answer"><input type="radio" name="q113" value="D"> D. It is not effective in low temperatures</div>
+</div>
+
+<!-- Question 114 -->
+<div class="question" data-question="114">
+    <p>114. What is the main benefit of using a gas sterilization method?</p>
+    <div class="answer"><input type="radio" name="q114" value="A"> A. It is quick and inexpensive</div>
+    <div class="answer"><input type="radio" name="q114" value="B"> B. It is suitable for heat-sensitive materials</div>
+    <div class="answer"><input type="radio" name="q114" value="C"> C. It is suitable for large volumes</div>
+    <div class="answer"><input type="radio" name="q114" value="D" data-correct="true"> D. It is effective against a wide range of microorganisms</div>
+</div>
+
+<!-- Question 115 -->
+<div class="question" data-question="115">
+    <p>115. Which sterilization method is commonly used for single-use medical devices?</p>
+    <div class="answer"><input type="radio" name="q115" value="A"> A. Dry Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q115" value="B" data-correct="true"> B. Ethylene Oxide Sterilization</div>
+    <div class="answer"><input type="radio" name="q115" value="C"> C. Steam Sterilization</div>
+    <div class="answer"><input type="radio" name="q115" value="D"> D. Gamma Radiation Sterilization</div>
+</div>
+
+<!-- Question 116 -->
+<div class="question" data-question="116">
+    <p>116. What is the key factor in determining the effectiveness of a sterilization process?</p>
+    <div class="answer"><input type="radio" name="q116" value="A"> A. Temperature</div>
+    <div class="answer"><input type="radio" name="q116" value="B"> B. Time</div>
+    <div class="answer"><input type="radio" name="q116" value="C"> C. Chemical Concentration</div>
+    <div class="answer"><input type="radio" name="q116" value="D" data-correct="true"> D. All of the above</div>
+</div>
+
+<!-- Question 117 -->
+<div class="question" data-question="117">
+    <p>117. What type of chemical is used in low-temperature plasma sterilization?</p>
+    <div class="answer"><input type="radio" name="q117" value="A"> A. Hydrogen Peroxide</div>
+    <div class="answer"><input type="radio" name="q117" value="B"> B. Ethylene Oxide</div>
+    <div class="answer"><input type="radio" name="q117" value="C"> C. Ozone</div>
+    <div class="answer"><input type="radio" name="q117" value="D" data-correct="true"> D. Plasma Gas</div>
+</div>
+
+<!-- Question 118 -->
+<div class="question" data-question="118">
+    <p>118. Which of the following sterilization methods is typically used for disposable items in the medical industry?</p>
+    <div class="answer"><input type="radio" name="q118" value="A"> A. Dry Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q118" value="B" data-correct="true"> C. Gamma Radiation Sterilization</div>
+    <div class="answer"><input type="radio" name="q118" value="C"> C. Steam Sterilization</div>
+    <div class="answer"><input type="radio" name="q118" value="D"> D. Ethylene Oxide Sterilization</div>
+</div>
+
+<!-- Question 119 -->
+<div class="question" data-question="119">
+    <p>119. What is the purpose of using a chemical indicator in the sterilization process?</p>
+    <div class="answer"><input type="radio" name="q119" value="A"> A. To measure the temperature</div>
+    <div class="answer"><input type="radio" name="q119" value="B"> B. To verify the presence of steam</div>
+    <div class="answer"><input type="radio" name="q119" value="C" data-correct="true"> C. To confirm that the sterilization conditions have been met</div>
+    <div class="answer"><input type="radio" name="q119" value="D"> D. To monitor the humidity level</div>
+</div>
+
+<!-- Question 120 -->
+<div class="question" data-question="120">
+    <p>120. What is the primary advantage of using steam sterilization?</p>
+    <div class="answer"><input type="radio" name="q120" value="A"> A. It is less effective than other methods</div>
+    <div class="answer"><input type="radio" name="q120" value="B"> B. It requires high temperatures for a long time</div>
+    <div class="answer"><input type="radio" name="q120" value="C" data-correct="true"> C. It is effective against all types of microorganisms</div>
+    <div class="answer"><input type="radio" name="q120" value="D"> D. It is only suitable for metal instruments</div>
+</div>
+
+<!-- Question 121 -->
+<div class="question" data-question="121">
+    <p>121. What is the main disadvantage of using dry heat sterilization?</p>
+    <div class="answer"><input type="radio" name="q121" value="A"> A. It is not suitable for heat-sensitive materials</div>
+    <div class="answer"><input type="radio" name="q121" value="B"> B. It is not effective against all microorganisms</div>
+    <div class="answer"><input type="radio" name="q121" value="C"> C. It requires longer exposure times</div>
+    <div class="answer"><input type="radio" name="q121" value="D" data-correct="true"> D. It is less effective than other methods</div>
+</div>
+
+<!-- Question 122 -->
+<div class="question" data-question="122">
+    <p>122. What is the primary use of chemical sterilants in healthcare?</p>
+    <div class="answer"><input type="radio" name="q122" value="A"> A. To clean surfaces</div>
+    <div class="answer"><input type="radio" name="q122" value="B" data-correct="true"> B. To sterilize heat-sensitive instruments</div>
+    <div class="answer"><input type="radio" name="q122" value="C"> C. To disinfect environmental surfaces</div>
+    <div class="answer"><input type="radio" name="q122" value="D"> D. To sanitize medical equipment</div>
+</div>
+
+<!-- Question 123 -->
+<div class="question" data-question="123">
+    <p>123. Which of the following methods of sterilization is best suited for high-volume processing of medical supplies?</p>
+    <div class="answer"><input type="radio" name="q123" value="A"> A. Dry Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q123" value="B"> B. Chemical Sterilization</div>
+    <div class="answer"><input type="radio" name="q123" value="C"> C. Ultraviolet Sterilization</div>
+    <div class="answer"><input type="radio" name="q123" value="D" data-correct="true"> D. Steam Sterilization</div>
+</div>
+
+<!-- Question 124 -->
+<div class="question" data-question="124">
+    <p>124. Which of the following is not a method of physical sterilization?</p>
+    <div class="answer"><input type="radio" name="q124" value="A"> A. Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q124" value="B"> B. Filtration</div>
+    <div class="answer"><input type="radio" name="q124" value="C"> C. Radiation</div>
+    <div class="answer"><input type="radio" name="q124" value="D" data-correct="true"> D. Chemical Sterilization</div>
+</div>
+
+<!-- Question 125 -->
+<div class="question" data-question="125">
+    <p>125. What is the primary purpose of using a chemical sterilant?</p>
+    <div class="answer"><input type="radio" name="q125" value="A"> A. To clean surfaces</div>
+    <div class="answer"><input type="radio" name="q125" value="B"> B. To disinfect surfaces</div>
+    <div class="answer"><input type="radio" name="q125" value="C"> C. To sanitize surfaces</div>
+    <div class="answer"><input type="radio" name="q125" value="D" data-correct="true"> D. To achieve complete destruction of all microorganisms</div>
+</div>
+
+<!-- Question 126 -->
+<div class="question" data-question="126">
+    <p>126. What type of sterilization method is typically used for sensitive electronic equipment?</p>
+    <div class="answer"><input type="radio" name="q126" value="A"> A. Dry Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q126" value="B"> B. Steam Sterilization</div>
+    <div class="answer"><input type="radio" name="q126" value="C" data-correct="true"> C. Gas Sterilization</div>
+    <div class="answer"><input type="radio" name="q126" value="D"> D. Ultraviolet Sterilization</div>
+</div>
+
+<!-- Question 127 -->
+<div class="question" data-question="127">
+    <p>127. Which of the following is an advantage of using ethylene oxide for sterilization?</p>
+    <div class="answer"><input type="radio" name="q127" value="A"> A. It is quick and easy</div>
+    <div class="answer"><input type="radio" name="q127" value="B"> B. It is suitable for large volumes</div>
+    <div class="answer"><input type="radio" name="q127" value="C"> C. It is effective against all microorganisms</div>
+    <div class="answer"><input type="radio" name="q127" value="D" data-correct="true"> D. It is effective at low temperatures</div>
+</div>
+
+<!-- Question 128 -->
+<div class="question" data-question="128">
+    <p>128. What is the purpose of a biological indicator in a sterilization process?</p>
+    <div class="answer"><input type="radio" name="q128" value="A"> A. To measure the humidity level</div>
+    <div class="answer"><input type="radio" name="q128" value="B"> B. To verify the presence of steam</div>
+    <div class="answer"><input type="radio" name="q128" value="C"> C. To check the temperature</div>
+    <div class="answer"><input type="radio" name="q128" value="D" data-correct="true"> D. To confirm that the sterilization process was effective</div>
+</div>
+
+<!-- Question 129 -->
+<div class="question" data-question="129">
+    <p>129. What is the main disadvantage of using gas sterilization?</p>
+    <div class="answer"><input type="radio" name="q129" value="A"> A. It is ineffective against microorganisms</div>
+    <div class="answer"><input type="radio" name="q129" value="B"> B. It is suitable only for small items</div>
+    <div class="answer"><input type="radio" name="q129" value="C"> C. It requires high temperatures</div>
+    <div class="answer"><input type="radio" name="q129" value="D" data-correct="true"> D. It requires a long exposure time and proper ventilation</div>
+</div>
+
+<!-- Question 130 -->
+<div class="question" data-question="130">
+    <p>130. Which sterilization method is considered the gold standard for achieving sterility?</p>
+    <div class="answer"><input type="radio" name="q130" value="A"> A. Chemical Sterilization</div>
+    <div class="answer"><input type="radio" name="q130" value="B"> B. Dry Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q130" value="C"> C. Gas Sterilization</div>
+    <div class="answer"><input type="radio" name="q130" value="D" data-correct="true"> D. Steam Sterilization</div>
+</div>
+
+<!-- Question 131 -->
+<div class="question" data-question="131">
+    <p>131. What is the primary function of an autoclave in a hospital setting?</p>
+    <div class="answer"><input type="radio" name="q131" value="A"> A. To dry medical instruments</div>
+    <div class="answer"><input type="radio" name="q131" value="B"> B. To disinfect surfaces</div>
+    <div class="answer"><input type="radio" name="q131" value="C"> C. To sterilize medical instruments and equipment</div>
+    <div class="answer"><input type="radio" name="q131" value="D" data-correct="true"> D. To store medical supplies</div>
+</div>
+
+<!-- Question 132 -->
+<div class="question" data-question="132">
+    <p>132. What is the purpose of a sterilization log?</p>
+    <div class="answer"><input type="radio" name="q132" value="A"> A. To track the use of medical supplies</div>
+    <div class="answer"><input type="radio" name="q132" value="B"> B. To record the cleaning schedule of equipment</div>
+    <div class="answer"><input type="radio" name="q132" value="C"> C" data-correct="true"> C. To document the effectiveness and performance of the sterilization process</div>
+    <div class="answer"><input type="radio" name="q132" value="D"> D. To measure the temperature and humidity levels</div>
+</div>
+
+<!-- Question 133 -->
+<div class="question" data-question="133">
+    <p>133. Which type of chemical indicator changes color to show that the sterilization process has been completed?</p>
+    <div class="answer"><input type="radio" name="q133" value="A"> A. Biological Indicator</div>
+    <div class="answer"><input type="radio" name="q133" value="B"> B. Mechanical Indicator</div>
+    <div class="answer"><input type="radio" name="q133" value="C" data-correct="true"> C. Chemical Indicator</div>
+    <div class="answer"><input type="radio" name="q133" value="D"> D. Radiological Indicator</div>
+</div>
+
+<!-- Question 134 -->
+<div class="question" data-question="134">
+    <p>134. What is the typical exposure time for steam sterilization at 121°C?</p>
+    <div class="answer"><input type="radio" name="q134" value="A"> A. 10 minutes</div>
+    <div class="answer"><input type="radio" name="q134" value="B"> B. 30 minutes</div>
+    <div class="answer"><input type="radio" name="q134" value="C" data-correct="true"> C. 15 minutes</div>
+    <div class="answer"><input type="radio" name="q134" value="D"> D. 5 minutes</div>
+</div>
+
+<!-- Question 135 -->
+<div class="question" data-question="135">
+    <p>135. What is a common method for monitoring the effectiveness of ethylene oxide sterilization?</p>
+    <div class="answer"><input type="radio" name="q135" value="A"> A. Chemical Indicator</div>
+    <div class="answer"><input type="radio" name="q135" value="B"> B. Biological Indicator</div>
+    <div class="answer"><input type="radio" name="q135" value="C" data-correct="true"> C. Biological Indicator</div>
+    <div class="answer"><input type="radio" name="q135" value="D"> D. Mechanical Indicator</div>
+</div>
+
+<!-- Question 136 -->
+<div class="question" data-question="136">
+    <p>136. Which method is suitable for sterilizing items that are sensitive to heat and moisture?</p>
+    <div class="answer"><input type="radio" name="q136" value="A"> A. Dry Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q136" value="B"> B. Steam Sterilization</div>
+    <div class="answer"><input type="radio" name="q136" value="C" data-correct="true"> C. Gas Sterilization</div>
+    <div class="answer"><input type="radio" name="q136" value="D"> D. Ultraviolet Sterilization</div>
+</div>
+
+<!-- Question 137 -->
+<div class="question" data-question="137">
+    <p>137. What is the main purpose of using a chemical indicator in a sterilization cycle?</p>
+    <div class="answer"><input type="radio" name="q137" value="A"> A. To check the temperature</div>
+    <div class="answer"><input type="radio" name="q137" value="B"> B. To measure the humidity</div>
+    <div class="answer"><input type="radio" name="q137" value="C"> C. To confirm that the sterilization process has been completed</div>
+    <div class="answer"><input type="radio" name="q137" value="D" data-correct="true"> D. To ensure that the sterilization conditions have been met</div>
+</div>
+
+<!-- Question 138 -->
+<div class="question" data-question="138">
+    <p>138. What type of sterilization method is used for non-heat-resistant items?</p>
+    <div class="answer"><input type="radio" name="q138" value="A"> A. Steam Sterilization</div>
+    <div class="answer"><input type="radio" name="q138" value="B"> B. Dry Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q138" value="C"> C. Ultraviolet Sterilization</div>
+    <div class="answer"><input type="radio" name="q138" value="D" data-correct="true"> D. Ethylene Oxide Sterilization</div>
+</div>
+
+<!-- Question 139 -->
+<div class="question" data-question="139">
+    <p>139. What is the primary purpose of using steam in the sterilization process?</p>
+    <div class="answer"><input type="radio" name="q139" value="A"> A. To increase the temperature</div>
+    <div class="answer"><input type="radio" name="q139" value="B"> B. To create pressure</div>
+    <div class="answer"><input type="radio" name="q139" value="C"> C. To remove microorganisms</div>
+    <div class="answer"><input type="radio" name="q139" value="D" data-correct="true"> D. To ensure that the equipment is free from microorganisms</div>
+</div>
+
+<!-- Question 140 -->
+<div class="question" data-question="140">
+    <p>140. What is the purpose of a mechanical indicator in a sterilization process?</p>
+    <div class="answer"><input type="radio" name="q140" value="A"> A. To measure the chemical concentration</div>
+    <div class="answer"><input type="radio" name="q140" value="B"> B. To verify the presence of steam</div>
+    <div class="answer"><input type="radio" name="q140" value="C" data-correct="true"> C. To monitor the physical parameters of the sterilization process</div>
+    <div class="answer"><input type="radio" name="q140" value="D"> D. To check the temperature</div>
+</div>
+
+<!-- Question 141 -->
+<div class="question" data-question="141">
+    <p>141. What type of sterilization method is commonly used for disposable medical items?</p>
+    <div class="answer"><input type="radio" name="q141" value="A"> A. Steam Sterilization</div>
+    <div class="answer"><input type="radio" name="q141" value="B"> B. Dry Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q141" value="C"> C. Ethylene Oxide Sterilization</div>
+    <div class="answer"><input type="radio" name="q141" value="D" data-correct="true"> D. Gamma Radiation Sterilization</div>
+</div>
+
+<!-- Question 142 -->
+<div class="question" data-question="142">
+    <p>142. What is the role of a biological indicator in the sterilization process?</p>
+    <div class="answer"><input type="radio" name="q142" value="A"> A. To measure the chemical concentration</div>
+    <div class="answer"><input type="radio" name="q142" value="B"> B. To check the temperature</div>
+    <div class="answer"><input type="radio" name="q142" value="C"> C. To verify the presence of steam</div>
+    <div class="answer"><input type="radio" name="q142" value="D" data-correct="true"> D. To confirm that the sterilization process was effective</div>
+</div>
+
+<!-- Question 143 -->
+<div class="question" data-question="143">
+    <p>143. Which of the following sterilization methods requires the longest exposure time?</p>
+    <div class="answer"><input type="radio" name="q143" value="A"> A. Steam Sterilization</div>
+    <div class="answer"><input type="radio" name="q143" value="B"> B. Dry Heat Sterilization</div>
+    <div class="answer"><input type="radio" name="q143" value="C"> C. Gas Sterilization</div>
+    <div class="answer"><input type="radio" name="q143" value="D" data-correct="true"> D. Chemical Sterilization</div>
+</div>
+
+<!-- Question 144 -->
+<div class="question" data-question="144">
+    <p>144. What is the purpose of using a biological indicator in a steam sterilization process?</p>
+    <div class="answer"><input type="radio" name="q144" value="A"> A. To check the temperature</div>
+    <div class="answer"><input type="radio" name="q144" value="B"> B. To measure the pressure</div>
+    <div class="answer"><input type="radio" name="q144" value="C"> C. To confirm the presence of steam</div>
+    <div class="answer"><input type="radio" name="q144" value="D" data-correct="true"> D. To verify that the sterilization process was effective</div>
+</div>
+
+<!-- Question 145 -->
+<div class="question" data-question="145">
+    <p>145. Which of the following is not a characteristic of a good sterilization indicator?</p>
+    <div class="answer"><input type="radio" name="q145" value="A"> A. It is sensitive to the sterilization process parameters</div>
+    <div class="answer"><input type="radio" name="q145" value="B"> B. It provides immediate results</div>
+    <div class="answer"><input type="radio" name="q145" value="C" data-correct="true"> C. It is inexpensive</div>
+    <div class="answer"><input type="radio" name="q145" value="D"> D. It is easy to use and interpret</div>
+</div>
+
+<!-- Question 146 -->
+<div class="question" data-question="146">
+    <p>146. What is the main purpose of using a chemical indicator during a sterilization cycle?</p>
+    <div class="answer"><input type="radio" name="q146" value="A"> A. To measure the temperature</div>
+    <div class="answer"><input type="radio" name="q146" value="B"> B. To confirm that the sterilization parameters have been met</div>
+    <div class="answer"><input type="radio" name="q146" value="C"> C. To check the humidity levels</div>
+    <div class="answer"><input type="radio" name="q146" value="D" data-correct="true"> D. To indicate that the sterilization process has occurred</div>
+</div>
+
+<!-- Question 147 -->
+<div class="question" data-question="147">
+    <p>147. What is the main advantage of using steam over dry heat for sterilization?</p>
+    <div class="answer"><input type="radio" name="q147" value="A"> A. Steam is more suitable for heat-sensitive items</div>
+    <div class="answer"><input type="radio" name="q147" value="B"> B. Steam requires less time for sterilization</div>
+    <div class="answer"><input type="radio" name="q147" value="C" data-correct="true"> C. Steam is more effective in killing microorganisms</div>
+    <div class="answer"><input type="radio" name="q147" value="D"> D. Steam is less expensive</div>
+</div>
+
+<!-- Question 148 -->
+<div class="question" data-question="148">
+    <p>148. What is the purpose of using an autoclave in a medical setting?</p>
+    <div class="answer"><input type="radio" name="q148" value="A"> A. To dry medical equipment</div>
+    <div class="answer"><input type="radio" name="q148" value="B"> B. To clean medical surfaces</div>
+    <div class="answer"><input type="radio" name="q148" value="C" data-correct="true"> C. To sterilize medical instruments and supplies</div>
+    <div class="answer"><input type="radio" name="q148" value="D"> D. To store medical supplies</div>
+</div>
+
+<!-- Question 149 -->
+<div class="question" data-question="149">
+    <p>149. What is a common indicator used to monitor the effectiveness of a steam sterilization process?</p>
+    <div class="answer"><input type="radio" name="q149" value="A"> A. Chemical Indicator</div>
+    <div class="answer"><input type="radio" name="q149" value="B"> B. Mechanical Indicator</div>
+    <div class="answer"><input type="radio" name="q149" value="C"> C. Biological Indicator</div>
+    <div class="answer"><input type="radio" name="q149" value="D" data-correct="true"> D. Chemical Indicator</div>
+</div>
+
+<!-- Question 150 -->
+<div class="question" data-question="150">
+    <p>150. What is the main disadvantage of using chemical sterilants?</p>
+    <div class="answer"><input type="radio" name="q150" value="A"> A. They are not effective against microorganisms</div>
+    <div class="answer"><input type="radio" name="q150" value="B"> B. They are expensive</div>
+    <div class="answer"><input type="radio" name="q150" value="C"> C. They are only suitable for metal instruments</div>
+    <div class="answer"><input type="radio" name="q150" value="D" data-correct="true"> D. They can be toxic and require proper ventilation</div>
+</div>
+
+
+    <!-- Submit Button -->
+<button type="button" onclick="checkAnswers()">Submit Answers</button>
+
+
+    <script>
+        function checkAnswers() {
+        // Get all questions
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach(question => {
+            // Get all answers for this question
+            const answers = question.querySelectorAll('.answer input[type="radio"]');
+            let selectedAnswer = null;
+
+            answers.forEach(answer => {
+                if (answer.checked) {
+                    selectedAnswer = answer;
+                }
+            });
+
+            // Clear previous highlights
+            answers.forEach(answer => {
+                answer.parentElement.classList.remove('correct', 'incorrect');
+            });
+
+            // Highlight the correct and wrong answers
+            answers.forEach(answer => {
+                if (answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('correct');
+                }
+
+                if (answer === selectedAnswer && !answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('incorrect');
+                }
+            });
+        });
+    }
+    </script>
+</body>
+</html>

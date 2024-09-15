@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Selection</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .quiz-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .quiz-item {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .quiz-item a {
+            display: block;
+            padding: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e1e1e1;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .quiz-item a:hover {
+            background-color: #e9ecef;
+            color: #0056b3;
+        }
+        .quiz-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Select a Quiz</h1>
+
+    <div class="quiz-list">
+        <div class="quiz-item"><a href="quiz1.html">Quiz 1</a></div>
+        <div class="quiz-item"><a href="quiz2.html">Quiz 2</a></div>
+        <div class="quiz-item"><a href="quiz3.html">Quiz 3</a></div>
+        <div class="quiz-item"><a href="quiz4.html">Quiz 4</a></div>
+        <div class="quiz-item"><a href="quiz5.html">Quiz 5</a></div>
+    </div>
+</div>
+
+</body>
+</html>

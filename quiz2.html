@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2</title>
+    <style>
+       body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #quiz {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .question p {
+            margin: 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .answer {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .answer input[type="radio"] {
+            margin-right: 10px;
+        }
+        .answer:hover {
+            background-color: #e2e6ea;
+        }
+        .correct {
+            background-color: #d4edda; /* Light green for correct answers */
+            border: 1px solid #c3e6cb; /* Green border */ 
+        }
+        .incorrect {
+            background-color: #f8d7da; /* Light red for wrong answers */
+            border: 1px solid #f5c6cb; /* Red border */ 
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz 2</h1>
+
+		<div class="question" data-question="151">
+            <p>151. Central Service Technicians must be able to adapt to change:</p>
+            <div class="answer"><input type="radio" name="q151" value="A" data-correct="true"> A. True</div>
+            <div class="answer"><input type="radio" name="q151" value="B"> B. False</div>
+        </div>
+
+        <!-- Question 152 -->
+        <div class="question" data-question="152">
+            <p>152. Soiled instruments and other items are received in the blank area of the Central Service Department:</p>
+            <div class="answer"><input type="radio" name="q152" value="A"> A. Preparation</div>
+            <div class="answer"><input type="radio" name="q152" value="B"> B. Packaging</div>
+            <div class="answer"><input type="radio" name="q152" value="C" data-correct="true"> C. Decontamination</div>
+            <div class="answer"><input type="radio" name="q152" value="D"> D. Sterilization</div>
+        </div>
+		
+		
+
+        <!-- Question 153 -->
+        <div class="question" data-question="153">
+            <p>153. The term, "CR", relates to a surgical procedure for:</p>
+            <div class="answer"><input type="radio" name="q153" value="A" data-correct="true"> A. Treating a fractured bone without a surgical incision</div>
+            <div class="answer"><input type="radio" name="q153" value="B"> B. Creating a new blood supply to an area of the heart</div>
+            <div class="answer"><input type="radio" name="q153" value="C"> C. Surgical removal of the uterus</div>
+            <div class="answer"><input type="radio" name="q153" value="D"> D. Surgical removal of part of the prostate gland</div>
+        </div>
+
+        <!-- Question 154 -->
+        <div class="question" data-question="154">
+            <p>154. Surgical instruments should be inspected:</p>
+            <div class="answer"><input type="radio" name="q154" value="A"> A. Before they are cleaned</div>
+            <div class="answer"><input type="radio" name="q154" value="B" data-correct="true"> B. After they are cleaned</div>
+            <div class="answer"><input type="radio" name="q154" value="C"> C. After they are sterilized</div>
+            <div class="answer"><input type="radio" name="q154" value="D"> D. During storage</div>
+        </div>
+
+        <!-- Question 155 -->
+        <div class="question" data-question="155">
+            <p>155. All microorganisms are harmful to humans:</p>
+            <div class="answer"><input type="radio" name="q155" value="A"> A. True</div>
+            <div class="answer"><input type="radio" name="q155" value="B" data-correct="true"> B. False</div>
+        </div>
+
+        <!-- Question 156 -->
+        <div class="question" data-question="156">
+            <p>156. A somewhat flexible muscular tube that helps move food into the stomach:</p>
+            <div class="answer"><input type="radio" name="q156" value="A"> A. Alimentary Canal</div>
+            <div class="answer"><input type="radio" name="q156" value="B"> B. Ureters</div>
+            <div class="answer"><input type="radio" name="q156" value="C" data-correct="true"> C. Esophagus</div>
+            <div class="answer"><input type="radio" name="q156" value="D"> D. Mouth</div>
+        </div>
+
+        <!-- Question 157 -->
+        <div class="question" data-question="157">
+            <p>157. This procedure is the removal of the gall bladder:</p>
+            <div class="answer"><input type="radio" name="q157" value="A" data-correct="true"> A. Cholecystectomy</div>
+            <div class="answer"><input type="radio" name="q157" value="B"> B. Colectomy</div>
+            <div class="answer"><input type="radio" name="q157" value="C"> C. Parotidectomy</div>
+            <div class="answer"><input type="radio" name="q157" value="D"> D. Gastrectomy</div>
+        </div>
+
+        <!-- Question 158 -->
+        <div class="question" data-question="158">
+            <p>158. The largest part of the brain, it controls mental activities and movement:</p>
+            <div class="answer"><input type="radio" name="q158" value="A" data-correct="true"> A. Cerebrum</div>
+            <div class="answer"><input type="radio" name="q158" value="B"> B. Cell</div>
+            <div class="answer" name="q158" value="C"> C. Cerebellum</div>
+            <div class="answer"><input type="radio" name="q158" value="D"> D. Brain Stem</div>
+        </div>
+
+        <!-- Question 159 -->
+        <div class="question" data-question="159">
+            <p>159. The use of analytical skills to solve problems and make decisions is a component of which of the following knowledge and skills dimensions?</p>
+            <div class="answer"><input type="radio" name="q159" value="A"> A. Communication abilities</div>
+            <div class="answer"><input type="radio" name="q159" value="B"> B. Facility system responsibilities</div>
+            <div class="answer"><input type="radio" name="q159" value="C" data-correct="true"> C. Employability skills</div>
+            <div class="answer"><input type="radio" name="q159" value="D"> D. Safety practices</div>
+        </div>
+
+        <!-- Question 160 -->
+        <div class="question" data-question="160">
+            <p>160. This gland stimulates body growth:</p>
+            <div class="answer"><input type="radio" name="q160" value="A"> A. Adrenal Gland</div>
+            <div class="answer"><input type="radio" name="q160" value="B"> B. Thyroid Gland</div>
+            <div class="answer"><input type="radio" name="q160" value="C"> C. Pancreas</div>
+            <div class="answer"><input type="radio" name="q160" value="D" data-correct="true"> D. Pituitary Gland</div>
+        </div>
+
+        <!-- Question 161 -->
+        <div class="question" data-question="161">
+            <p>161. All bacteria require the same conditions to live and grow:</p>
+            <div class="answer"><input type="radio" name="q161" value="A"> A. True</div>
+            <div class="answer"><input type="radio" name="q161" value="B" data-correct="true"> B. False</div>
+        </div>
+
+        <!-- Question 162 -->
+        <div class="question" data-question="162">
+            <p>162. The "throat":</p>
+            <div class="answer"><input type="radio" name="q162" value="A"> A. Esophagus</div>
+            <div class="answer"><input type="radio" name="q162" value="B"> B. Larynx</div>
+            <div class="answer"><input type="radio" name="q162" value="C"> C. Trachea</div>
+            <div class="answer"><input type="radio" name="q162" value="D" data-correct="true"> D. Pharnyx</div>
+        </div>
+
+        <!-- Question 163 -->
+        <div class="question" data-question="163">
+            <p>163. Thread-like "tails" that help bacteria move through liquids are called:</p>
+            <div class="answer"><input type="radio" name="q163" value="A"> A. Nucleus</div>
+            <div class="answer"><input type="radio" name="q163" value="B"> B. Causative agent</div>
+            <div class="answer"><input type="radio" name="q163" value="C" data-correct="true"> C. Flagella</div>
+            <div class="answer"><input type="radio" name="q163" value="D"> D. Spores</div>
+        </div>
+
+        <!-- Question 164 -->
+        <div class="question" data-question="164">
+            <p>164. Career growth and progression is virtually non-existent for Central Service Technicians:</p>
+            <div class="answer"><input type="radio" name="q164" value="A"> A. True</div>
+            <div class="answer"><input type="radio" name="q164" value="B" data-correct="true"> B. False</div>
+        </div>
+
+        <!-- Question 165 -->
+        <div class="question" data-question="165">
+            <p>165. What type of air pressure is required for decontamination areas?</p>
+            <div class="answer"><input type="radio" name="q165" value="A" data-correct="true"> A. Negative</div>
+            <div class="answer"><input type="radio" name="q165" value="B"> B. Neutral</div>
+            <div class="answer"><input type="radio" name="q165" value="C"> C. Forced air</div>
+            <div class="answer"><input type="radio" name="q165" value="D"> D. Positive</div>
+        </div>
+
+        <!-- Question 166 -->
+        <div class="question" data-question="166">
+            <p>166. Central Service Technicians must be able to identify approximately 100 surgical instruments in order to be proficient in their job:</p>
+            <div class="answer"><input type="radio" name="q166" value="A"> A. True</div>
+            <div class="answer"><input type="radio" name="q166" value="B" data-correct="true"> B. False</div>
+        </div>
+
+        <!-- Question 167 -->
+        <div class="question" data-question="167">
+            <p>167. The field of Central Service is primarily concerned with:</p>
+            <div class="answer"><input type="radio" name="q167" value="A"> A. Sterilization only</div>
+            <div class="answer"><input type="radio" name="q167" value="B"> B. Cleaning only</div>
+            <div class="answer"><input type="radio" name="q167" value="C" data-correct="true"> C. Cleaning, disinfection, and sterilization</div>
+            <div class="answer"><input type="radio" name="q167" value="D"> D. Supply and storage only</div>
+        </div>
+
+        <!-- Question 168 -->
+        <div class="question" data-question="168">
+            <p>168. Decontamination and cleaning of surgical instruments should be done:</p>
+            <div class="answer"><input type="radio" name="q168" value="A"> A. After surgery</div>
+            <div class="answer"><input type="radio" name="q168" value="B" data-correct="true"> B. Before and after surgery</div>
+            <div class="answer"><input type="radio" name="q168" value="C"> C. Before surgery only</div>
+            <div class="answer"><input type="radio" name="q168" value="D"> D. After the use of instruments</div>
+        </div>
+
+        <!-- Question 169 -->
+        <div class="question" data-question="169">
+            <p>169. The Central Service Department should maintain a clean and organized work environment to:</p>
+            <div class="answer"><input type="radio" name="q169" value="A"> A. Prevent cross-contamination</div>
+            <div class="answer"><input type="radio" name="q169" value="B" data-correct="true"> B. Ensure patient safety and effective infection control</div>
+            <div class="answer" name="q169" value="C"> C. Save time and reduce labor costs</div>
+            <div class="answer"><input type="radio" name="q169" value="D"> D. Increase productivity only</div>
+        </div>
+
+        <!-- Question 170 -->
+        <div class="question" data-question="170">
+            <p>170. The Central Service Technician's role in infection control involves:</p>
+            <div class="answer"><input type="radio" name="q170" value="A"> A. Monitoring patient vital signs</div>
+            <div class="answer"><input type="radio" name="q170" value="B"> B. Maintaining a sterile environment in the operating room</div>
+            <div class="answer"><input type="radio" name="q170" value="C" data-correct="true"> C. Cleaning, disinfecting, and sterilizing instruments</div>
+            <div class="answer"><input type="radio" name="q170" value="D"> D. Assisting with patient care</div>
+        </div>
+
+        <!-- Question 171 -->
+        <div class="question" data-question="171">
+            <p>171. Proper cleaning of instruments involves:</p>
+            <div class="answer"><input type="radio" name="q171" value="A" data-correct="true"> A. Removing all visible debris and organic material</div>
+            <div class="answer"><input type="radio" name="q171" value="B"> B. Rinsing with water only</div>
+            <div class="answer"><input type="radio" name="q171" value="C"> C. Using only mechanical cleaning methods</div>
+            <div class="answer"><input type="radio" name="q171" value="D"> D. Using chemical agents only</div>
+        </div>
+
+        <!-- Question 172 -->
+        <div class="question" data-question="172">
+            <p>172. What is the primary goal of decontamination?</p>
+            <div class="answer"><input type="radio" name="q172" value="A" data-correct="true"> A. To reduce the microbial load to a safe level</div>
+            <div class="answer"><input type="radio" name="q172" value="B"> B. To sterilize all instruments</div>
+            <div class="answer"><input type="radio" name="q172" value="C"> C. To sanitize all surfaces</div>
+            <div class="answer"><input type="radio" name="q172" value="D"> D. To disinfect all medical equipment</div>
+        </div>
+
+        <!-- Question 173 -->
+        <div class="question" data-question="173">
+            <p>173. Which of the following is NOT a method of disinfection?</p>
+            <div class="answer"><input type="radio" name="q173" value="A"> A. Steam autoclaving</div>
+            <div class="answer"><input type="radio" name="q173" value="B" data-correct="true"> B. Boiling water</div>
+            <div class="answer"><input type="radio" name="q173" value="C"> C. Chemical immersion</div>
+            <div class="answer"><input type="radio" name="q173" value="D"> D. Dry heat sterilization</div>
+        </div>
+
+        <!-- Question 174 -->
+        <div class="question" data-question="174">
+            <p>174. Sterilization is the process of:</p>
+            <div class="answer"><input type="radio" name="q174" value="A" data-correct="true"> A. Destroying all forms of microbial life</div>
+            <div class="answer"><input type="radio" name="q174" value="B"> B. Reducing microbial load to a safe level</div>
+            <div class="answer"><input type="radio" name="q174" value="C"> C. Disinfecting surfaces</div>
+            <div class="answer"><input type="radio" name="q174" value="D"> D. Cleaning instruments</div>
+        </div>
+
+        <!-- Question 175 -->
+        <div class="question" data-question="175">
+            <p>175. The use of chemical agents to kill or inhibit the growth of microorganisms is known as:</p>
+            <div class="answer"><input type="radio" name="q175" value="A" data-correct="true"> A. Disinfection</div>
+            <div class="answer"><input type="radio" name="q175" value="B"> B. Sterilization</div>
+            <div class="answer"><input type="radio" name="q175" value="C"> C. Sanitization</div>
+            <div class="answer"><input type="radio" name="q175" value="D"> D. Decontamination</div>
+        </div>
+
+        <!-- Question 176 -->
+        <div class="question" data-question="176">
+            <p>176. Which of the following is used for high-level disinfection?</p>
+            <div class="answer"><input type="radio" name="q176" value="A"> A. Boiling water</div>
+            <div class="answer"><input type="radio" name="q176" value="B"> B. Alcohol wipes</div>
+            <div class="answer"><input type="radio" name="q176" value="C" data-correct="true"> C. Glutaraldehyde</div>
+            <div class="answer"><input type="radio" name="q176" value="D"> D. Bleach solution</div>
+        </div>
+
+        <!-- Question 177 -->
+        <div class="question" data-question="177">
+            <p>177. What should be done if an instrument is found to be damaged during inspection?</p>
+            <div class="answer"><input type="radio" name="q177" value="A"> A. Continue to use it</div>
+            <div class="answer"><input type="radio" name="q177" value="B"> B. Discard it immediately</div>
+            <div class="answer"><input type="radio" name="q177" value="C" data-correct="true"> C. Report it to the supervisor and tag it for repair</div>
+            <div class="answer"><input type="radio" name="q177" value="D"> D. Clean it and store it</div>
+        </div>
+
+        <!-- Question 178 -->
+        <div class="question" data-question="178">
+            <p>178. The process of removing organic material from instruments is called:</p>
+            <div class="answer"><input type="radio" name="q178" value="A" data-correct="true"> A. Cleaning</div>
+            <div class="answer"><input type="radio" name="q178" value="B"> B. Sterilization</div>
+            <div class="answer"><input type="radio" name="q178" value="C"> C. Disinfection</div>
+            <div class="answer"><input type="radio" name="q178" value="D"> D. Sanitization</div>
+        </div>
+
+        <!-- Question 179 -->
+        <div class="question" data-question="179">
+            <p>179. Which of the following is a method of sterilization?</p>
+            <div class="answer"><input type="radio" name="q179" value="A" data-correct="true"> A. Steam autoclaving</div>
+            <div class="answer"><input type="radio" name="q179" value="B"> B. Chemical disinfection</div>
+            <div class="answer"><input type="radio" name="q179" value="C"> C. Dry heat exposure</div>
+            <div class="answer"><input type="radio" name="q179" value="D"> D. Alcohol immersion</div>
+        </div>
+
+        <!-- Question 180 -->
+        <div class="question" data-question="180">
+            <p>180. Personal protective equipment (PPE) used in Central Service includes:</p>
+            <div class="answer"><input type="radio" name="q180" value="A" data-correct="true"> A. Gloves, gowns, masks</div>
+            <div class="answer"><input type="radio" name="q180" value="B"> B. Sunglasses, hats, aprons</div>
+            <div class="answer"><input type="radio" name="q180" value="C"> C. Face shields, earplugs</div>
+            <div class="answer"><input type="radio" name="q180" value="D"> D. None of the above</div>
+        </div>
+
+        <!-- Question 181 -->
+        <div class="question" data-question="181">
+            <p>181. In which of the following scenarios would you use an ultrasonic cleaner?</p>
+            <div class="answer"><input type="radio" name="q181" value="A" data-correct="true"> A. To remove debris from small, intricate instruments</div>
+            <div class="answer"><input type="radio" name="q181" value="B"> B. To sterilize large equipment</div>
+            <div class="answer"><input type="radio" name="q181" value="C"> C. To dry instruments</div>
+            <div class="answer"><input type="radio" name="q181" value="D"> D. To disinfect surfaces</div>
+        </div>
+
+        <!-- Question 182 -->
+        <div class="question" data-question="182">
+            <p>182. How often should Central Service Technicians review and update their knowledge of infection control practices?</p>
+            <div class="answer"><input type="radio" name="q182" value="A"> A. Once a year</div>
+            <div class="answer"><input type="radio" name="q182" value="B"> B. Every five years</div>
+            <div class="answer"><input type="radio" name="q182" value="C" data-correct="true"> C. Regularly, as per current standards and guidelines</div>
+            <div class="answer"><input type="radio" name="q182" value="D"> D. Only when new equipment is introduced</div>
+        </div>
+
+        <!-- Question 183 -->
+        <div class="question" data-question="183">
+            <p>183. Which of the following is a critical factor in maintaining the effectiveness of sterilization?</p>
+            <div class="answer"><input type="radio" name="q183" value="A"> A. Using the correct cleaning agents</div>
+            <div class="answer"><input type="radio" name="q183" value="B"> B. Proper handling and storage of sterile items</div>
+            <div class="answer"><input type="radio" name="q183" value="C" data-correct="true"> C. Ensuring proper temperature and exposure time</div>
+            <div class="answer"><input type="radio" name="q183" value="D"> D. All of the above</div>
+        </div>
+
+        <!-- Question 184 -->
+        <div class="question" data-question="184">
+            <p>184. The term "aseptic technique" refers to:</p>
+            <div class="answer"><input type="radio" name="q184" value="A" data-correct="true"> A. Methods used to prevent contamination during procedures</div>
+            <div class="answer"><input type="radio" name="q184" value="B"> B. Techniques used to clean surfaces</div>
+            <div class="answer"><input type="radio" name="q184" value="C"> C. Methods used for waste disposal</div>
+            <div class="answer"><input type="radio" name="q184" value="D"> D. Procedures for managing infections</div>
+        </div>
+
+        <!-- Question 185 -->
+        <div class="question" data-question="185">
+            <p>185. What type of infection control process is necessary for handling bloodborne pathogens?</p>
+            <div class="answer"><input type="radio" name="q185" value="A"> A. Standard precautions</div>
+            <div class="answer"><input type="radio" name="q185" value="B" data-correct="true"> B. Universal precautions</div>
+            <div class="answer"><input type="radio" name="q185" value="C"> C. Airborne precautions</div>
+            <div class="answer"><input type="radio" name="q185" value="D"> D. Droplet precautions</div>
+        </div>
+
+        <!-- Question 186 -->
+        <div class="question" data-question="186">
+            <p>186. To prevent cross-contamination, instruments should be:</p>
+            <div class="answer"><input type="radio" name="q186" value="A" data-correct="true"> A. Stored separately from clean instruments</div>
+            <div class="answer"><input type="radio" name="q186" value="B"> B. Rinsed only</div>
+            <div class="answer"><input type="radio" name="q186" value="C"> C. Discarded immediately</div>
+            <div class="answer"><input type="radio" name="q186" value="D"> D. Washed with soap</div>
+        </div>
+
+        <!-- Question 187 -->
+        <div class="question" data-question="187">
+            <p>187. When performing instrument processing, it is important to:</p>
+            <div class="answer"><input type="radio" name="q187" value="A" data-correct="true"> A. Follow manufacturer instructions and guidelines</div>
+            <div class="answer"><input type="radio" name="q187" value="B"> B. Use any available cleaning method</div>
+            <div class="answer"><input type="radio" name="q187" value="C"> C. Disregard proper storage procedures</div>
+            <div class="answer"><input type="radio" name="q187" value="D"> D. Only use chemical agents</div>
+        </div>
+
+        <!-- Question 188 -->
+        <div class="question" data-question="188">
+            <p>188. Which of the following is an example of a high-level disinfectant?</p>
+            <div class="answer"><input type="radio" name="q188" value="A"> A. Ethanol</div>
+            <div class="answer"><input type="radio" name="q188" value="B" data-correct="true"> B. Hydrogen peroxide</div>
+            <div class="answer"><input type="radio" name="q188" value="C"> C. Isopropyl alcohol</div>
+            <div class="answer"><input type="radio" name="q188" value="D"> D. Soap and water</div>
+        </div>
+
+        <!-- Question 189 -->
+        <div class="question" data-question="189">
+            <p>189. What is the function of a sterilization indicator?</p>
+            <div class="answer"><input type="radio" name="q189" value="A"> A. To measure the temperature</div>
+            <div class="answer"><input type="radio" name="q189" value="B"> B. To ensure proper chemical concentration</div>
+            <div class="answer"><input type="radio" name="q189" value="C" data-correct="true"> C. To confirm that sterilization conditions were met</div>
+            <div class="answer"><input type="radio" name="q189" value="D"> D. To record the time of sterilization</div>
+        </div>
+
+        <!-- Question 190 -->
+        <div class="question" data-question="190">
+            <p>190. How should used surgical instruments be handled before cleaning?</p>
+            <div class="answer"><input type="radio" name="q190" value="A"> A. Soaked in water</div>
+            <div class="answer"><input type="radio" name="q190" value="B"> B. Left in the operating room</div>
+            <div class="answer"><input type="radio" name="q190" value="C"> C. Rinsed immediately and transported in a covered container</div>
+            <div class="answer"><input type="radio" name="q190" value="D" data-correct="true"> D. Rinsed and then placed in a designated container for transport</div>
+        </div>
+    
+
+		<!-- Question 191 -->
+		<div class="question" data-question="191">
+			<p>191. Which of the following is the primary function of the epithelial tissue?</p>
+			<div class="answer"><input type="radio" name="q191" value="A" data-correct="true"> A. To cover and protect body surfaces</div>
+			<div class="answer"><input type="radio" name="q191" value="B"> B. To support and bind other tissues</div>
+			<div class="answer"><input type="radio" name="q191" value="C"> C. To conduct electrical impulses</div>
+			<div class="answer"><input type="radio" name="q191" value="D"> D. To contract and cause movement</div>
+		</div>
+
+		<!-- Question 192 -->
+		<div class="question" data-question="192">
+			<p>192. This organ pumps blood throughout the body:</p>
+			<div class="answer"><input type="radio" name="q192" value="A"> A. Ovaries</div>
+			<div class="answer"><input type="radio" name="q192" value="B"> B. Liver</div>
+			<div class="answer"><input type="radio" name="q192" value="C" data-correct="true"> C. Heart</div>
+			<div class="answer"><input type="radio" name="q192" value="D"> D. Calcification</div>
+		</div>
+
+		<!-- Question 193 -->
+		<div class="question" data-question="193">
+			<p>193. Because all Central Services Departments have the same structure, healthcare facilities use one standardized job description for all Central Service Technicians.</p>
+			<div class="answer"><input type="radio" name="q193" value="A"> A. True</div>
+			<div class="answer"><input type="radio" name="q193" value="B" data-correct="true"> B. False</div>
+		</div>
+
+		<!-- Question 194 -->
+		<div class="question" data-question="194">
+			<p>194. These carry blood away from the heart:</p>
+			<div class="answer"><input type="radio" name="q194" value="A" data-correct="true"> A. Arteries</div>
+			<div class="answer"><input type="radio" name="q194" value="B"> B. Veins</div>
+			<div class="answer"><input type="radio" name="q194" value="C"> C. Alimentary Canal</div>
+			<div class="answer"><input type="radio" name="q194" value="D"> D. Liver</div>
+		</div>
+
+		<!-- Question 195 -->
+		<div class="question" data-question="195">
+			<p>195. The use of positive and negative air pressure in the Central Service Department is designed to take the place of heating and air conditioning.</p>
+			<div class="answer"><input type="radio" name="q195" value="A"> A. True</div>
+			<div class="answer"><input type="radio" name="q195" value="B" data-correct="true"> B. False</div>
+		</div>
+
+		<!-- Question 196 -->
+		<div class="question" data-question="196">
+			<p>196. This surgical procedure consists of removing an ear bone that has thickened and no longer transmits sound waves and replacing it with an artificial implant to improve hearing:</p>
+			<div class="answer"><input type="radio" name="q196" value="A"> A. Tympanoplasty</div>
+			<div class="answer"><input type="radio" name="q196" value="B" data-correct="true"> B. Stapedectomy</div>
+			<div class="answer" name="q196" value="C"> C. Auditory Implantation</div>
+			<div class="answer" name="q196" value="D"> D. Myringotomy</div>
+		</div>
+
+		<!-- Question 197 -->
+		<div class="question" data-question="197">
+			<p>197. Which of the following means "beside or near"?</p>
+			<div class="answer"><input type="radio" name="q197" value="A" data-correct="true"> A. Para</div>
+			<div class="answer"><input type="radio" name="q197" value="B"> B. Peri</div>
+			<div class="answer"><input type="radio" name="q197" value="C"> C. Parta</div>
+			<div class="answer"><input type="radio" name="q197" value="D"> D. Pana</div>
+		</div>
+
+		<!-- Question 198 -->
+		<div class="question" data-question="198">
+			<p>198. These muscles control involuntary movements like, breathing, digestion, etc.</p>
+			<div class="answer"><input type="radio" name="q198" value="A" data-correct="true"> A. Smooth Muscle</div>
+			<div class="answer"><input type="radio" name="q198" value="B"> B. Cardiac Muscle</div>
+			<div class="answer"><input type="radio" name="q198" value="C"> C. Skeletal Muscle</div>
+			<div class="answer"><input type="radio" name="q198" value="D"> D. Fascia Muscle</div>
+		</div>
+
+		<!-- Question 199 -->
+		<div class="question" data-question="199">
+			<p>199. The pathway that food takes through the digestive system:</p>
+			<div class="answer"><input type="radio" name="q199" value="A" data-correct="true"> A. Alimentary Canal</div>
+			<div class="answer"><input type="radio" name="q199" value="B"> B. Esophagus</div>
+			<div class="answer" name="q199" value="C"> C. Stomach</div>
+			<div class="answer" name="q199" value="D"> D. Veins</div>
+		</div>
+
+		<!-- Question 200 -->
+		<div class="question" data-question="200">
+			<p>200. Central Service Technicians can protect patients by breaking the chain of infection.</p>
+			<div class="answer"><input type="radio" name="q200" value="A" data-correct="true"> A. True</div>
+			<div class="answer"><input type="radio" name="q200" value="B"> B. False</div>
+		</div>
+
+
+
+<!-- Question 202 -->
+<div class="question" data-question="202">
+    <p>202. This is where the digestive process begins</p>
+    <div class="answer"><input type="radio" name="q202" value="A"> A. Esophagus</div>
+    <div class="answer"><input type="radio" name="q202" value="B" data-correct="true"> B. Mouth</div>
+    <div class="answer"><input type="radio" name="q202" value="C"> C. Stomach</div>
+    <div class="answer"><input type="radio" name="q202" value="D"> D. Colon</div>
+</div>
+
+<!-- Question 203 -->
+<div class="question" data-question="203">
+    <p>203. The term "hemi" is a</p>
+    <div class="answer"><input type="radio" name="q203" value="A" data-correct="true"> A. Prefix</div>
+    <div class="answer"><input type="radio" name="q203" value="B"> B. Root</div>
+    <div class="answer"><input type="radio" name="q203" value="C"> C. Suffix</div>
+    <div class="answer"><input type="radio" name="q203" value="D"> D. Noun</div>
+</div>
+
+<!-- Question 204 -->
+<div class="question" data-question="204">
+    <p>204. The purpose of a combining vowel is to:</p>
+    <div class="answer"><input type="radio" name="q204" value="A"> A. Tell the primary meaning of a word</div>
+    <div class="answer"><input type="radio" name="q204" value="B"> B. Suggest the meaning of the root word element</div>
+    <div class="answer"><input type="radio" name="q204" value="C" data-correct="true"> C. Ease pronunciation</div>
+    <div class="answer"><input type="radio" name="q204" value="D"> D. Ease spelling</div>
+</div>
+
+<!-- Question 205 -->
+<div class="question" data-question="205">
+    <p>205. The sterile storage area in a Central Service department should be restricted to:</p>
+    <div class="answer"><input type="radio" name="q205" value="A"> A. Central Service managers and supervisors</div>
+    <div class="answer"><input type="radio" name="q205" value="B"> B. Operating Room personnel</div>
+    <div class="answer"><input type="radio" name="q205" value="C"> C. Central Service employees only</div>
+    <div class="answer"><input type="radio" name="q205" value="D" data-correct="true"> D. Properly attired personnel meeting facility requirements</div>
+</div>
+
+<!-- Question 206 -->
+<div class="question" data-question="206">
+    <p>206. "subcutaneous" refers to:</p>
+    <div class="answer"><input type="radio" name="q206" value="A"> A. Low sugar content in the blood</div>
+    <div class="answer"><input type="radio" name="q206" value="B"> B. Displacement of the pelvic joint</div>
+    <div class="answer"><input type="radio" name="q206" value="C" data-correct="true"> C. Beneath the skin</div>
+    <div class="answer"><input type="radio" name="q206" value="D"> D. Without infection; sterile</div>
+</div>
+
+<!-- Question 207 -->
+<div class="question" data-question="207">
+    <p>207. The functional center of a cell that governs activity and heredity is called the:</p>
+    <div class="answer"><input type="radio" name="q207" value="A"> A. Flagella</div>
+    <div class="answer"><input type="radio" name="q207" value="B" data-correct="true"> B. Nucleus</div>
+    <div class="answer"><input type="radio" name="q207" value="C"> C. Cocci</div>
+    <div class="answer"><input type="radio" name="q207" value="D"> D. Port of exit</div>
+</div>
+
+<!-- Question 208 -->
+<div class="question" data-question="208">
+    <p>208. The white portion of the eye is called the:</p>
+    <div class="answer"><input type="radio" name="q208" value="A"> A. Retina</div>
+    <div class="answer"><input type="radio" name="q208" value="B"> B. Iris</div>
+    <div class="answer"><input type="radio" name="q208" value="C"> C. Pupil</div>
+    <div class="answer"><input type="radio" name="q208" value="D" data-correct="true"> D. Sclera</div>
+</div>
+
+<!-- Question 209 -->
+<div class="question" data-question="209">
+    <p>209. Central Service Technicians must wear special attire referred to as blank to minimize their exposure to bloodborne pathogens and other contaminants.</p>
+    <div class="answer"><input type="radio" name="q209" value="A" data-correct="true"> A. PPE</div>
+    <div class="answer"><input type="radio" name="q209" value="B"> B. OSHA</div>
+    <div class="answer"><input type="radio" name="q209" value="C"> C. Scrubs</div>
+    <div class="answer"><input type="radio" name="q209" value="D"> D. CDC</div>
+</div>
+
+<!-- Question 210 -->
+<div class="question" data-question="210">
+    <p>210. Staphylococcus is classified as a gram-positive bacteria.</p>
+    <div class="answer"><input type="radio" name="q210" value="A" data-correct="true"> A. True</div>
+    <div class="answer"><input type="radio" name="q210" value="B"> B. False</div>
+</div>
+
+<!-- Question 211 -->
+<div class="question" data-question="211">
+    <p>211. Considered the master gland because it helps control the activities of all other endocrine glands.</p>
+    <div class="answer"><input type="radio" name="q211" value="A"> A. Prostate Gland</div>
+    <div class="answer"><input type="radio" name="q211" value="B" data-correct="true"> B. Pituitary Gland</div>
+    <div class="answer"><input type="radio" name="q211" value="C"> C. Kidney</div>
+    <div class="answer"><input type="radio" name="q211" value="D"> D. Brain Stem</div>
+</div>
+
+<!-- Question 212 -->
+<div class="question" data-question="212">
+    <p>212. Which of the following is the most popular title for the Central Service department head?</p>
+    <div class="answer"><input type="radio" name="q212" value="A"> A. Coordinator</div>
+    <div class="answer"><input type="radio" name="q212" value="B" data-correct="true"> B. Director</div>
+    <div class="answer"><input type="radio" name="q212" value="C"> C. Manager</div>
+    <div class="answer"><input type="radio" name="q212" value="D"> D. Supervisor</div>
+</div>
+
+<!-- Question 213 -->
+<div class="question" data-question="213">
+    <p>213. BLANK is defined as the state of being soiled or infected by contact with infectious organisms or other material.</p>
+    <div class="answer"><input type="radio" name="q213" value="A"> A. Decontaminate</div>
+    <div class="answer"><input type="radio" name="q213" value="B"> B. Viral</div>
+    <div class="answer"><input type="radio" name="q213" value="C" data-correct="true"> C. Contamination</div>
+    <div class="answer"><input type="radio" name="q213" value="D"> D. Airborne</div>
+</div>
+
+<!-- Question 214 -->
+<div class="question" data-question="214">
+    <p>214. "Lithotripsy" refers to:</p>
+    <div class="answer"><input type="radio" name="q214" value="A"> A. Aspiration of fatty tissue</div>
+    <div class="answer"><input type="radio" name="q214" value="B"> B. Surgical removal of the ovary</div>
+    <div class="answer"><input type="radio" name="q214" value="C" data-correct="true"> C. Crushing of a stone</div>
+    <div class="answer"><input type="radio" name="q214" value="D"> D. Visual examination of a joint</div>
+</div>
+
+<!-- Question 215 -->
+<div class="question" data-question="215">
+    <p>215. The anatomical term "distal" refers to:</p>
+    <div class="answer"><input type="radio" name="q215" value="A"> A. Nearer to the center of the body</div>
+    <div class="answer"><input type="radio" name="q215" value="B" data-correct="true"> B. Farther from the point of attachment</div>
+    <div class="answer"><input type="radio" name="q215" value="C"> C. Closer to the surface</div>
+    <div class="answer"><input type="radio" name="q215" value="D"> D. Closer to the midline of the body</div>
+</div>
+
+<!-- Question 216 -->
+<div class="question" data-question="216">
+    <p>216. Which structure in the ear is responsible for hearing?</p>
+    <div class="answer"><input type="radio" name="q216" value="A"> A. Cochlea</div>
+    <div class="answer"><input type="radio" name="q216" value="B"> B. Semicircular canals</div>
+    <div class="answer"><input type="radio" name="q216" value="C"> C. Tympanic membrane</div>
+    <div class="answer"><input type="radio" name="q216" value="D" data-correct="true"> D. Cochlea</div>
+</div>
+
+<!-- Question 217 -->
+<div class="question" data-question="217">
+    <p>217. "Hyperglycemia" refers to:</p>
+    <div class="answer"><input type="radio" name="q217" value="A"> A. Low blood pressure</div>
+    <div class="answer"><input type="radio" name="q217" value="B"> B. High blood sugar</div>
+    <div class="answer"><input type="radio" name="q217" value="C"> C. Elevated body temperature</div>
+    <div class="answer"><input type="radio" name="q217" value="D" data-correct="true"> D. High blood sugar</div>
+</div>
+
+<!-- Question 218 -->
+<div class="question" data-question="218">
+    <p>218. The process by which white blood cells engulf and destroy pathogens is called:</p>
+    <div class="answer"><input type="radio" name="q218" value="A"> A. Phagocytosis</div>
+    <div class="answer"><input type="radio" name="q218" value="B"> B. Endocytosis</div>
+    <div class="answer"><input type="radio" name="q218" value="C"> C"> C. Exocytosis</div>
+    <div class="answer"><input type="radio" name="q218" value="D" data-correct="true"> D. Phagocytosis</div>
+</div>
+
+<!-- Question 219 -->
+<div class="question" data-question="219">
+    <p>219. The medical term for the inflammation of the lining of the stomach is:</p>
+    <div class="answer"><input type="radio" name="q219" value="A"> A. Gastritis</div>
+    <div class="answer"><input type="radio" name="q219" value="B"> B. Appendicitis</div>
+    <div class="answer"><input type="radio" name="q219" value="C"> C"> C. Colitis</div>
+    <div class="answer"><input type="radio" name="q219" value="D" data-correct="true"> D. Gastritis</div>
+</div>
+
+<!-- Question 220 -->
+<div class="question" data-question="220">
+    <p>220. The term "bradycardia" refers to:</p>
+    <div class="answer"><input type="radio" name="q220" value="A" data-correct="true"> A. Slow heart rate</div>
+    <div class="answer"><input type="radio" name="q220" value="B"> B. Rapid heart rate</div>
+    <div class="answer"><input type="radio" name="q220" value="C"> C. Irregular heartbeat</div>
+    <div class="answer"><input type="radio" name="q220" value="D"> D. High blood pressure</div>
+</div>
+
+
+<!-- Question 221 -->
+<div class="question" data-question="221">
+    <p>221. The structure that separates the thoracic cavity from the abdominal cavity is called the:</p>
+    <div class="answer"><input type="radio" name="q221" value="A"> A. Diaphragm</div>
+    <div class="answer"><input type="radio" name="q221" value="B"> B. Sternum</div>
+    <div class="answer"><input type="radio" name="q221" value="C" data-correct="true"> C. Diaphragm</div>
+    <div class="answer"><input type="radio" name="q221" value="D"> D. Pericardium</div>
+</div>
+
+<!-- Question 222 -->
+<div class="question" data-question="222">
+    <p>222. The medical term for a surgical incision into the chest is:</p>
+    <div class="answer"><input type="radio" name="q222" value="A"> A. Thoracotomy</div>
+    <div class="answer"><input type="radio" name="q222" value="B"> B. Laparotomy</div>
+    <div class="answer"><input type="radio" name="q222" value="C"> C"> C. Craniotomy</div>
+    <div class="answer"><input type="radio" name="q222" value="D" data-correct="true"> D. Thoracotomy</div>
+</div>
+
+<!-- Question 223 -->
+<div class="question" data-question="223">
+    <p>223. The smallest unit of life that can function independently is called a:</p>
+    <div class="answer"><input type="radio" name="q223" value="A"> A. Tissue</div>
+    <div class="answer"><input type="radio" name="q223" value="B" data-correct="true"> B. Cell</div>
+    <div class="answer"><input type="radio" name="q223" value="C"> C. Organ</div>
+    <div class="answer"><input type="radio" name="q223" value="D"> D. System</div>
+</div>
+
+<!-- Question 224 -->
+<div class="question" data-question="224">
+    <p>224. The condition characterized by a deficiency of red blood cells is called:</p>
+    <div class="answer"><input type="radio" name="q224" value="A"> A. Leukemia</div>
+    <div class="answer"><input type="radio" name="q224" value="B" data-correct="true"> B. Anemia</div>
+    <div class="answer"><input type="radio" name="q224" value="C"> C. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q224" value="D"> D. Polycythemia</div>
+</div>
+
+<!-- Question 225 -->
+<div class="question" data-question="225">
+    <p>225. The term for a condition where there is an excessive accumulation of fluid in the body is:</p>
+    <div class="answer"><input type="radio" name="q225" value="A" data-correct="true"> A. Edema</div>
+    <div class="answer"><input type="radio" name="q225" value="B"> B. Dehydration</div>
+    <div class="answer"><input type="radio" name="q225" value="C"> C. Hemorrhage</div>
+    <div class="answer"><input type="radio" name="q225" value="D"> D. Hypoglycemia</div>
+</div>
+
+<!-- Question 226 -->
+<div class="question" data-question="226">
+    <p>226. The outer layer of the skin is known as the:</p>
+    <div class="answer"><input type="radio" name="q226" value="A" data-correct="true"> A. Epidermis</div>
+    <div class="answer"><input type="radio" name="q226" value="B"> B. Dermis</div>
+    <div class="answer"><input type="radio" name="q226" value="C"> C. Hypodermis</div>
+    <div class="answer"><input type="radio" name="q226" value="D"> D. Subcutaneous layer</div>
+</div>
+
+<!-- Question 227 -->
+<div class="question" data-question="227">
+    <p>227. A substance used to kill or inhibit the growth of bacteria is called:</p>
+    <div class="answer"><input type="radio" name="q227" value="A"> A. Antipyretic</div>
+    <div class="answer"><input type="radio" name="q227" value="B"> B. Antiseptic</div>
+    <div class="answer"><input type="radio" name="q227" value="C"> C"> C. Analgesic</div>
+    <div class="answer"><input type="radio" name="q227" value="D" data-correct="true"> D. Antibiotic</div>
+</div>
+
+<!-- Question 228 -->
+<div class="question" data-question="228">
+    <p>228. The term for inflammation of the liver is:</p>
+    <div class="answer"><input type="radio" name="q228" value="A"> A. Hepatitis</div>
+    <div class="answer"><input type="radio" name="q228" value="B"> B" data-correct="true"> B. Hepatitis</div>
+    <div class="answer"><input type="radio" name="q228" value="C"> C. Cirrhosis</div>
+    <div class="answer"><input type="radio" name="q228" value="D"> D. Cholecystitis</div>
+</div>
+
+<!-- Question 229 -->
+<div class="question" data-question="229">
+    <p>229. The process by which oxygen and carbon dioxide are exchanged in the lungs is known as:</p>
+    <div class="answer"><input type="radio" name="q229" value="A"> A. Circulation</div>
+    <div class="answer"><input type="radio" name="q229" value="B"> B. Respiration</div>
+    <div class="answer"><input type="radio" name="q229" value="C" data-correct="true"> C. Gas exchange</div>
+    <div class="answer"><input type="radio" name="q229" value="D"> D. Diffusion</div>
+</div>
+
+<!-- Question 230 -->
+<div class="question" data-question="230">
+    <p>230. The medical term for a condition where the body has difficulty controlling blood sugar levels is:</p>
+    <div class="answer"><input type="radio" name="q230" value="A" data-correct="true"> A. Diabetes Mellitus</div>
+    <div class="answer"><input type="radio" name="q230" value="B"> B. Hypertension</div>
+    <div class="answer"><input type="radio" name="q230" value="C"> C. Hyperlipidemia</div>
+    <div class="answer"><input type="radio" name="q230" value="D"> D. Hypothyroidism</div>
+</div>
+
+
+
+
+<!-- Question 231 -->
+<div class="question" data-question="231">
+    <p>231. The term for the surgical removal of the appendix is:</p>
+    <div class="answer"><input type="radio" name="q231" value="A"> A. Appendectomy</div>
+    <div class="answer"><input type="radio" name="q231" value="B" data-correct="true"> B. Appendectomy</div>
+    <div class="answer"><input type="radio" name="q231" value="C"> C. Cholecystectomy</div>
+    <div class="answer"><input type="radio" name="q231" value="D"> D. Gastrectomy</div>
+</div>
+
+<!-- Question 232 -->
+<div class="question" data-question="232">
+    <p>232. The term that refers to an abnormal increase in the size of cells is:</p>
+    <div class="answer"><input type="radio" name="q232" value="A"> A. Hyperplasia</div>
+    <div class="answer"><input type="radio" name="q232" value="B"> B. Hypertrophy</div>
+    <div class="answer"><input type="radio" name="q232" value="C" data-correct="true"> C. Hypertrophy</div>
+    <div class="answer"><input type="radio" name="q232" value="D"> D. Atrophy</div>
+</div>
+
+<!-- Question 233 -->
+<div class="question" data-question="233">
+    <p>233. The medical term for a headache is:</p>
+    <div class="answer"><input type="radio" name="q233" value="A" data-correct="true"> A. Cephalalgia</div>
+    <div class="answer"><input type="radio" name="q233" value="B"> B. Dizziness</div>
+    <div class="answer"><input type="radio" name="q233" value="C"> C. Nausea</div>
+    <div class="answer"><input type="radio" name="q233" value="D"> D. Syncope</div>
+</div>
+
+<!-- Question 234 -->
+<div class="question" data-question="234">
+    <p>234. The term for an inflammation of the lining of the heart is:</p>
+    <div class="answer"><input type="radio" name="q234" value="A"> A. Endocarditis</div>
+    <div class="answer"><input type="radio" name="q234" value="B" data-correct="true"> B. Endocarditis</div>
+    <div class="answer"><input type="radio" name="q234" value="C"> C. Pericarditis</div>
+    <div class="answer"><input type="radio" name="q234" value="D"> D. Myocarditis</div>
+</div>
+
+<!-- Question 235 -->
+<div class="question" data-question="235">
+    <p>235. The term for an abnormal increase in white blood cells is:</p>
+    <div class="answer"><input type="radio" name="q235" value="A"> A. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q235" value="B"> B. Leukocytosis</div>
+    <div class="answer"><input type="radio" name="q235" value="C" data-correct="true"> C. Leukocytosis</div>
+    <div class="answer"><input type="radio" name="q235" value="D"> D. Anemia</div>
+</div>
+
+<!-- Question 236 -->
+<div class="question" data-question="236">
+    <p>236. The medical term for the process of breaking down food in the digestive system is:</p>
+    <div class="answer"><input type="radio" name="q236" value="A"> A. Digestion</div>
+    <div class="answer"><input type="radio" name="q236" value="B"> B. Absorption</div>
+    <div class="answer"><input type="radio" name="q236" value="C" data-correct="true"> C. Digestion</div>
+    <div class="answer"><input type="radio" name="q236" value="D"> D. Metabolism</div>
+</div>
+
+<!-- Question 237 -->
+<div class="question" data-question="237">
+    <p>237. The term for the removal of the gallbladder is:</p>
+    <div class="answer"><input type="radio" name="q237" value="A"> A. Appendectomy</div>
+    <div class="answer"><input type="radio" name="q237" value="B" data-correct="true"> B. Cholecystectomy</div>
+    <div class="answer"><input type="radio" name="q237" value="C"> C. Gastrectomy</div>
+    <div class="answer"><input type="radio" name="q237" value="D"> D. Hysterectomy</div>
+</div>
+
+<!-- Question 238 -->
+<div class="question" data-question="238">
+    <p>238. The term for the surgical procedure to repair a hernia is:</p>
+    <div class="answer"><input type="radio" name="q238" value="A"> A. Herniorrhaphy</div>
+    <div class="answer"><input type="radio" name="q238" value="B"> B. Herniotomy</div>
+    <div class="answer"><input type="radio" name="q238" value="C"> C" data-correct="true"> C. Herniorrhaphy</div>
+    <div class="answer"><input type="radio" name="q238" value="D"> D. Appendectomy</div>
+</div>
+
+<!-- Question 239 -->
+<div class="question" data-question="239">
+    <p>239. The term used to describe a condition characterized by low blood pressure is:</p>
+    <div class="answer"><input type="radio" name="q239" value="A"> A. Hypertension</div>
+    <div class="answer"><input type="radio" name="q239" value="B" data-correct="true"> B. Hypotension</div>
+    <div class="answer"><input type="radio" name="q239" value="C"> C. Tachycardia</div>
+    <div class="answer"><input type="radio" name="q239" value="D"> D. Bradycardia</div>
+</div>
+
+<!-- Question 240 -->
+<div class="question" data-question="240">
+    <p>240. The medical term for the presence of stones in the urinary tract is:</p>
+    <div class="answer"><input type="radio" name="q240" value="A"> A. Nephritis</div>
+    <div class="answer"><input type="radio" name="q240" value="B"> B. Cystitis</div>
+    <div class="answer"><input type="radio" name="q240" value="C"> C. Urolithiasis</div>
+    <div class="answer"><input type="radio" name="q240" value="D" data-correct="true"> D. Urolithiasis</div>
+</div>
+
+<!-- Question 241 -->
+<div class="question" data-question="241">
+    <p>241. The term for a condition where the body is unable to produce insulin is:</p>
+    <div class="answer"><input type="radio" name="q241" value="A"> A. Type 1 Diabetes</div>
+    <div class="answer"><input type="radio" name="q241" value="B"> B. Type 2 Diabetes</div>
+    <div class="answer"><input type="radio" name="q241" value="C" data-correct="true"> C. Type 1 Diabetes</div>
+    <div class="answer"><input type="radio" name="q241" value="D"> D. Gestational Diabetes</div>
+</div>
+
+<!-- Question 242 -->
+<div class="question" data-question="242">
+    <p>242. The medical term for the inflammation of the lining of the stomach is:</p>
+    <div class="answer"><input type="radio" name="q242" value="A"> A. Gastritis</div>
+    <div class="answer"><input type="radio" name="q242" value="B"> B. Enteritis</div>
+    <div class="answer"><input type="radio" name="q242" value="C" data-correct="true"> C. Gastritis</div>
+    <div class="answer"><input type="radio" name="q242" value="D"> D. Colitis</div>
+</div>
+
+<!-- Question 243 -->
+<div class="question" data-question="243">
+    <p>243. The term for a condition characterized by excessive sweating is:</p>
+    <div class="answer"><input type="radio" name="q243" value="A" data-correct="true"> A. Hyperhidrosis</div>
+    <div class="answer"><input type="radio" name="q243" value="B"> B. Anhidrosis</div>
+    <div class="answer"><input type="radio" name="q243" value="C"> C. Xerosis</div>
+    <div class="answer"><input type="radio" name="q243" value="D"> D. Dermatitis</div>
+</div>
+
+<!-- Question 244 -->
+<div class="question" data-question="244">
+    <p>244. The term for a condition characterized by the loss of bone density is:</p>
+    <div class="answer"><input type="radio" name="q244" value="A"> A. Osteoporosis</div>
+    <div class="answer"><input type="radio" name="q244" value="B" data-correct="true"> B. Osteoporosis</div>
+    <div class="answer"><input type="radio" name="q244" value="C"> C. Osteomyelitis</div>
+    <div class="answer"><input type="radio" name="q244" value="D"> D. Osteomalacia</div>
+</div>
+
+<!-- Question 245 -->
+<div class="question" data-question="245">
+    <p>245. The medical term for a condition characterized by high cholesterol levels in the blood is:</p>
+    <div class="answer"><input type="radio" name="q245" value="A" data-correct="true"> A. Hyperlipidemia</div>
+    <div class="answer"><input type="radio" name="q245" value="B"> B. Hyperglycemia</div>
+    <div class="answer"><input type="radio" name="q245" value="C"> C. Hypoglycemia</div>
+    <div class="answer"><input type="radio" name="q245" value="D"> D. Hypolipidemia</div>
+</div>
+
+<!-- Question 246 -->
+<div class="question" data-question="246">
+    <p>246. The term for a condition where the blood supply to the brain is interrupted is:</p>
+    <div class="answer"><input type="radio" name="q246" value="A"> A. Stroke</div>
+    <div class="answer"><input type="radio" name="q246" value="B" data-correct="true"> B. Stroke</div>
+    <div class="answer"><input type="radio" name="q246" value="C"> C. Seizure</div>
+    <div class="answer"><input type="radio" name="q246" value="D"> D. Coma</div>
+</div>
+
+<!-- Question 247 -->
+<div class="question" data-question="247">
+    <p>247. The term for a condition characterized by difficulty breathing is:</p>
+    <div class="answer"><input type="radio" name="q247" value="A"> A. Dyspnea</div>
+    <div class="answer"><input type="radio" name="q247" value="B" data-correct="true"> B. Dyspnea</div>
+    <div class="answer"><input type="radio" name="q247" value="C"> C. Apnea</div>
+    <div class="answer"><input type="radio" name="q247" value="D"> D. Tachypnea</div>
+</div>
+
+<!-- Question 248 -->
+<div class="question" data-question="248">
+    <p>248. The term for a condition characterized by inflammation of the joints is:</p>
+    <div class="answer"><input type="radio" name="q248" value="A"> A. Arthritis</div>
+    <div class="answer"><input type="radio" name="q248" value="B" data-correct="true"> B. Arthritis</div>
+    <div class="answer"><input type="radio" name="q248" value="C"> C. Bursitis</div>
+    <div class="answer"><input type="radio" name="q248" value="D"> D. Tendinitis</div>
+</div>
+
+<!-- Question 249 -->
+<div class="question" data-question="249">
+    <p>249. The term for an abnormal growth of tissue is:</p>
+    <div class="answer"><input type="radio" name="q249" value="A"> A. Tumor</div>
+    <div class="answer"><input type="radio" name="q249" value="B"> B. Lesion</div>
+    <div class="answer"><input type="radio" name="q249" value="C" data-correct="true"> C. Tumor</div>
+    <div class="answer"><input type="radio" name="q249" value="D"> D. Cyst</div>
+</div>
+
+<!-- Question 250 -->
+<div class="question" data-question="250">
+    <p>250. The medical term for a condition where there is an excessive amount of fluid in the lungs is:</p>
+    <div class="answer"><input type="radio" name="q250" value="A"> A. Pneumonia</div>
+    <div class="answer"><input type="radio" name="q250" value="B"> B. Pulmonary edema</div>
+    <div class="answer"><input type="radio" name="q250" value="C" data-correct="true"> C. Pulmonary edema</div>
+    <div class="answer"><input type="radio" name="q250" value="D"> D. Asthma</div>
+</div>
+
+<!-- Question 251 -->
+<div class="question" data-question="251">
+    <p>251. The medical term for a condition characterized by the hardening of the arteries is:</p>
+    <div class="answer"><input type="radio" name="q251" value="A"> A. Atherosclerosis</div>
+    <div class="answer"><input type="radio" name="q251" value="B"> B" data-correct="true"> B. Atherosclerosis</div>
+    <div class="answer"><input type="radio" name="q251" value="C"> C. Arteriosclerosis</div>
+    <div class="answer"><input type="radio" name="q251" value="D"> D. Hypertension</div>
+</div>
+
+<!-- Question 252 -->
+<div class="question" data-question="252">
+    <p>252. The medical term for an abnormal decrease in the number of red blood cells is:</p>
+    <div class="answer"><input type="radio" name="q252" value="A"> A. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q252" value="B"> B. Anemia</div>
+    <div class="answer"><input type="radio" name="q252" value="C" data-correct="true"> C. Anemia</div>
+    <div class="answer"><input type="radio" name="q252" value="D"> D. Leukocytosis</div>
+</div>
+
+<!-- Question 253 -->
+<div class="question" data-question="253">
+    <p>253. The term for a condition where the body produces excess acid in the stomach is:</p>
+    <div class="answer"><input type="radio" name="q253" value="A" data-correct="true"> A. Hyperacidity</div>
+    <div class="answer"><input type="radio" name="q253" value="B"> B. Hypoacidity</div>
+    <div class="answer"><input type="radio" name="q253" value="C"> C. Gastritis</div>
+    <div class="answer"><input type="radio" name="q253" value="D"> D. Peptic ulcer</div>
+</div>
+
+<!-- Question 254 -->
+<div class="question" data-question="254">
+    <p>254. The medical term for the condition where the body has difficulty absorbing nutrients from the intestines is:</p>
+    <div class="answer"><input type="radio" name="q254" value="A" data-correct="true"> A. Malabsorption</div>
+    <div class="answer"><input type="radio" name="q254" value="B"> B. Malnutrition</div>
+    <div class="answer"><input type="radio" name="q254" value="C"> C. Dyspepsia</div>
+    <div class="answer"><input type="radio" name="q254" value="D"> D. Constipation</div>
+</div>
+
+<!-- Question 255 -->
+<div class="question" data-question="255">
+    <p>255. The term for an infection that affects the skin and soft tissues is:</p>
+    <div class="answer"><input type="radio" name="q255" value="A" data-correct="true"> A. Cellulitis</div>
+    <div class="answer"><input type="radio" name="q255" value="B"> B. Dermatitis</div>
+    <div class="answer"><input type="radio" name="q255" value="C"> C. Eczema</div>
+    <div class="answer"><input type="radio" name="q255" value="D"> D. Psoriasis</div>
+</div>
+
+<!-- Question 256 -->
+<div class="question" data-question="256">
+    <p>256. The term for a condition where there is a loss of muscle mass and strength is:</p>
+    <div class="answer"><input type="radio" name="q256" value="A" data-correct="true"> A. Atrophy</div>
+    <div class="answer"><input type="radio" name="q256" value="B"> B. Hypertrophy</div>
+    <div class="answer"><input type="radio" name="q256" value="C"> C. Dystrophy</div>
+    <div class="answer"><input type="radio" name="q256" value="D"> D. Myopathy</div>
+</div>
+
+<!-- Question 257 -->
+<div class="question" data-question="257">
+    <p>257. The medical term for a chronic disease characterized by an overactive immune response against the body's own tissues is:</p>
+    <div class="answer"><input type="radio" name="q257" value="A" data-correct="true"> A. Autoimmune disease</div>
+    <div class="answer"><input type="radio" name="q257" value="B"> B. Allergic reaction</div>
+    <div class="answer"><input type="radio" name="q257" value="C"> C. Inflammatory disease</div>
+    <div class="answer"><input type="radio" name="q257" value="D"> D. Infectious disease</div>
+</div>
+
+<!-- Question 258 -->
+<div class="question" data-question="258">
+    <p>258. The medical term for an abnormal condition of the heart characterized by an irregular heartbeat is:</p>
+    <div class="answer"><input type="radio" name="q258" value="A" data-correct="true"> A. Arrhythmia</div>
+    <div class="answer"><input type="radio" name="q258" value="B"> B. Bradycardia</div>
+    <div class="answer"><input type="radio" name="q258" value="C"> C. Tachycardia</div>
+    <div class="answer"><input type="radio" name="q258" value="D"> D. Atrial fibrillation</div>
+</div>
+
+<!-- Question 259 -->
+<div class="question" data-question="259">
+    <p>259. The medical term for the inflammation of the liver is:</p>
+    <div class="answer"><input type="radio" name="q259" value="A" data-correct="true"> A. Hepatitis</div>
+    <div class="answer"><input type="radio" name="q259" value="B"> B. Cirrhosis</div>
+    <div class="answer"><input type="radio" name="q259" value="C"> C. Hepatoma</div>
+    <div class="answer"><input type="radio" name="q259" value="D"> D. Hepatopathy</div>
+</div>
+
+<!-- Question 260 -->
+<div class="question" data-question="260">
+    <p>260. The term for a condition where there is a narrowing of the arteries is:</p>
+    <div class="answer"><input type="radio" name="q260" value="A"> A. Arteriosclerosis</div>
+    <div class="answer"><input type="radio" name="q260" value="B"> B. Atherosclerosis</div>
+    <div class="answer"><input type="radio" name="q260" value="C" data-correct="true"> C. Arteriosclerosis</div>
+    <div class="answer"><input type="radio" name="q260" value="D"> D. Vasculitis</div>
+</div>
+
+<!-- Question 261 -->
+<div class="question" data-question="261">
+    <p>261. The medical term for the surgical removal of the uterus is:</p>
+    <div class="answer"><input type="radio" name="q261" value="A" data-correct="true"> A. Hysterectomy</div>
+    <div class="answer"><input type="radio" name="q261" value="B"> B. Mastectomy</div>
+    <div class="answer"><input type="radio" name="q261" value="C"> C. Oophorectomy</div>
+    <div class="answer"><input type="radio" name="q261" value="D"> D. Salpingectomy</div>
+</div>
+
+<!-- Question 262 -->
+<div class="question" data-question="262">
+    <p>262. The term for the condition characterized by the presence of a tumor in the bone is:</p>
+    <div class="answer"><input type="radio" name="q262" value="A"> A. Osteoma</div>
+    <div class="answer"><input type="radio" name="q262" value="B"> B. Osteosarcoma</div>
+    <div class="answer"><input type="radio" name="q262" value="C" data-correct="true"> C. Osteosarcoma</div>
+    <div class="answer"><input type="radio" name="q262" value="D"> D. Osteomyelitis</div>
+</div>
+
+<!-- Question 263 -->
+<div class="question" data-question="263">
+    <p>263. The medical term for an abnormal condition of the skin characterized by the presence of blisters is:</p>
+    <div class="answer"><input type="radio" name="q263" value="A" data-correct="true"> A. Bullous dermatitis</div>
+    <div class="answer"><input type="radio" name="q263" value="B"> B. Psoriasis</div>
+    <div class="answer"><input type="radio" name="q263" value="C"> C. Eczema</div>
+    <div class="answer"><input type="radio" name="q263" value="D"> D. Acne</div>
+</div>
+
+<!-- Question 264 -->
+<div class="question" data-question="264">
+    <p>264. The term for a condition where there is a lack of oxygen reaching the tissues is:</p>
+    <div class="answer"><input type="radio" name="q264" value="A" data-correct="true"> A. Hypoxia</div>
+    <div class="answer"><input type="radio" name="q264" value="B"> B. Hyperoxia</div>
+    <div class="answer"><input type="radio" name="q264" value="C"> C. Anoxia</div>
+    <div class="answer"><input type="radio" name="q264" value="D"> D. Ischemia</div>
+</div>
+
+<!-- Question 265 -->
+<div class="question" data-question="265">
+    <p>265. The medical term for the surgical repair of a blood vessel is:</p>
+    <div class="answer"><input type="radio" name="q265" value="A"> A. Angioplasty</div>
+    <div class="answer"><input type="radio" name="q265" value="B"> B. Endarterectomy</div>
+    <div class="answer"><input type="radio" name="q265" value="C" data-correct="true"> C. Angioplasty</div>
+    <div class="answer"><input type="radio" name="q265" value="D"> D. Vein stripping</div>
+</div>
+
+<!-- Question 266 -->
+<div class="question" data-question="266">
+    <p>266. The term for an abnormal condition characterized by the presence of a low platelet count is:</p>
+    <div class="answer"><input type="radio" name="q266" value="A" data-correct="true"> A. Thrombocytopenia</div>
+    <div class="answer"><input type="radio" name="q266" value="B"> B. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q266" value="C"> C. Anemia</div>
+    <div class="answer"><input type="radio" name="q266" value="D"> D. Polycythemia</div>
+</div>
+
+<!-- Question 267 -->
+<div class="question" data-question="267">
+    <p>267. The medical term for the inflammation of the lining of the lungs is:</p>
+    <div class="answer"><input type="radio" name="q267" value="A"> A. Pleuritis</div>
+    <div class="answer"><input type="radio" name="q267" value="B" data-correct="true"> B. Pleuritis</div>
+    <div class="answer"><input type="radio" name="q267" value="C"> C. Pneumonia</div>
+    <div class="answer"><input type="radio" name="q267" value="D"> D. Bronchitis</div>
+</div>
+
+<!-- Question 268 -->
+<div class="question" data-question="268">
+    <p>268. The term for a condition characterized by the presence of gallstones is:</p>
+    <div class="answer"><input type="radio" name="q268" value="A"> A. Cholecystitis</div>
+    <div class="answer"><input type="radio" name="q268" value="B"> B. Cholelithiasis</div>
+    <div class="answer"><input type="radio" name="q268" value="C" data-correct="true"> C. Cholelithiasis</div>
+    <div class="answer"><input type="radio" name="q268" value="D"> D. Pancreatitis</div>
+</div>
+
+<!-- Question 269 -->
+<div class="question" data-question="269">
+    <p>269. The medical term for a condition characterized by an abnormal increase in white blood cells is:</p>
+    <div class="answer"><input type="radio" name="q269" value="A"> A. Leukocytosis</div>
+    <div class="answer"><input type="radio" name="q269" value="B" data-correct="true"> B. Leukocytosis</div>
+    <div class="answer"><input type="radio" name="q269" value="C"> C. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q269" value="D"> D. Anemia</div>
+</div>
+
+<!-- Question 270 -->
+<div class="question" data-question="270">
+    <p>270. The term for a condition characterized by an abnormal increase in blood glucose levels is:</p>
+    <div class="answer"><input type="radio" name="q270" value="A" data-correct="true"> A. Hyperglycemia</div>
+    <div class="answer"><input type="radio" name="q270" value="B"> B. Hypoglycemia</div>
+    <div class="answer"><input type="radio" name="q270" value="C"> C. Hyperlipidemia</div>
+    <div class="answer"><input type="radio" name="q270" value="D"> D. Hypoglycemia</div>
+</div>
+
+<!-- Question 271 -->
+<div class="question" data-question="271">
+    <p>271. The medical term for the surgical removal of the appendix is:</p>
+    <div class="answer"><input type="radio" name="q271" value="A" data-correct="true"> A. Appendectomy</div>
+    <div class="answer"><input type="radio" name="q271" value="B"> B. Cholecystectomy</div>
+    <div class="answer"><input type="radio" name="q271" value="C"> C. Herniorrhaphy</div>
+    <div class="answer"><input type="radio" name="q271" value="D"> D. Gastrectomy</div>
+</div>
+
+<!-- Question 272 -->
+<div class="question" data-question="272">
+    <p>272. The term for a condition where there is a loss of bone density is:</p>
+    <div class="answer"><input type="radio" name="q272" value="A" data-correct="true"> A. Osteoporosis</div>
+    <div class="answer"><input type="radio" name="q272" value="B"> B. Osteomyelitis</div>
+    <div class="answer"><input type="radio" name="q272" value="C"> C. Osteomalacia</div>
+    <div class="answer"><input type="radio" name="q272" value="D"> D. Osteosarcoma</div>
+</div>
+
+<!-- Question 273 -->
+<div class="question" data-question="273">
+    <p>273. The medical term for inflammation of the lining of the stomach is:</p>
+    <div class="answer"><input type="radio" name="q273" value="A" data-correct="true"> A. Gastritis</div>
+    <div class="answer"><input type="radio" name="q273" value="B"> B. Colitis</div>
+    <div class="answer"><input type="radio" name="q273" value="C"> C. Enteritis</div>
+    <div class="answer"><input type="radio" name="q273" value="D"> D. Hepatitis</div>
+</div>
+
+<!-- Question 274 -->
+<div class="question" data-question="274">
+    <p>274. The term for a condition characterized by difficulty swallowing is:</p>
+    <div class="answer"><input type="radio" name="q274" value="A" data-correct="true"> A. Dysphagia</div>
+    <div class="answer"><input type="radio" name="q274" value="B"> B. Dyspepsia</div>
+    <div class="answer"><input type="radio" name="q274" value="C"> C. Dysphonia</div>
+    <div class="answer"><input type="radio" name="q274" value="D"> D. Dysuria</div>
+</div>
+
+<!-- Question 275 -->
+<div class="question" data-question="275">
+    <p>275. The term for a condition characterized by high blood pressure is:</p>
+    <div class="answer"><input type="radio" name="q275" value="A" data-correct="true"> A. Hypertension</div>
+    <div class="answer"><input type="radio" name="q275" value="B"> B. Hypotension</div>
+    <div class="answer"><input type="radio" name="q275" value="C"> C. Hyperglycemia</div>
+    <div class="answer"><input type="radio" name="q275" value="D"> D. Hypoglycemia</div>
+</div>
+
+<!-- Question 276 -->
+<div class="question" data-question="276">
+    <p>276. The term for a condition characterized by an abnormal accumulation of fluid in the tissues is:</p>
+    <div class="answer"><input type="radio" name="q276" value="A" data-correct="true"> A. Edema</div>
+    <div class="answer"><input type="radio" name="q276" value="B"> B. Ascites</div>
+    <div class="answer"><input type="radio" name="q276" value="C"> C. Hemorrhage</div>
+    <div class="answer"><input type="radio" name="q276" value="D"> D. Infiltration</div>
+</div>
+
+<!-- Question 277 -->
+<div class="question" data-question="277">
+    <p>277. The medical term for a condition characterized by the presence of pus is:</p>
+    <div class="answer"><input type="radio" name="q277" value="A" data-correct="true"> A. Suppuration</div>
+    <div class="answer"><input type="radio" name="q277" value="B"> B. Exudation</div>
+    <div class="answer"><input type="radio" name="q277" value="C"> C. Hemorrhage</div>
+    <div class="answer"><input type="radio" name="q277" value="D"> D. Necrosis</div>
+</div>
+
+<!-- Question 278 -->
+<div class="question" data-question="278">
+    <p>278. The term for a condition characterized by the presence of a tumor in the brain is:</p>
+    <div class="answer"><input type="radio" name="q278" value="A" data-correct="true"> A. Brain tumor</div>
+    <div class="answer"><input type="radio" name="q278" value="B"> B. Meningioma</div>
+    <div class="answer"><input type="radio" name="q278" value="C"> C. Glioma</div>
+    <div class="answer"><input type="radio" name="q278" value="D"> D. Neuroblastoma</div>
+</div>
+
+<!-- Question 279 -->
+<div class="question" data-question="279">
+    <p>279. The medical term for a condition characterized by an abnormal decrease in red blood cells is:</p>
+    <div class="answer"><input type="radio" name="q279" value="A" data-correct="true"> A. Anemia</div>
+    <div class="answer"><input type="radio" name="q279" value="B"> B. Polycythemia</div>
+    <div class="answer"><input type="radio" name="q279" value="C"> C. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q279" value="D"> D. Thrombocytopenia</div>
+</div>
+
+<!-- Question 280 -->
+<div class="question" data-question="280">
+    <p>280. The term for the surgical procedure to remove the gallbladder is:</p>
+    <div class="answer"><input type="radio" name="q280" value="A" data-correct="true"> A. Cholecystectomy</div>
+    <div class="answer"><input type="radio" name="q280" value="B"> B. Appendectomy</div>
+    <div class="answer"><input type="radio" name="q280" value="C"> C. Herniorrhaphy</div>
+    <div class="answer"><input type="radio" name="q280" value="D"> D. Gastrectomy</div>
+</div>
+
+<!-- Question 281 -->
+<div class="question" data-question="281">
+    <p>281. The term for a condition characterized by the loss of hair is:</p>
+    <div class="answer"><input type="radio" name="q281" value="A" data-correct="true"> A. Alopecia</div>
+    <div class="answer"><input type="radio" name="q281" value="B"> B. Dermatitis</div>
+    <div class="answer"><input type="radio" name="q281" value="C"> C. Eczema</div>
+    <div class="answer"><input type="radio" name="q281" value="D"> D. Psoriasis</div>
+</div>
+
+<!-- Question 282 -->
+<div class="question" data-question="282">
+    <p>282. The term for a condition characterized by an abnormal accumulation of fluid in the abdominal cavity is:</p>
+    <div class="answer"><input type="radio" name="q282" value="A" data-correct="true"> A. Ascites</div>
+    <div class="answer"><input type="radio" name="q282" value="B"> B. Edema</div>
+    <div class="answer"><input type="radio" name="q282" value="C"> C. Hemorrhage</div>
+    <div class="answer"><input type="radio" name="q282" value="D"> D. Infiltration</div>
+</div>
+
+<!-- Question 283 -->
+<div class="question" data-question="283">
+    <p>283. The term for a condition characterized by an abnormal increase in red blood cells is:</p>
+    <div class="answer"><input type="radio" name="q283" value="A" data-correct="true"> A. Polycythemia</div>
+    <div class="answer"><input type="radio" name="q283" value="B"> B. Anemia</div>
+    <div class="answer"><input type="radio" name="q283" value="C"> C. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q283" value="D"> D. Thrombocytopenia</div>
+</div>
+
+<!-- Question 284 -->
+<div class="question" data-question="284">
+    <p>284. The term for a condition characterized by inflammation of the liver is:</p>
+    <div class="answer"><input type="radio" name="q284" value="A" data-correct="true"> A. Hepatitis</div>
+    <div class="answer"><input type="radio" name="q284" value="B"> B. Gastritis</div>
+    <div class="answer"><input type="radio" name="q284" value="C"> C. Enteritis</div>
+    <div class="answer"><input type="radio" name="q284" value="D"> D. Colitis</div>
+</div>
+
+<!-- Question 285 -->
+<div class="question" data-question="285">
+    <p>285. The medical term for an abnormal curvature of the spine is:</p>
+    <div class="answer"><input type="radio" name="q285" value="A" data-correct="true"> A. Scoliosis</div>
+    <div class="answer"><input type="radio" name="q285" value="B"> B. Kyphosis</div>
+    <div class="answer"><input type="radio" name="q285" value="C"> C. Lordosis</div>
+    <div class="answer"><input type="radio" name="q285" value="D"> D. Spinal stenosis</div>
+</div>
+
+<!-- Question 286 -->
+<div class="question" data-question="286">
+    <p>286. The term for a condition characterized by an abnormal decrease in platelets is:</p>
+    <div class="answer"><input type="radio" name="q286" value="A" data-correct="true"> A. Thrombocytopenia</div>
+    <div class="answer"><input type="radio" name="q286" value="B"> B. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q286" value="C"> C. Anemia</div>
+    <div class="answer"><input type="radio" name="q286" value="D"> D. Polycythemia</div>
+</div>
+
+<!-- Question 287 -->
+<div class="question" data-question="287">
+    <p>287. The medical term for a condition characterized by a bluish discoloration of the skin due to lack of oxygen is:</p>
+    <div class="answer"><input type="radio" name="q287" value="A" data-correct="true"> A. Cyanosis</div>
+    <div class="answer"><input type="radio" name="q287" value="B"> B. Erythema</div>
+    <div class="answer"><input type="radio" name="q287" value="C"> C. Jaundice</div>
+    <div class="answer"><input type="radio" name="q287" value="D"> D. Pallor</div>
+</div>
+
+<!-- Question 288 -->
+<div class="question" data-question="288">
+    <p>288. The term for a condition characterized by the inflammation of the lining of the heart is:</p>
+    <div class="answer"><input type="radio" name="q288" value="A" data-correct="true"> A. Pericarditis</div>
+    <div class="answer"><input type="radio" name="q288" value="B"> B. Endocarditis</div>
+    <div class="answer"><input type="radio" name="q288" value="C"> C. Myocarditis</div>
+    <div class="answer"><input type="radio" name="q288" value="D"> D. Carditis</div>
+</div>
+
+<!-- Question 289 -->
+<div class="question" data-question="289">
+    <p>289. The term for a condition characterized by the abnormal enlargement of the heart is:</p>
+    <div class="answer"><input type="radio" name="q289" value="A" data-correct="true"> A. Cardiomegaly</div>
+    <div class="answer"><input type="radio" name="q289" value="B"> B. Cardiomyopathy</div>
+    <div class="answer"><input type="radio" name="q289" value="C"> C. Myocarditis</div>
+    <div class="answer"><input type="radio" name="q289" value="D"> D. Endocarditis</div>
+</div>
+
+<!-- Question 290 -->
+<div class="question" data-question="290">
+    <p>290. The term for a condition characterized by the abnormal narrowing of a blood vessel is:</p>
+    <div class="answer"><input type="radio" name="q290" value="A" data-correct="true"> A. Stenosis</div>
+    <div class="answer"><input type="radio" name="q290" value="B"> B. Aneurysm</div>
+    <div class="answer"><input type="radio" name="q290" value="C"> C. Embolism</div>
+    <div class="answer"><input type="radio" name="q290" value="D"> D. Thrombosis</div>
+</div>
+
+<!-- Question 291 -->
+<div class="question" data-question="291">
+    <p>291. The term for a condition characterized by the abnormal formation of stones in the gallbladder is:</p>
+    <div class="answer"><input type="radio" name="q291" value="A" data-correct="true"> A. Cholelithiasis</div>
+    <div class="answer"><input type="radio" name="q291" value="B"> B. Cholecystitis</div>
+    <div class="answer"><input type="radio" name="q291" value="C"> C. Hepatitis</div>
+    <div class="answer"><input type="radio" name="q291" value="D"> D. Pancreatitis</div>
+</div>
+
+<!-- Question 292 -->
+<div class="question" data-question="292">
+    <p>292. The term for a condition characterized by the abnormal presence of bacteria in the blood is:</p>
+    <div class="answer"><input type="radio" name="q292" value="A" data-correct="true"> A. Bacteremia</div>
+    <div class="answer"><input type="radio" name="q292" value="B"> B. Septicemia</div>
+    <div class="answer"><input type="radio" name="q292" value="C"> C. Viremia</div>
+    <div class="answer"><input type="radio" name="q292" value="D"> D. Fungemia</div>
+</div>
+
+<!-- Question 293 -->
+<div class="question" data-question="293">
+    <p>293. The term for a condition characterized by an abnormal decrease in the number of white blood cells is:</p>
+    <div class="answer"><input type="radio" name="q293" value="A" data-correct="true"> A. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q293" value="B"> B. Leukocytosis</div>
+    <div class="answer"><input type="radio" name="q293" value="C"> C. Anemia</div>
+    <div class="answer"><input type="radio" name="q293" value="D"> D. Thrombocytopenia</div>
+</div>
+
+<!-- Question 294 -->
+<div class="question" data-question="294">
+    <p>294. The term for a condition characterized by the accumulation of fluid in the lungs is:</p>
+    <div class="answer"><input type="radio" name="q294" value="A" data-correct="true"> A. Pulmonary edema</div>
+    <div class="answer"><input type="radio" name="q294" value="B"> B. Pleural effusion</div>
+    <div class="answer"><input type="radio" name="q294" value="C"> C. Ascites</div>
+    <div class="answer"><input type="radio" name="q294" value="D"> D. Pericardial effusion</div>
+</div>
+
+<!-- Question 295 -->
+<div class="question" data-question="295">
+    <p>295. The medical term for a condition characterized by inflammation of the joints is:</p>
+    <div class="answer"><input type="radio" name="q295" value="A" data-correct="true"> A. Arthritis</div>
+    <div class="answer"><input type="radio" name="q295" value="B"> B. Myositis</div>
+    <div class="answer"><input type="radio" name="q295" value="C"> C. Tendonitis</div>
+    <div class="answer"><input type="radio" name="q295" value="D"> D. Bursitis</div>
+</div>
+
+<!-- Question 296 -->
+<div class="question" data-question="296">
+    <p>296. The term for a condition characterized by an abnormal increase in the number of platelets is:</p>
+    <div class="answer"><input type="radio" name="q296" value="A" data-correct="true"> A. Thrombocytosis</div>
+    <div class="answer"><input type="radio" name="q296" value="B"> B. Thrombocytopenia</div>
+    <div class="answer"><input type="radio" name="q296" value="C"> C. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q296" value="D"> D. Anemia</div>
+</div>
+
+<!-- Question 297 -->
+<div class="question" data-question="297">
+    <p>297. The term for a condition characterized by inflammation of the membranes surrounding the lungs is:</p>
+    <div class="answer"><input type="radio" name="q297" value="A" data-correct="true"> A. Pleuritis</div>
+    <div class="answer"><input type="radio" name="q297" value="B"> B. Bronchitis</div>
+    <div class="answer"><input type="radio" name="q297" value="C"> C. Pneumonia</div>
+    <div class="answer"><input type="radio" name="q297" value="D"> D. Asthma</div>
+</div>
+
+<!-- Question 298 -->
+<div class="question" data-question="298">
+    <p>298. The term for a condition characterized by an abnormal growth of tissue in the uterus is:</p>
+    <div class="answer"><input type="radio" name="q298" value="A" data-correct="true"> A. Endometriosis</div>
+    <div class="answer"><input type="radio" name="q298" value="B"> B. Fibroids</div>
+    <div class="answer"><input type="radio" name="q298" value="C"> C. Polycystic ovary syndrome</div>
+    <div class="answer"><input type="radio" name="q298" value="D"> D. Ovarian cysts</div>
+</div>
+
+<!-- Question 299 -->
+<div class="question" data-question="299">
+    <p>299. The term for a condition characterized by an abnormal decrease in the number of red blood cells is:</p>
+    <div class="answer"><input type="radio" name="q299" value="A" data-correct="true"> A. Anemia</div>
+    <div class="answer"><input type="radio" name="q299" value="B"> B. Polycythemia</div>
+    <div class="answer"><input type="radio" name="q299" value="C"> C. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q299" value="D"> D. Thrombocytopenia</div>
+</div>
+
+<!-- Question 300 -->
+<div class="question" data-question="300">
+    <p>300. The term for a condition characterized by an abnormal increase in the number of white blood cells is:</p>
+    <div class="answer"><input type="radio" name="q300" value="A" data-correct="true"> A. Leukocytosis</div>
+    <div class="answer"><input type="radio" name="q300" value="B"> B. Leukopenia</div>
+    <div class="answer"><input type="radio" name="q300" value="C"> C. Anemia</div>
+    <div class="answer"><input type="radio" name="q300" value="D"> D. Thrombocytopenia</div>
+</div>
+
+    <!-- Submit Button -->
+<button type="button" onclick="checkAnswers()">Submit Answers</button>
+
+
+    <script>
+        function checkAnswers() {
+        // Get all questions
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach(question => {
+            // Get all answers for this question
+            const answers = question.querySelectorAll('.answer input[type="radio"]');
+            let selectedAnswer = null;
+
+            answers.forEach(answer => {
+                if (answer.checked) {
+                    selectedAnswer = answer;
+                }
+            });
+
+            // Clear previous highlights
+            answers.forEach(answer => {
+                answer.parentElement.classList.remove('correct', 'incorrect');
+            });
+
+            // Highlight the correct and wrong answers
+            answers.forEach(answer => {
+                if (answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('correct');
+                }
+
+                if (answer === selectedAnswer && !answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('incorrect');
+                }
+            });
+        });
+    }
+    </script>
+</body>
+</html>
