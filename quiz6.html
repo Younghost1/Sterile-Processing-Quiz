@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 6</title>
+    <style>
+       body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #quiz {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: auto;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .question p {
+            margin: 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .answer {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .answer input[type="radio"] {
+            margin-right: 10px;
+        }
+        .answer:hover {
+            background-color: #e2e6ea;
+        }
+        .correct {
+            background-color: #d4edda; /* Light green for correct answers */
+            border: 1px solid #c3e6cb; /* Green border */ 
+        }
+        .incorrect {
+            background-color: #f8d7da; /* Light red for wrong answers */
+            border: 1px solid #f5c6cb; /* Red border */ 
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz 6</h1>
+
+<!-- Unit 1 – Asepsis and Holistic Health Assessment -->
+<div class="question" data-question="1">
+    <p>What is asepsis?</p>
+    <div class="answer"><input type="radio" name="q1" value="A"> A) Sterilizing medical equipment</div>
+    <div class="answer"><input type="radio" name="q1" value="B" data-correct="true"> B) Preventing infection by eliminating pathogens</div>
+    <div class="answer"><input type="radio" name="q1" value="C"> C) A natural immune response</div>
+    <div class="answer"><input type="radio" name="q1" value="D"> D) Eliminating all bacteria, including good bacteria</div>
+</div>
+
+<div class="question" data-question="2">
+    <p>COLDSPA is used to assess what aspect of a patient's condition?</p>
+    <div class="answer"><input type="radio" name="q2" value="A"> A) Vital signs</div>
+    <div class="answer"><input type="radio" name="q2" value="B" data-correct="true"> B) Pain or discomfort</div>
+    <div class="answer"><input type="radio" name="q2" value="C"> C) Emotional well-being</div>
+    <div class="answer"><input type="radio" name="q2" value="D"> D) Sleep patterns</div>
+</div>
+
+<div class="question" data-question="3">
+    <p>Which is NOT part of ISBAR?</p>
+    <div class="answer"><input type="radio" name="q3" value="A"> A) Situation</div>
+    <div class="answer"><input type="radio" name="q3" value="B"> B) Background</div>
+    <div class="answer"><input type="radio" name="q3" value="C" data-correct="true"> C) Analysis</div>
+    <div class="answer"><input type="radio" name="q3" value="D"> D) Recommendation</div>
+</div>
+
+<div class="question" data-question="4">
+    <p>What does the 'P' in IPPA stand for?</p>
+    <div class="answer"><input type="radio" name="q4" value="A" data-correct="true"> A) Palpation</div>
+    <div class="answer"><input type="radio" name="q4" value="B"> B) Percussion</div>
+    <div class="answer"><input type="radio" name="q4" value="C"> C) Prevention</div>
+    <div class="answer"><input type="radio" name="q4" value="D"> D) Pain assessment</div>
+</div>
+
+<div class="question" data-question="5">
+    <p>Which health history is focused on a specific problem?</p>
+    <div class="answer"><input type="radio" name="q5" value="A"> A) Comprehensive</div>
+    <div class="answer"><input type="radio" name="q5" value="B" data-correct="true"> B) Focused</div>
+    <div class="answer"><input type="radio" name="q5" value="C"> C) Family</div>
+    <div class="answer"><input type="radio" name="q5" value="D"> D) Social</div>
+</div>
+
+<div class="question" data-question="6">
+    <p>Which of the following is subjective data?</p>
+    <div class="answer"><input type="radio" name="q6" value="A"> A) Blood pressure of 120/80 mmHg</div>
+    <div class="answer"><input type="radio" name="q6" value="B" data-correct="true"> B) Patient’s report of nausea</div>
+    <div class="answer"><input type="radio" name="q6" value="C"> C) Heart rate of 78 bpm</div>
+    <div class="answer"><input type="radio" name="q6" value="D"> D) Temperature of 98.6°F</div>
+</div>
+
+<div class="question" data-question="7">
+    <p>Which type of data is gathered from observation and measurement?</p>
+    <div class="answer"><input type="radio" name="q7" value="A"> A) Subjective</div>
+    <div class="answer"><input type="radio" name="q7" value="B" data-correct="true"> B) Objective</div>
+    <div class="answer"><input type="radio" name="q7" value="C"> C) Emotional</div>
+    <div class="answer"><input type="radio" name="q7" value="D"> D) Unmeasurable</div>
+</div>
+
+<div class="question" data-question="8">
+    <p>Which of the following is part of social history?</p>
+    <div class="answer"><input type="radio" name="q8" value="A"> A) Medical conditions</div>
+    <div class="answer"><input type="radio" name="q8" value="B" data-correct="true"> B) Lifestyle and habits</div>
+    <div class="answer"><input type="radio" name="q8" value="C"> C) Family diseases</div>
+    <div class="answer"><input type="radio" name="q8" value="D"> D) Current medications</div>
+</div>
+
+<div class="question" data-question="9">
+    <p>What should be included in a holistic health assessment?</p>
+    <div class="answer"><input type="radio" name="q9" value="A"> A) Physical well-being only</div>
+    <div class="answer"><input type="radio" name="q9" value="B" data-correct="true"> B) Emotional, social, and physical well-being</div>
+    <div class="answer"><input type="radio" name="q9" value="C"> C) Only objective data</div>
+    <div class="answer"><input type="radio" name="q9" value="D"> D) Avoiding personal beliefs</div>
+</div>
+
+<div class="question" data-question="10">
+    <p>Which of the following is part of the ISBAR technique?</p>
+    <div class="answer"><input type="radio" name="q10" value="A"> A) Interpretation</div>
+    <div class="answer"><input type="radio" name="q10" value="B" data-correct="true"> B) Situation</div>
+    <div class="answer"><input type="radio" name="q10" value="C"> C) Behavior</div>
+    <div class="answer"><input type="radio" name="q10" value="D"> D) Agreement</div>
+</div>
+
+<!-- Unit 2 – Skin, Hair, Nails, Head & Neck -->
+<div class="question" data-question="11">
+    <p>Which term describes normal skin findings?</p>
+    <div class="answer"><input type="radio" name="q11" value="A"> A) Pallor</div>
+    <div class="answer"><input type="radio" name="q11" value="B"> B) Erythema</div>
+    <div class="answer"><input type="radio" name="q11" value="C"> C) Jaundice</div>
+    <div class="answer"><input type="radio" name="q11" value="D" data-correct="true"> D) Pink, intact skin</div>
+</div>
+
+<div class="question" data-question="12">
+    <p>What is erythema?</p>
+    <div class="answer"><input type="radio" name="q12" value="A" data-correct="true"> A) Redness of the skin</div>
+    <div class="answer"><input type="radio" name="q12" value="B"> B) Yellowing of the skin</div>
+    <div class="answer"><input type="radio" name="q12" value="C"> C) Pale skin</div>
+    <div class="answer"><input type="radio" name="q12" value="D"> D) Blue-tinged skin</div>
+</div>
+
+<div class="question" data-question="13">
+    <p>Which of the following is a normal skin turgor finding?</p>
+    <div class="answer"><input type="radio" name="q13" value="A"> A) Skin remains tented after pinching</div>
+    <div class="answer"><input type="radio" name="q13" value="B" data-correct="true"> B) Skin quickly returns to its normal position after being pinched</div>
+    <div class="answer"><input type="radio" name="q13" value="C"> C) Skin feels warm and dry</div>
+    <div class="answer"><input type="radio" name="q13" value="D"> D) Skin appears shiny and thin</div>
+</div>
+
+<div class="question" data-question="14">
+    <p>What test is used to assess CN 5 (Trigeminal Nerve)?</p>
+    <div class="answer"><input type="radio" name="q14" value="A"> A) Snellen test</div>
+    <div class="answer"><input type="radio" name="q14" value="B"> B) Rinne test</div>
+    <div class="answer"><input type="radio" name="q14" value="C" data-correct="true"> C) Sensory function test</div>
+    <div class="answer"><input type="radio" name="q14" value="D"> D) Romberg test</div>
+</div>
+
+<div class="question" data-question="15">
+    <p>Which of the following is an abnormal finding in the hair and scalp examination?</p>
+    <div class="answer"><input type="radio" name="q15" value="A"> A) Clean, evenly distributed hair</div>
+    <div class="answer"><input type="radio" name="q15" value="B"> B) Scalp free of lesions</div>
+    <div class="answer"><input type="radio" name="q15" value="C" data-correct="true"> C) Patches of hair loss with scaly lesions</div>
+    <div class="answer"><input type="radio" name="q15" value="D"> D) Soft and smooth scalp</div>
+</div>
+
+<div class="question" data-question="16">
+    <p>What is a common cause of brittle nails?</p>
+    <div class="answer"><input type="radio" name="q16" value="A"> A) Excessive moisture</div>
+    <div class="answer"><input type="radio" name="q16" value="B"> B) Nutritional deficiency</div>
+    <div class="answer"><input type="radio" name="q16" value="C" data-correct="true"> C) Frequent use of nail polish remover</div>
+    <div class="answer"><input type="radio" name="q16" value="D"> D) Natural aging process</div>
+</div>
+
+<div class="question" data-question="17">
+    <p>Which term describes a swollen, reddened area of the skin?</p>
+    <div class="answer"><input type="radio" name="q17" value="A" data-correct="true"> A) Inflammation</div>
+    <div class="answer"><input type="radio" name="q17" value="B"> B) Atrophy</div>
+    <div class="answer"><input type="radio" name="q17" value="C"> C) Erosion</div>
+    <div class="answer"><input type="radio" name="q17" value="D"> D) Necrosis</div>
+</div>
+
+<div class="question" data-question="18">
+    <p>Which of the following is a sign of jaundice?</p>
+    <div class="answer"><input type="radio" name="q18" value="A"> A) Redness in the skin</div>
+    <div class="answer"><input type="radio" name="q18" value="B"> B) Pale skin</div>
+    <div class="answer"><input type="radio" name="q18" value="C" data-correct="true"> C) Yellowing of the skin and sclera</div>
+    <div class="answer"><input type="radio" name="q18" value="D"> D) Blue-tinged skin</div>
+</div>
+
+<div class="question" data-question="19">
+    <p>What does the "P" in PERRLA stand for?</p>
+    <div class="answer"><input type="radio" name="q19" value="A" data-correct="true"> A) Pupils</div>
+    <div class="answer"><input type="radio" name="q19" value="B"> B) Puncture</div>
+    <div class="answer"><input type="radio" name="q19" value="C"> C) Pressure</div>
+    <div class="answer"><input type="radio" name="q19" value="D"> D) Pathogens</div>
+</div>
+
+<div class="question" data-question="20">
+    <p>Which condition is characterized by the presence of a red, raised rash?</p>
+    <div class="answer"><input type="radio" name="q20" value="A"> A) Cyanosis</div>
+    <div class="answer"><input type="radio" name="q20" value="B"> B) Pallor</div>
+    <div class="answer"><input type="radio" name="q20" value="C" data-correct="true"> C) Urticaria</div>
+    <div class="answer"><input type="radio" name="q20" value="D"> D) Petechiae</div>
+</div>
+
+<!-- Unit 3 – ENTMS and Eyes -->
+<div class="question" data-question="21">
+    <p>Which test assesses near vision?</p>
+    <div class="answer"><input type="radio" name="q21" value="A"> A) Snellen chart</div>
+    <div class="answer"><input type="radio" name="q21" value="B" data-correct="true"> B) Jaeger chart</div>
+    <div class="answer"><input type="radio" name="q21" value="C"> C) Ishihara test</div>
+    <div class="answer"><input type="radio" name="q21" value="D"> D) Confrontation test</div>
+</div>
+
+<div class="question" data-question="22">
+    <p>What is the purpose of the Rinne test?</p>
+    <div class="answer"><input type="radio" name="q22" value="A"> A) Assessing visual acuity</div>
+    <div class="answer"><input type="radio" name="q22" value="B" data-correct="true"> B) Evaluating hearing</div>
+    <div class="answer"><input type="radio" name="q22" value="C"> C) Measuring eye pressure</div>
+    <div class="answer"><input type="radio" name="q22" value="D"> D) Testing balance</div>
+</div>
+
+<div class="question" data-question="23">
+    <p>Which of the following is a normal finding in an eye examination?</p>
+    <div class="answer"><input type="radio" name="q23" value="A"> A) Yellow sclera</div>
+    <div class="answer"><input type="radio" name="q23" value="B"> B) Unequal pupil size</div>
+    <div class="answer"><input type="radio" name="q23" value="C" data-correct="true"> C) Clear cornea</div>
+    <div class="answer"><input type="radio" name="q23" value="D"> D) Cloudy lens</div>
+</div>
+
+<div class="question" data-question="24">
+    <p>What does "PERRLA" stand for in an eye examination?</p>
+    <div class="answer"><input type="radio" name="q24" value="A"> A) Pupils Equal, React to Light and Accommodation</div>
+    <div class="answer"><input type="radio" name="q24" value="B"> B) Pupils Evenly React to Light and Alignment</div>
+    <div class="answer"><input type="radio" name="q24" value="C" data-correct="true"> C) Pupils Equal, Round, Reactive to Light and Accommodation</div>
+    <div class="answer"><input type="radio" name="q24" value="D"> D) Pupils Enhanced with Refraction and Light Assessment</div>
+</div>
+
+<div class="question" data-question="25">
+    <p>Which condition is characterized by the presence of a red, inflamed eye?</p>
+    <div class="answer"><input type="radio" name="q25" value="A"> A) Conjunctivitis</div>
+    <div class="answer"><input type="radio" name="q25" value="B"> B) Glaucoma</div>
+    <div class="answer"><input type="radio" name="q25" value="C"> C) Cataract</div>
+    <div class="answer"><input type="radio" name="q25" value="D" data-correct="true"> D) Uveitis</div>
+</div>
+
+<div class="question" data-question="26">
+    <p>Which test assesses visual acuity?</p>
+    <div class="answer"><input type="radio" name="q26" value="A"> A) Rinne test</div>
+    <div class="answer"><input type="radio" name="q26" value="B"> B) Weber test</div>
+    <div class="answer"><input type="radio" name="q26" value="C"> C) Ishihara test</div>
+    <div class="answer"><input type="radio" name="q26" value="D" data-correct="true"> D) Snellen chart</div>
+</div>
+
+<div class="question" data-question="27">
+    <p>What does a positive Weber test indicate?</p>
+    <div class="answer"><input type="radio" name="q27" value="A"> A) Sensorineural hearing loss</div>
+    <div class="answer"><input type="radio" name="q27" value="B" data-correct="true"> B) Conductive hearing loss</div>
+    <div class="answer"><input type="radio" name="q27" value="C"> C) Visual impairment</div>
+    <div class="answer"><input type="radio" name="q27" value="D"> D) Balance disorder</div>
+</div>
+
+<div class="question" data-question="28">
+    <p>What is the most common cause of visual impairment in the elderly?</p>
+    <div class="answer"><input type="radio" name="q28" value="A"> A) Glaucoma</div>
+    <div class="answer"><input type="radio" name="q28" value="B" data-correct="true"> B) Cataracts</div>
+    <div class="answer"><input type="radio" name="q28" value="C"> C) Macular degeneration</div>
+    <div class="answer"><input type="radio" name="q28" value="D"> D) Diabetic retinopathy</div>
+</div>
+
+<div class="question" data-question="29">
+    <p>Which condition is characterized by bulging eyes?</p>
+    <div class="answer"><input type="radio" name="q29" value="A"> A) Conjunctivitis</div>
+    <div class="answer"><input type="radio" name="q29" value="B"> B) Ptosis</div>
+    <div class="answer"><input type="radio" name="q29" value="C" data-correct="true"> C) Exophthalmos</div>
+    <div class="answer"><input type="radio" name="q29" value="D"> D) Diplopia</div>
+</div>
+
+<div class="question" data-question="30">
+    <p>Which of the following is NOT a part of the ENT assessment?</p>
+    <div class="answer"><input type="radio" name="q30" value="A"> A) Inspection of the ears</div>
+    <div class="answer"><input type="radio" name="q30" value="B"> B) Palpation of the sinuses</div>
+    <div class="answer"><input type="radio" name="q30" value="C"> C) Examination of the mouth</div>
+    <div class="answer"><input type="radio" name="q30" value="D" data-correct="true"> D) Assessment of peripheral pulses</div>
+</div>
+
+<!-- Unit 4 – Breasts and Lymphatic System -->
+<div class="question" data-question="31">
+    <p>What is a common sign of breast cancer?</p>
+    <div class="answer"><input type="radio" name="q31" value="A"> A) Tenderness</div>
+    <div class="answer"><input type="radio" name="q31" value="B"> B) Lumps that are movable</div>
+    <div class="answer"><input type="radio" name="q31" value="C" data-correct="true"> C) Hard, non-tender lumps</div>
+    <div class="answer"><input type="radio" name="q31" value="D"> D) Redness around the nipple</div>
+</div>
+
+<div class="question" data-question="32">
+    <p>Which lymph nodes are most commonly assessed during a physical examination?</p>
+    <div class="answer"><input type="radio" name="q32" value="A"> A) Cervical and axillary</div>
+    <div class="answer"><input type="radio" name="q32" value="B"> B) Inguinal and popliteal</div>
+    <div class="answer"><input type="radio" name="q32" value="C" data-correct="true"> C) Cervical and inguinal</div>
+    <div class="answer"><input type="radio" name="q32" value="D"> D) Axillary and popliteal</div>
+</div>
+
+<div class="question" data-question="33">
+    <p>Which finding is indicative of lymphadenopathy?</p>
+    <div class="answer"><input type="radio" name="q33" value="A"> A) No palpable lymph nodes</div>
+    <div class="answer"><input type="radio" name="q33" value="B" data-correct="true"> B) Enlarged, tender lymph nodes</div>
+    <div class="answer"><input type="radio" name="q33" value="C"> C) Hard, immobile lymph nodes</div>
+    <div class="answer"><input type="radio" name="q33" value="D"> D) Normal-sized, mobile lymph nodes</div>
+</div>
+
+<div class="question" data-question="34">
+    <p>Which test is used to assess for a breast lump?</p>
+    <div class="answer"><input type="radio" name="q34" value="A"> A) Mammogram</div>
+    <div class="answer"><input type="radio" name="q34" value="B"> B) Ultrasound</div>
+    <div class="answer"><input type="radio" name="q34" value="C" data-correct="true"> C) Clinical breast examination</div>
+    <div class="answer"><input type="radio" name="q34" value="D"> D) Biopsy</div>
+</div>
+
+<div class="question" data-question="35">
+    <p>What is the purpose of a clinical breast examination?</p>
+    <div class="answer"><input type="radio" name="q35" value="A"> A) To measure breast size</div>
+    <div class="answer"><input type="radio" name="q35" value="B"> B) To assess for breast tenderness</div>
+    <div class="answer"><input type="radio" name="q35" value="C" data-correct="true"> C) To detect lumps or abnormalities</div>
+    <div class="answer"><input type="radio" name="q35" value="D"> D) To check for skin changes</div>
+</div>
+
+<div class="question" data-question="36">
+    <p>Which of the following is NOT a typical breast cancer symptom?</p>
+    <div class="answer"><input type="radio" name="q36" value="A"> A) Nipple discharge</div>
+    <div class="answer"><input type="radio" name="q36" value="B"> C) Skin dimpling</div>
+    <div class="answer"><input type="radio" name="q36" value="C"> C) Lumps with regular borders</div>
+    <div class="answer"><input type="radio" name="q36" value="D" data-correct="true"> D) Itching</div>
+</div>
+
+<div class="question" data-question="37">
+    <p>What is the main function of the lymphatic system?</p>
+    <div class="answer"><input type="radio" name="q37" value="A"> A) To transport oxygen</div>
+    <div class="answer"><input type="radio" name="q37" value="B"> B) To produce hormones</div>
+    <div class="answer"><input type="radio" name="q37" value="C"> C) To filter and return interstitial fluid to the bloodstream</div>
+    <div class="answer"><input type="radio" name="q37" value="D" data-correct="true"> D) To digest food</div>
+</div>
+
+<div class="question" data-question="38">
+    <p>Which lymph node is typically examined during a breast examination?</p>
+    <div class="answer"><input type="radio" name="q38" value="A"> A) Inguinal</div>
+    <div class="answer"><input type="radio" name="q38" value="B" data-correct="true"> B) Axillary</div>
+    <div class="answer"><input type="radio" name="q38" value="C"> C) Popliteal</div>
+    <div class="answer"><input type="radio" name="q38" value="D"> D) Cervical</div>
+</div>
+
+<div class="question" data-question="39">
+    <p>Which condition is characterized by an enlarged, painful lymph node?</p>
+    <div class="answer"><input type="radio" name="q39" value="A"> A) Hodgkin’s lymphoma</div>
+    <div class="answer"><input type="radio" name="q39" value="B"> B) Non-Hodgkin’s lymphoma</div>
+    <div class="answer"><input type="radio" name="q39" value="C" data-correct="true"> C) Infection</div>
+    <div class="answer"><input type="radio" name="q39" value="D"> D) Metastatic cancer</div>
+</div>
+
+
+
+<!-- Unit 4 – Eyes (continued) -->
+<div class="question" data-question="40">
+    <p>Which cranial nerves control eye movement?</p>
+    <div class="answer"><input type="radio" name="q40" value="A" data-correct="true"> A) CN 2, 3, 4, and 6</div>
+    <div class="answer"><input type="radio" name="q40" value="B"> B) CN 5, 7, and 8</div>
+    <div class="answer"><input type="radio" name="q40" value="C"> C) CN 1, 2, and 4</div>
+    <div class="answer"><input type="radio" name="q40" value="D"> D) CN 1, 3, and 5</div>
+</div>
+
+<div class="question" data-question="41">
+    <p>What does EOM stand for?</p>
+    <div class="answer"><input type="radio" name="q41" value="A"> A) Eye Optic Movement</div>
+    <div class="answer"><input type="radio" name="q41" value="B" data-correct="true"> B) Extraocular Movement</div>
+    <div class="answer"><input type="radio" name="q41" value="C"> C) External Optic Muscle</div>
+    <div class="answer"><input type="radio" name="q41" value="D"> D) Eye Orbital Motion</div>
+</div>
+
+<div class="question" data-question="42">
+    <p>Which of the following is NOT a part of the eye?</p>
+    <div class="answer"><input type="radio" name="q42" value="A"> A) Iris</div>
+    <div class="answer"><input type="radio" name="q42" value="B"> B) Cornea</div>
+    <div class="answer"><input type="radio" name="q42" value="C" data-correct="true"> C) Pinna</div>
+    <div class="answer"><input type="radio" name="q42" value="D"> D) Lens</div>
+</div>
+
+<div class="question" data-question="43">
+    <p>What is the correct technique to test for accommodation?</p>
+    <div class="answer"><input type="radio" name="q43" value="A"> A) Shine light in the eyes and observe pupil constriction</div>
+    <div class="answer"><input type="radio" name="q43" value="B" data-correct="true"> B) Have the patient follow a distant object as you bring it closer</div>
+    <div class="answer"><input type="radio" name="q43" value="C"> C) Use an ophthalmoscope to check the retina</div>
+    <div class="answer"><input type="radio" name="q43" value="D"> D) Ask the patient to close one eye and read a chart</div>
+</div>
+
+<div class="question" data-question="44">
+    <p>Which cranial nerve is tested when assessing PERRLA?</p>
+    <div class="answer"><input type="radio" name="q44" value="A" data-correct="true"> A) CN 2 and CN 3</div>
+    <div class="answer"><input type="radio" name="q44" value="B"> B) CN 4 and CN 6</div>
+    <div class="answer"><input type="radio" name="q44" value="C"> C) CN 5 and CN 7</div>
+    <div class="answer"><input type="radio" name="q44" value="D"> D) CN 1 and CN 12</div>
+</div>
+
+<div class="question" data-question="45">
+    <p>Which of the following would be an abnormal finding in an eye assessment?</p>
+    <div class="answer"><input type="radio" name="q45" value="A"> A) Equal pupils</div>
+    <div class="answer"><input type="radio" name="q45" value="B"> B) Pupils that react to light</div>
+    <div class="answer"><input type="radio" name="q45" value="C" data-correct="true"> C) Unequal pupils</div>
+    <div class="answer"><input type="radio" name="q45" value="D"> D) Round pupils</div>
+</div>
+
+<div class="question" data-question="46">
+    <p>What is an appropriate ROS question for eye health?</p>
+    <div class="answer"><input type="radio" name="q46" value="A"> A) "Do you have difficulty hearing?"</div>
+    <div class="answer"><input type="radio" name="q46" value="B" data-correct="true"> B) "Do you wear glasses or contact lenses?"</div>
+    <div class="answer"><input type="radio" name="q46" value="C"> C) "Have you had any nasal discharge?"</div>
+    <div class="answer"><input type="radio" name="q46" value="D"> D) "Do you experience nausea?"</div>
+</div>
+
+<div class="question" data-question="47">
+    <p>What age-related change commonly affects vision?</p>
+    <div class="answer"><input type="radio" name="q47" value="A" data-correct="true"> A) Glaucoma</div>
+    <div class="answer"><input type="radio" name="q47" value="B"> B) Increased near vision</div>
+    <div class="answer"><input type="radio" name="q47" value="C"> C) Improved night vision</div>
+    <div class="answer"><input type="radio" name="q47" value="D"> D) Enhanced peripheral vision</div>
+</div>
+
+<div class="question" data-question="48">
+    <p>What does a normal pupillary light reflex indicate?</p>
+    <div class="answer"><input type="radio" name="q48" value="A"> A) The pupils do not change size</div>
+    <div class="answer"><input type="radio" name="q48" value="B" data-correct="true"> B) Both pupils constrict when light is shined in one eye</div>
+    <div class="answer"><input type="radio" name="q48" value="C"> C) Only the pupil in the affected eye reacts to light</div>
+    <div class="answer"><input type="radio" name="q48" value="D"> D) The pupils dilate in response to light</div>
+</div>
+
+<div class="question" data-question="49">
+    <p>When should a patient typically have an eye examination?</p>
+    <div class="answer"><input type="radio" name="q49" value="A"> A) Every 10 years</div>
+    <div class="answer"><input type="radio" name="q49" value="B" data-correct="true"> B) Every 2 years</div>
+    <div class="answer"><input type="radio" name="q49" value="C"> C) Every year</div>
+    <div class="answer"><input type="radio" name="q49" value="D"> D) Every 5 years</div>
+</div>
+
+<div class="question" data-question="50">
+    <p>Which of the following is a potential nursing diagnosis for a patient with glaucoma?</p>
+    <div class="answer"><input type="radio" name="q50" value="A"> A) Alteration in hearing related to ear infection</div>
+    <div class="answer"><input type="radio" name="q50" value="B" data-correct="true"> B) Alteration in sight related to glaucoma as evidenced by decreased central vision</div>
+    <div class="answer"><input type="radio" name="q50" value="C"> C) Risk for skin breakdown related to immobility</div>
+    <div class="answer"><input type="radio" name="q50" value="D"> D) Risk for infection related to urinary catheter</div>
+</div>
+
+<!-- Unit 5 – Breasts, Lymphatic System, and Abdomen -->
+<div class="question" data-question="51">
+    <p>What is the first step in assessing the abdomen?</p>
+    <div class="answer"><input type="radio" name="q51" value="A"> A) Percussion</div>
+    <div class="answer"><input type="radio" name="q51" value="B" data-correct="true"> B) Inspection</div>
+    <div class="answer"><input type="radio" name="q51" value="C"> C) Palpation</div>
+    <div class="answer"><input type="radio" name="q51" value="D"> D) Auscultation</div>
+</div>
+
+<div class="question" data-question="52">
+    <p>What is the correct order for performing an abdominal assessment?</p>
+    <div class="answer"><input type="radio" name="q52" value="A" data-correct="true"> A) IAPP – Inspect, Auscultate, Percuss, Palpate</div>
+    <div class="answer"><input type="radio" name="q52" value="B"> B) IPPA – Inspect, Palpate, Percuss, Auscultate</div>
+    <div class="answer"><input type="radio" name="q52" value="C"> C) PAPPI – Palpate, Auscultate, Percuss, Inspect</div>
+    <div class="answer"><input type="radio" name="q52" value="D"> D) IAAP – Inspect, Auscultate, Auscultate, Palpate</div>
+</div>
+
+<div class="question" data-question="53">
+    <p>Which quadrant of the abdomen contains the liver?</p>
+    <div class="answer"><input type="radio" name="q53" value="A"> A) Left lower quadrant (LLQ)</div>
+    <div class="answer"><input type="radio" name="q53" value="B"> B) Left upper quadrant (LUQ)</div>
+    <div class="answer"><input type="radio" name="q53" value="C" data-correct="true"> C) Right upper quadrant (RUQ)</div>
+    <div class="answer"><input type="radio" name="q53" value="D"> D) Right lower quadrant (RLQ)</div>
+</div>
+
+<div class="question" data-question="54">
+    <p>Which of the following is a normal bowel sound finding?</p>
+    <div class="answer"><input type="radio" name="q54" value="A" data-correct="true"> A) High-pitched, gurgling sounds</div>
+    <div class="answer"><input type="radio" name="q54" value="B"> B) No bowel sounds</div>
+    <div class="answer"><input type="radio" name="q54" value="C"> C) Continuous, loud sounds</div>
+    <div class="answer"><input type="radio" name="q54" value="D"> D) Irregular, weak sounds</div>
+</div>
+
+<div class="question" data-question="55">
+    <p>How long should you listen for bowel sounds before documenting "absent bowel sounds"?</p>
+    <div class="answer"><input type="radio" name="q55" value="A"> A) 1 minute</div>
+    <div class="answer"><input type="radio" name="q55" value="B"> B) 2 minutes</div>
+    <div class="answer"><input type="radio" name="q55" value="C"> C) 3 minutes</div>
+    <div class="answer"><input type="radio" name="q55" value="D" data-correct="true"> D) 5 minutes</div>
+</div>
+
+<div class="question" data-question="56">
+    <p>Which of the following is considered an abnormal lymph node finding?</p>
+    <div class="answer"><input type="radio" name="q56" value="A"> A) Soft, non-tender nodes</div>
+    <div class="answer"><input type="radio" name="q56" value="B" data-correct="true"> B) Hard, immobile nodes</div>
+    <div class="answer"><input type="radio" name="q56" value="C"> C) Non-palpable nodes</div>
+    <div class="answer"><input type="radio" name="q56" value="D"> D) Mobile, non-tender nodes</div>
+</div>
+
+<div class="question" data-question="57">
+    <p>What is an appropriate ROS question related to the breasts?</p>
+    <div class="answer"><input type="radio" name="q57" value="A"> A) "Do you have any abdominal pain?"</div>
+    <div class="answer"><input type="radio" name="q57" value="B" data-correct="true"> B) "Do you perform regular breast self-exams?"</div>
+    <div class="answer"><input type="radio" name="q57" value="C"> C) "Do you have difficulty breathing?"</div>
+    <div class="answer"><input type="radio" name="q57" value="D"> D) "Do you experience frequent urination?"</div>
+</div>
+
+<div class="question" data-question="58">
+    <p>What does TSE stand for?</p>
+    <div class="answer"><input type="radio" name="q58" value="A"> A) Total Skin Examination</div>
+    <div class="answer"><input type="radio" name="q58" value="B" data-correct="true"> B) Testicular Self-Examination</div>
+    <div class="answer"><input type="radio" name="q58" value="C"> C) Tenderness of Skin Examination</div>
+    <div class="answer"><input type="radio" name="q58" value="D"> D) Thyroid Self-Examination</div>
+</div>
+
+<div class="question" data-question="59">
+    <p>When is the best time for women to perform a breast self-exam (BSE)?</p>
+    <div class="answer"><input type="radio" name="q59" value="A"> A) At the start of their menstrual cycle</div>
+    <div class="answer"><input type="radio" name="q59" value="B" data-correct="true"> B) Immediately after their menstrual cycle</div>
+    <div class="answer"><input type="radio" name="q59" value="C"> C) Midway through their menstrual cycle</div>
+    <div class="answer"><input type="radio" name="q59" value="D"> D) During ovulation</div>
+</div>
+
+<div class="question" data-question="60">
+    <p>What is the correct technique for assessing the breasts during a clinical exam?</p>
+    <div class="answer"><input type="radio" name="q60" value="A"> A) Inspection and percussion</div>
+    <div class="answer"><input type="radio" name="q60" value="B" data-correct="true"> B) Inspection and palpation</div>
+    <div class="answer"><input type="radio" name="q60" value="C"> C) Percussion and auscultation</div>
+    <div class="answer"><input type="radio" name="q60" value="D"> D) Palpation and percussion</div>
+</div>
+
+<div class="question" data-question="61">
+    <p>What does a normal finding for breast palpation include?</p>
+    <div class="answer"><input type="radio" name="q61" value="A"> A) Tender, hard lumps</div>
+    <div class="answer"><input type="radio" name="q61" value="B" data-correct="true"> B) Soft, mobile nodules</div>
+    <div class="answer"><input type="radio" name="q61" value="C"> C) Dimpling of the skin</div>
+    <div class="answer"><input type="radio" name="q61" value="D"> D) Painless, fixed lumps</div>
+</div>
+
+<div class="question" data-question="62">
+    <p>What is the primary purpose of auscultating the abdomen?</p>
+    <div class="answer"><input type="radio" name="q62" value="A"> A) Detect masses</div>
+    <div class="answer"><input type="radio" name="q62" value="B" data-correct="true"> B) Evaluate bowel sounds</div>
+    <div class="answer"><input type="radio" name="q62" value="C"> C) Assess for tenderness</div>
+    <div class="answer"><input type="radio" name="q62" value="D"> D) Measure abdominal girth</div>
+</div>
+
+<div class="question" data-question="63">
+    <p>Which abdominal organ is located in the left upper quadrant?</p>
+    <div class="answer"><input type="radio" name="q63" value="A"> A) Liver</div>
+    <div class="answer"><input type="radio" name="q63" value="B" data-correct="true"> B) Stomach</div>
+    <div class="answer"><input type="radio" name="q63" value="C"> C) Gallbladder</div>
+    <div class="answer"><input type="radio" name="q63" value="D"> D) Appendix</div>
+</div>
+
+<div class="question" data-question="64">
+    <p>Which of the following describes abnormal bowel sounds?</p>
+    <div class="answer"><input type="radio" name="q64" value="A"> A) Irregular and high-pitched</div>
+    <div class="answer"><input type="radio" name="q64" value="B"> B) Regular, low-pitched, and soft</div>
+    <div class="answer"><input type="radio" name="q64" value="C" data-correct="true"> C) Continuous and loud</div>
+    <div class="answer"><input type="radio" name="q64" value="D"> D) High-pitched, gurgling sounds heard occasionally</div>
+</div>
+
+<div class="question" data-question="65">
+    <p>What is the purpose of having the patient void before an abdominal examination?</p>
+    <div class="answer"><input type="radio" name="q65" value="A" data-correct="true"> A) To prevent discomfort during palpation</div>
+    <div class="answer"><input type="radio" name="q65" value="B"> B) To assess for dehydration</div>
+    <div class="answer"><input type="radio" name="q65" value="C"> C) To perform a urine test</div>
+    <div class="answer"><input type="radio" name="q65" value="D"> D) To make room for proper percussive assessment</div>
+</div>
+
+<div class="question" data-question="66">
+    <p>What are the underlying structures in the right lower quadrant (RLQ)?</p>
+    <div class="answer"><input type="radio" name="q66" value="A"> A) Spleen, stomach</div>
+    <div class="answer"><input type="radio" name="q66" value="B"> B) Liver, gallbladder</div>
+    <div class="answer"><input type="radio" name="q66" value="C" data-correct="true"> C) Appendix, small intestine</div>
+    <div class="answer"><input type="radio" name="q66" value="D"> D) Pancreas, large intestine</div>
+</div>
+
+<div class="question" data-question="67">
+    <p>What is the normal temperature range for a healthy adult?</p>
+    <div class="answer"><input type="radio" name="q67" value="A"> A) 95°F to 97°F</div>
+    <div class="answer"><input type="radio" name="q67" value="B" data-correct="true"> B) 97°F to 99°F</div>
+    <div class="answer"><input type="radio" name="q67" value="C"> C) 99°F to 101°F</div>
+    <div class="answer"><input type="radio" name="q67" value="D"> D) 101°F to 103°F</div>
+</div>
+
+<div class="question" data-question="68">
+    <p>Which pulse is typically palpated for a heart rate assessment?</p>
+    <div class="answer"><input type="radio" name="q68" value="A"> A) Brachial pulse</div>
+    <div class="answer"><input type="radio" name="q68" value="B"> B) Carotid pulse</div>
+    <div class="answer"><input type="radio" name="q68" value="C" data-correct="true"> C) Radial pulse</div>
+    <div class="answer"><input type="radio" name="q68" value="D"> D) Popliteal pulse</div>
+</div>
+
+<div class="question" data-question="69">
+    <p>Which of the following is considered a normal respiratory rate for adults?</p>
+    <div class="answer"><input type="radio" name="q69" value="A"> A) 10–12 breaths per minute</div>
+    <div class="answer"><input type="radio" name="q69" value="B" data-correct="true"> B) 12–20 breaths per minute</div>
+    <div class="answer"><input type="radio" name="q69" value="C"> C) 20–30 breaths per minute</div>
+    <div class="answer"><input type="radio" name="q69" value="D"> D) 30–40 breaths per minute</div>
+</div>
+
+<div class="question" data-question="70">
+    <p>What is considered hypertension in an adult patient?</p>
+    <div class="answer"><input type="radio" name="q70" value="A"> A) 90/60 mmHg</div>
+    <div class="answer"><input type="radio" name="q70" value="B"> B) 120/80 mmHg</div>
+    <div class="answer"><input type="radio" name="q70" value="C" data-correct="true"> C) 140/90 mmHg</div>
+    <div class="answer"><input type="radio" name="q70" value="D"> D) 160/100 mmHg</div>
+</div>
+
+    <div class="question" data-question="71">
+        <p>Which of the following techniques is used to assess the lymph nodes in the neck?</p>
+        <div class="answer"><input type="radio" name="q71" value="A"> A) Auscultation</div>
+        <div class="answer"><input type="radio" name="q71" value="B"> B) Inspection</div>
+        <div class="answer"><input type="radio" name="q71" value="C"> C) Percussion</div>
+        <div class="answer"><input type="radio" name="q71" value="D" data-correct="true"> D) Palpation</div>
+    </div>
+
+    <div class="question" data-question="72">
+        <p>What is the purpose of performing percussion during an abdominal exam?</p>
+        <div class="answer"><input type="radio" name="q72" value="A"> A) To check for tenderness</div>
+        <div class="answer"><input type="radio" name="q72" value="B" data-correct="true"> B) To detect fluid, masses, or air</div>
+        <div class="answer"><input type="radio" name="q72" value="C"> C) To assess bowel sounds</div>
+        <div class="answer"><input type="radio" name="q72" value="D"> D) To measure abdominal girth</div>
+    </div>
+
+    <div class="question" data-question="73">
+        <p>What is a normal finding when auscultating the abdomen?</p>
+        <div class="answer"><input type="radio" name="q73" value="A"> A) Absence of bowel sounds</div>
+        <div class="answer"><input type="radio" name="q73" value="B"> B) Hypoactive bowel sounds</div>
+        <div class="answer"><input type="radio" name="q73" value="C" data-correct="true"> C) High-pitched gurgling sounds every 5 to 30 seconds</div>
+        <div class="answer"><input type="radio" name="q73" value="D"> D) Continuous bowel sounds</div>
+    </div>
+
+    <div class="question" data-question="74">
+        <p>Which of the following is NOT a quadrant of the abdomen?</p>
+        <div class="answer"><input type="radio" name="q74" value="A"> A) Right lower quadrant (RLQ)</div>
+        <div class="answer"><input type="radio" name="q74" value="B"> B) Left lower quadrant (LLQ)</div>
+        <div class="answer"><input type="radio" name="q74" value="C"> C) Right upper quadrant (RUQ)</div>
+        <div class="answer"><input type="radio" name="q74" value="D" data-correct="true"> D) Middle lower quadrant (MLQ)</div>
+    </div>
+
+    <div class="question" data-question="75">
+        <p>What is the main function of the lymphatic system?</p>
+        <div class="answer"><input type="radio" name="q75" value="A"> A) Transport blood throughout the body</div>
+        <div class="answer"><input type="radio" name="q75" value="B" data-correct="true"> B) Remove excess fluid and fight infection</div>
+        <div class="answer"><input type="radio" name="q75" value="C"> C) Aid in digestion</div>
+        <div class="answer"><input type="radio" name="q75" value="D"> D) Produce hormones</div>
+    </div>
+
+    <div class="question" data-question="76">
+        <p>Which is a normal finding when assessing cervical lymph nodes?</p>
+        <div class="answer"><input type="radio" name="q76" value="A"> A) Fixed, hard nodes</div>
+        <div class="answer"><input type="radio" name="q76" value="B"> B) Enlarged, tender nodes</div>
+        <div class="answer"><input type="radio" name="q76" value="C" data-correct="true"> C) Non-palpable or soft, mobile nodes</div>
+        <div class="answer"><input type="radio" name="q76" value="D"> D) Painful, enlarged nodes</div>
+    </div>
+
+    <div class="question" data-question="77">
+        <p>What is the correct sequence for performing a lymph node assessment?</p>
+        <div class="answer"><input type="radio" name="q77" value="A"> A) Inspect, Palpate, Percuss</div>
+        <div class="answer"><input type="radio" name="q77" value="B"> B) Palpate, Inspect, Auscultate</div>
+        <div class="answer"><input type="radio" name="q77" value="C" data-correct="true"> C) Palpate only</div>
+        <div class="answer"><input type="radio" name="q77" value="D"> D) Inspect, Auscultate, Palpate</div>
+    </div>
+
+    <div class="question" data-question="78">
+        <p>What is a normal finding when palpating the breasts?</p>
+        <div class="answer"><input type="radio" name="q78" value="A" data-correct="true"> A) Firm, non-tender, and mobile tissue</div>
+        <div class="answer"><input type="radio" name="q78" value="B"> B) Hard, immobile lumps</div>
+        <div class="answer"><input type="radio" name="q78" value="C"> C) Dimpling of the skin</div>
+        <div class="answer"><input type="radio" name="q78" value="D"> D) Redness and swelling</div>
+    </div>
+
+    <div class="question" data-question="79">
+        <p>What does IAPP stand for in abdominal assessment?</p>
+        <div class="answer"><input type="radio" name="q79" value="A"> A) Inspect, Auscultate, Palpate, Percuss</div>
+        <div class="answer"><input type="radio" name="q79" value="B" data-correct="true"> B) Inspect, Auscultate, Percuss, Palpate</div>
+        <div class="answer"><input type="radio" name="q79" value="C"> C) Inspect, Auscultate, Palpate, Auscultate</div>
+        <div class="answer"><input type="radio" name="q79" value="D"> D) Inspect, Assess, Palpate, Percuss</div>
+    </div>
+
+    <div class="question" data-question="80">
+        <p>How long should you auscultate for bowel sounds in each quadrant during an abdominal exam?</p>
+        <div class="answer"><input type="radio" name="q80" value="A"> A) 10 seconds</div>
+        <div class="answer"><input type="radio" name="q80" value="B"> B) 15 seconds</div>
+        <div class="answer"><input type="radio" name="q80" value="C"> C) 30 seconds</div>
+        <div class="answer"><input type="radio" name="q80" value="D" data-correct="true"> D) 1 minute</div>
+    </div>
+
+    <h1>Unit 6 – Miscellaneous and General Knowledge</h1>
+
+    <div class="question" data-question="81">
+        <p>What is the normal range for adult blood pressure?</p>
+        <div class="answer"><input type="radio" name="q81" value="A" data-correct="true"> A) 90/60 to 120/80 mmHg</div>
+        <div class="answer"><input type="radio" name="q81" value="B"> B) 80/50 to 100/70 mmHg</div>
+        <div class="answer"><input type="radio" name="q81" value="C"> C) 120/80 to 140/90 mmHg</div>
+        <div class="answer"><input type="radio" name="q81" value="D"> D) 140/90 to 160/100 mmHg</div>
+    </div>
+
+
+    <div class="question" data-question="82">
+        <p>Which cranial nerve is tested by having the patient smile and raise their eyebrows?</p>
+        <div class="answer"><input type="radio" name="q82" value="A"> A) CN 2</div>
+        <div class="answer"><input type="radio" name="q82" value="B"> B) CN 5</div>
+        <div class="answer"><input type="radio" name="q82" value="C" data-correct="true"> C) CN 7</div>
+        <div class="answer"><input type="radio" name="q82" value="D"> D) CN 9</div>
+    </div>
+
+    <div class="question" data-question="83">
+        <p>What is the normal oxygen saturation level in a healthy adult?</p>
+        <div class="answer"><input type="radio" name="q83" value="A"> A) 90–92%</div>
+        <div class="answer"><input type="radio" name="q83" value="B"> B) 92–95%</div>
+        <div class="answer"><input type="radio" name="q83" value="C" data-correct="true"> C) 95–100%</div>
+        <div class="answer"><input type="radio" name="q83" value="D"> D) 85–90%</div>
+    </div>
+
+    <div class="question" data-question="84">
+        <p>Which of the following conditions might cause cyanosis?</p>
+        <div class="answer"><input type="radio" name="q84" value="A"> A) Anemia</div>
+        <div class="answer"><input type="radio" name="q84" value="B"> B) Dehydration</div>
+        <div class="answer"><input type="radio" name="q84" value="C" data-correct="true"> C) Respiratory distress</div>
+        <div class="answer"><input type="radio" name="q84" value="D"> D) Hypertension</div>
+    </div>
+
+    <div class="question" data-question="85">
+        <p>What is the correct technique for measuring a patient’s radial pulse?</p>
+        <div class="answer"><input type="radio" name="q85" value="A"> A) Use the thumb to press firmly on the wrist</div>
+        <div class="answer"><input type="radio" name="q85" value="B" data-correct="true"> B) Use the pads of your fingers to lightly palpate the radial artery</div>
+        <div class="answer"><input type="radio" name="q85" value="C"> C) Palpate the brachial artery</div>
+        <div class="answer"><input type="radio" name="q85" value="D"> D) Count the pulse for 10 seconds and multiply by 6</div>
+    </div>
+
+    <div class="question" data-question="86">
+        <p>What is the normal respiratory rate for an adult?</p>
+        <div class="answer"><input type="radio" name="q86" value="A"> A) 8–10 breaths per minute</div>
+        <div class="answer"><input type="radio" name="q86" value="B"> B) 10–12 breaths per minute</div>
+        <div class="answer"><input type="radio" name="q86" value="C" data-correct="true"> C) 12–20 breaths per minute</div>
+        <div class="answer"><input type="radio" name="q86" value="D"> D) 20–30 breaths per minute</div>
+    </div>
+
+    <div class="question" data-question="87">
+        <p>How should the nurse assess a patient's skin turgor?</p>
+        <div class="answer"><input type="radio" name="q87" value="A"> A) Press down on the skin and watch for redness</div>
+        <div class="answer"><input type="radio" name="q87" value="B" data-correct="true"> B) Pinch a fold of skin and observe how quickly it returns to place</div>
+        <div class="answer"><input type="radio" name="q87" value="C"> C) Press down on the skin to check for fluid retention</div>
+        <div class="answer"><input type="radio" name="q87" value="D"> D) Use a flashlight to check skin texture</div>
+    </div>
+
+    <div class="question" data-question="88">
+        <p>Which cranial nerve is assessed by asking the patient to shrug their shoulders against resistance?</p>
+        <div class="answer"><input type="radio" name="q88" value="A"> A) CN 5</div>
+        <div class="answer"><input type="radio" name="q88" value="B"> B) CN 7</div>
+        <div class="answer"><input type="radio" name="q88" value="C" data-correct="true"> C) CN 11</div>
+        <div class="answer"><input type="radio" name="q88" value="D"> D) CN 12</div>
+    </div>
+
+    <div class="question" data-question="89">
+        <p>What is the purpose of using a Snellen chart in a health assessment?</p>
+        <div class="answer"><input type="radio" name="q89" value="A"> A) To assess hearing</div>
+        <div class="answer"><input type="radio" name="q89" value="B"> B) To measure blood pressure</div>
+        <div class="answer"><input type="radio" name="q89" value="C" data-correct="true"> C) To evaluate visual acuity</div>
+        <div class="answer"><input type="radio" name="q89" value="D"> D) To assess reflexes</div>
+    </div>
+
+    <div class="question" data-question="90">
+        <p>How is cranial nerve CN 1 tested?</p>
+        <div class="answer"><input type="radio" name="q90" value="A"> A) By testing vision</div>
+        <div class="answer"><input type="radio" name="q90" value="B" data-correct="true"> B) By testing the sense of smell</div>
+        <div class="answer"><input type="radio" name="q90" value="C"> C) By testing hearing</div>
+        <div class="answer"><input type="radio" name="q90" value="D"> D) By testing balance</div>
+    </div>
+
+    <h1>Bonus: Asepsis and Infection Control</h1>
+
+    <div class="question" data-question="91">
+        <p>What is asepsis?</p>
+        <div class="answer"><input type="radio" name="q91" value="A"> A) The complete destruction of all microorganisms</div>
+        <div class="answer"><input type="radio" name="q91" value="B" data-correct="true"> B) The absence of bacteria, viruses, and other microorganisms</div>
+        <div class="answer"><input type="radio" name="q91" value="C"> C) The spread of microorganisms through direct contact</div>
+        <div class="answer"><input type="radio" name="q91" value="D"> D) The process of inoculating a patient</div>
+    </div>
+
+    <div class="question" data-question="92">
+        <p>What is the most effective way to prevent the spread of infection?</p>
+        <div class="answer"><input type="radio" name="q92" value="A"> A) Wearing gloves</div>
+        <div class="answer"><input type="radio" name="q92" value="B" data-correct="true"> B) Hand washing</div>
+        <div class="answer"><input type="radio" name="q92" value="C"> C) Using antiseptics</div>
+        <div class="answer"><input type="radio" name="q92" value="D"> D) Wearing a mask</div>
+    </div>
+
+    <div class="question" data-question="93">
+        <p>What does the acronym IPPA stand for in a physical exam?</p>
+        <div class="answer"><input type="radio" name="q93" value="A" data-correct="true"> A) Inspect, Palpate, Percuss, Auscultate</div>
+        <div class="answer"><input type="radio" name="q93" value="B"> B) Insert, Percuss, Palpate, Auscultate</div>
+        <div class="answer"><input type="radio" name="q93" value="C"> C) Inspect, Palpate, Assess, Auscultate</div>
+        <div class="answer"><input type="radio" name="q93" value="D"> D) Inspect, Position, Palpate, Auscultate</div>
+    </div>
+
+    <div class="question" data-question="94">
+        <p>Which precaution is used for a patient with tuberculosis?</p>
+        <div class="answer"><input type="radio" name="q94" value="A"> A) Standard Precaution</div>
+        <div class="answer"><input type="radio" name="q94" value="B"> B) Droplet Precaution</div>
+        <div class="answer"><input type="radio" name="q94" value="C"> C) Contact Precaution</div>
+        <div class="answer"><input type="radio" name="q94" value="D" data-correct="true"> D) Airborne Precaution</div>
+    </div>
+
+    <div class="question" data-question="95">
+        <p>What does ISBAR stand for in communication?</p>
+        <div class="answer"><input type="radio" name="q95" value="A" data-correct="true"> A) Introduce, Situation, Background, Assessment, Recommendation</div>
+        <div class="answer"><input type="radio" name="q95" value="B"> B) Introduce, Symptom, Background, Action, Response</div>
+        <div class="answer"><input type="radio" name="q95" value="C"> C) Inspect, Study, Assess, Report</div>
+        <div class="answer"><input type="radio" name="q95" value="D"> D) Investigate, Situation, Background, Application, Results</div>
+    </div>
+
+    <div class="question" data-question="96">
+        <p>What does COLDSPA stand for in assessing pain?</p>
+        <div class="answer"><input type="radio" name="q96" value="A"> A) Condition, Onset, Location, Duration, Symptoms, Palliative, Aggressive</div>
+        <div class="answer"><input type="radio" name="q96" value="B" data-correct="true"> B) Character, Onset, Location, Duration, Severity, Pattern, Associated factors</div>
+        <div class="answer"><input type="radio" name="q96" value="C"> C) Condition, Onset, Length, Direction, Sensitivity, Pressure, Aggressiveness</div>
+        <div class="answer"><input type="radio" name="q96" value="D"> D) Character, Origin, Length, Duration, Symptoms, Pain, Action</div>
+    </div>
+
+    <div class="question" data-question="97">
+        <p>When should standard precautions be used?</p>
+        <div class="answer"><input type="radio" name="q97" value="A"> A) Only for patients with confirmed infections</div>
+        <div class="answer"><input type="radio" name="q97" value="B" data-correct="true"> B) For every patient interaction</div>
+        <div class="answer"><input type="radio" name="q97" value="C"> C) Only in surgical settings</div>
+        <div class="answer"><input type="radio" name="q97" value="D"> D) Only when dealing with bodily fluids</div>
+    </div>
+
+    <div class="question" data-question="98">
+        <p>What type of data is collected through the patient’s report of symptoms?</p>
+        <div class="answer"><input type="radio" name="q98" value="A"> A) Objective data</div>
+        <div class="answer"><input type="radio" name="q98" value="B" data-correct="true"> B) Subjective data</div>
+        <div class="answer"><input type="radio" name="q98" value="C"> C) Tangible data</div>
+        <div class="answer"><input type="radio" name="q98" value="D"> D) Clinical data</div>
+    </div>
+
+    <div class="question" data-question="99">
+        <p>Which of the following is an example of subjective data?</p>
+        <div class="answer"><input type="radio" name="q99" value="A"> A) A nurse noting a rash on the patient’s arm</div>
+        <div class="answer"><input type="radio" name="q99" value="B" data-correct="true"> B) A patient reporting nausea</div>
+        <div class="answer"><input type="radio" name="q99" value="C"> C) A nurse measuring the patient's temperature</div>
+        <div class="answer"><input type="radio" name="q99" value="D"> D) A nurse recording the patient’s pulse</div>
+    </div>
+
+    <div class="question" data-question="100">
+        <p>Which is NOT part of a holistic health assessment?</p>
+        <div class="answer"><input type="radio" name="q100" value="A"> A) Physical exam</div>
+        <div class="answer"><input type="radio" name="q100" value="B"> B) Social history</div>
+        <div class="answer"><input type="radio" name="q100" value="C"> C) Comprehensive mental health evaluation</div>
+        <div class="answer"><input type="radio" name="q100" value="D" data-correct="true"> D) Laboratory tests</div>
+    </div>
+
+
+    <!-- Submit Button -->
+<button type="button" onclick="checkAnswers()">Submit Answers</button>
+
+
+    <script>
+        function checkAnswers() {
+        // Get all questions
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach(question => {
+            // Get all answers for this question
+            const answers = question.querySelectorAll('.answer input[type="radio"]');
+            let selectedAnswer = null;
+
+            answers.forEach(answer => {
+                if (answer.checked) {
+                    selectedAnswer = answer;
+                }
+            });
+
+            // Clear previous highlights
+            answers.forEach(answer => {
+                answer.parentElement.classList.remove('correct', 'incorrect');
+            });
+
+            // Highlight the correct and wrong answers
+            answers.forEach(answer => {
+                if (answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('correct');
+                }
+
+                if (answer === selectedAnswer && !answer.hasAttribute('data-correct')) {
+                    answer.parentElement.classList.add('incorrect');
+                }
+            });
+        });
+    }
+    </script>
+</body>
+</html>
